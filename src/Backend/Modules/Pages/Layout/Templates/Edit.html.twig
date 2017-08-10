@@ -479,6 +479,7 @@
   </div>
 
   {# Page delete confirm block #}
+  {# @later for some reason the form isn't rendered in the template #}
   {% if item %}
     {{ form_start(deleteForm) }}
     {{ form_row(deleteForm._token) }}
