@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: cigy2
-# Generation Time: 2017-08-10 02:03:36 +0000
+# Generation Time: 2017-08-10 06:20:49 +0000
 # ************************************************************
 
 
@@ -2121,7 +2121,12 @@ VALUES
 	(1,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
 	(2,'404',0,'404',0,'404',0,'404',0,NULL,NULL,NULL,NULL),
 	(3,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(4,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL);
+	(4,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
+	(5,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
+	(6,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
+	(7,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
+	(8,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
+	(9,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `meta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2289,7 +2294,12 @@ VALUES
 	(1,1,1,0,2,1,'nl','page','Home','Home',0,0,'archive','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
 	(404,2,1,0,1,2,'nl','root','404','404',0,0,'active','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
 	(1,3,1,0,2,3,'nl','page','Home','Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:16',0,1,1,0,1),
-	(1,4,1,0,2,4,'nl','page','Home','Home',0,0,'active','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:42',0,1,1,0,1);
+	(1,4,1,0,2,4,'nl','page','Home','Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:42',0,1,1,0,1),
+	(405,5,1,0,1,5,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:1:{s:5:\"image\";N;}','2017-08-10 06:13:10','2017-08-10 06:13:10',1,1,1,1,2),
+	(405,6,1,0,1,6,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:14:47',1,1,1,1,2),
+	(405,7,1,0,1,7,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:16:38',1,1,1,1,2),
+	(405,8,1,0,1,8,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'active','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:17:39',1,1,1,1,2),
+	(1,9,1,0,2,9,'nl','page','Home','Home',0,0,'active','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 06:19:48',0,1,1,0,1);
 
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2306,7 +2316,6 @@ CREATE TABLE `pages_blocks` (
   `extra_id` int(11) DEFAULT NULL COMMENT 'The linked extra.',
   `extra_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'widget',
   `extra_data` text COLLATE utf8mb4_unicode_ci,
-  `html` text COLLATE utf8mb4_unicode_ci COMMENT 'if this block is HTML this field should contain the real HTML.',
   `created_on` datetime NOT NULL,
   `edited_on` datetime NOT NULL,
   `visible` tinyint(1) NOT NULL DEFAULT '1',
@@ -2317,12 +2326,15 @@ CREATE TABLE `pages_blocks` (
 LOCK TABLES `pages_blocks` WRITE;
 /*!40000 ALTER TABLE `pages_blocks` DISABLE KEYS */;
 
-INSERT INTO `pages_blocks` (`revision_id`, `position`, `extra_id`, `extra_type`, `extra_data`, `html`, `created_on`, `edited_on`, `visible`, `sequence`)
+INSERT INTO `pages_blocks` (`revision_id`, `position`, `extra_id`, `extra_type`, `extra_data`, `created_on`, `edited_on`, `visible`, `sequence`)
 VALUES
-	(1,'main',NULL,'widget',NULL,'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id magna. Proin euismod vestibulum tortor. Vestibulum eget nisl. Donec interdum quam at nunc. In laoreet orci sit amet sem. In sed metus ac nunc blandit ultricies. Maecenas sed tortor. Sed velit velit, mollis quis, ultricies tincidunt, dictum ac, felis. Integer hendrerit consectetur libero. Duis sem. Mauris tellus justo, sollicitudin at, vehicula eget, auctor vel, odio. Proin mattis. Mauris mollis elit sit amet lectus. Vestibulum in tortor sodales elit sollicitudin gravida. Integer scelerisque sollicitudin velit. Aliquam erat volutpat. Sed ut nisl congue justo pharetra accumsan.</p>','2017-08-10 01:14:30','2017-08-10 01:14:30',1,0),
-	(2,'main',NULL,'widget',NULL,'<p>De opgevraagde pagina bestaat niet of is niet beschikbaar op dit ogenblik.</p>\n','2017-08-10 01:14:30','2017-08-10 01:14:30',1,0),
-	(3,'main',NULL,'widget',NULL,'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id magna. Proin euismod vestibulum tortor. Vestibulum eget nisl. Donec interdum quam at nunc. In laoreet orci sit amet sem. In sed metus ac nunc blandit ultricies. Maecenas sed tortor. Sed velit velit, mollis quis, ultricies tincidunt, dictum ac, felis. Integer hendrerit consectetur libero. Duis sem. Mauris tellus justo, sollicitudin at, vehicula eget, auctor vel, odio. Proin mattis. Mauris mollis elit sit amet lectus. Vestibulum in tortor sodales elit sollicitudin gravida. Integer scelerisque sollicitudin velit. Aliquam erat volutpat. Sed ut nisl congue justo pharetra accumsan.</p>','0000-00-00 00:00:00','0000-00-00 00:00:00',1,0),
-	(4,'main',1,'widget',NULL,'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id magna. Proin euismod vestibulum tortor. Vestibulum eget nisl. Donec interdum quam at nunc. In laoreet orci sit amet sem. In sed metus ac nunc blandit ultricies. Maecenas sed tortor. Sed velit velit, mollis quis, ultricies tincidunt, dictum ac, felis. Integer hendrerit consectetur libero. Duis sem. Mauris tellus justo, sollicitudin at, vehicula eget, auctor vel, odio. Proin mattis. Mauris mollis elit sit amet lectus. Vestibulum in tortor sodales elit sollicitudin gravida. Integer scelerisque sollicitudin velit. Aliquam erat volutpat. Sed ut nisl congue justo pharetra accumsan.</p>','0000-00-00 00:00:00','0000-00-00 00:00:00',1,0);
+	(1,'main',NULL,'widget',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',1,0),
+	(2,'main',NULL,'widget',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',1,0),
+	(3,'main',NULL,'widget',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,0),
+	(4,'main',1,'widget',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,0),
+	(5,'main',2,'widget','','2017-08-10 06:13:09','2017-08-10 06:13:09',1,0),
+	(8,'main',2,'widget','','2017-08-10 06:17:39','2017-08-10 06:17:39',1,0),
+	(9,'main',1,'widget','','2017-08-10 06:19:48','2017-08-10 06:19:48',1,0);
 
 /*!40000 ALTER TABLE `pages_blocks` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2423,7 +2435,7 @@ LOCK TABLES `users_sessions` WRITE;
 
 INSERT INTO `users_sessions` (`id`, `user_id`, `session_id`, `secret_key`, `date`)
 VALUES
-	(1,1,'b0d0de35d415176256c693e829a2ec83','6e0436d633e62f342b2989a3a7a014c670480424','2017-08-10 02:00:44');
+	(1,1,'b0d0de35d415176256c693e829a2ec83','6e0436d633e62f342b2989a3a7a014c670480424','2017-08-10 06:19:49');
 
 /*!40000 ALTER TABLE `users_sessions` ENABLE KEYS */;
 UNLOCK TABLES;

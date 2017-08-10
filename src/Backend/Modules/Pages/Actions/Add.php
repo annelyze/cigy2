@@ -112,7 +112,6 @@ class Add extends BackendBaseActionAdd
 
         // create elements
         $this->form->addText('title', null, null, 'form-control title', 'form-control danger title');
-        $this->form->addEditor('html');
         $this->form->addHidden('template_id', $defaultTemplateId);
         $this->form->addRadiobutton(
             'hidden',
@@ -162,7 +161,7 @@ class Add extends BackendBaseActionAdd
         $this->positions['fallback']['blocks'][] = $block;
 
         // content has been submitted: re-create submitted content rather than the database-fetched content
-        if ($this->getRequest()->request->has('block_html_0')) {
+        if ($this->getRequest()->request->has('block_position_0')) {
             $this->blocksContent = [];
             $hasBlock = false;
             $i = 1;
@@ -186,12 +185,6 @@ class Add extends BackendBaseActionAdd
                     $block['extra_id'] = null;
                 }
 
-                // init html
-                $block['html'] = null;
-
-                $html = $this->getRequest()->request->get('block_html_' . $i);
-
-                // extra-type is HTML
                 if ($block['extra_id'] !== null) {
                     // type of block
                     if (isset($this->extras[$block['extra_id']]['type']) && $this->extras[$block['extra_id']]['type'] == 'block') {

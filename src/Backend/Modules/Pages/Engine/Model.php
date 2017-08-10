@@ -1268,7 +1268,6 @@ class Model
                             'position' => $position,
                             'extra_id' => $extraId,
                             'extra_type' => 'rich_text',
-                            'html' => '',
                             'created_on' => BackendModel::getUTCDate(),
                             'edited_on' => BackendModel::getUTCDate(),
                             'visible' => true,
