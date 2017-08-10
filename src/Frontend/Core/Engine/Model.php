@@ -211,7 +211,7 @@ class Model extends \Common\Core\Model
 
         // get blocks
         $blocks = (array) self::getContainer()->get('database')->getRecords(
-            'SELECT pe.id AS extra_id, pb.html, pb.position,
+            'SELECT pe.id AS extra_id, pb.position,
              pe.module AS extra_module, pe.type AS extra_type, pe.action AS extra_action, pe.data AS extra_data
              FROM pages_blocks AS pb
              INNER JOIN pages AS p ON p.revision_id = pb.revision_id
