@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <name>CigyWidgets</name>
+  <version>1.0.0</version>
+  <requirements>
+    <minimum_version>5.0.0</minimum_version>
+  </requirements>
+  <description>
+    <![CDATA[
+      Just ask.
+    ]]>
+  </description>
+  <authors>
+    <author>
+      <name><![CDATA[Annelies Van Extergem]]></name>
+      <url><![CDATA[http://www.wijs.be]]></url>
+    </author>
+    <author>
+      <name><![CDATA[Jonas Verdickt]]></name>
+      <url><![CDATA[http://www.wijs.be]]></url>
+    </author>
+  </authors>
+  <events>
+  </events>
+</module>
