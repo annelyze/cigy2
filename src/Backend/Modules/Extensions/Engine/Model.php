@@ -629,7 +629,6 @@ class Model
             BackendModel::getContainer()->get('database'),
             BL::getActiveLanguages(),
             array_keys(BL::getInterfaceLanguages()),
-            false,
             $variables
         );
 
