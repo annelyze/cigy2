@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: cigy2
-# Generation Time: 2017-08-10 07:57:02 +0000
+# Generation Time: 2017-08-10 09:48:54 +0000
 # ************************************************************
 
 
@@ -85,6 +85,15 @@ CREATE TABLE `content_blocks` (
   PRIMARY KEY (`revision_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+LOCK TABLES `content_blocks` WRITE;
+/*!40000 ALTER TABLE `content_blocks` DISABLE KEYS */;
+
+INSERT INTO `content_blocks` (`revision_id`, `id`, `user_id`, `extra_id`, `template`, `language`, `title`, `text`, `hidden`, `status`, `created_on`, `edited_on`)
+VALUES
+	(2,1,1,5,'Default.html.twig','nl','dfdfs','fdsqdfs',0,'active','2017-08-10 08:46:01','2017-08-10 08:46:01');
+
+/*!40000 ALTER TABLE `content_blocks` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table groups
@@ -2132,7 +2141,12 @@ VALUES
 	(10,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
 	(11,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
 	(12,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
-	(13,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL);
+	(13,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
+	(14,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
+	(15,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
+	(16,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
+	(17,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
+	(18,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `meta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2196,7 +2210,8 @@ INSERT INTO `modules_extras` (`id`, `module`, `type`, `label`, `action`, `data`,
 VALUES
 	(1,'CigyWidgets','widget','Nps','Nps',NULL,0,0),
 	(2,'CigyWidgets','widget','Abr','Abr',NULL,0,0),
-	(3,'CigyWidgets','widget','ClosedWon','ClosedWon',NULL,0,0);
+	(3,'CigyWidgets','widget','ClosedWon','ClosedWon',NULL,0,0),
+	(5,'ContentBlocks','widget','ContentBlocks','Detail','a:5:{s:2:\"id\";i:1;s:8:\"language\";s:2:\"nl\";s:8:\"edit_url\";s:53:\"/private/nl/content_blocks/edit?token=9mj0lsnlod&id=1\";s:15:\"custom_template\";s:17:\"Default.html.twig\";s:11:\"extra_label\";s:5:\"dfdfs\";}',0,0);
 
 /*!40000 ALTER TABLE `modules_extras` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2310,7 +2325,12 @@ VALUES
 	(406,10,1,0,1,10,'nl','root','Testjes',0,'Testjes',0,0,'archive','2017-08-10 07:47:26','a:1:{s:5:\"image\";N;}','2017-08-10 07:47:26','2017-08-10 07:47:26',1,1,1,1,3),
 	(406,11,1,0,1,11,'nl','root','Testjes',0,'Testjes',0,0,'archive','2017-08-10 07:47:26','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:47:26','2017-08-10 07:47:33',1,1,1,1,3),
 	(406,12,1,0,1,12,'nl','root','Testjes',3,'Testjes',0,0,'active','2017-08-10 07:47:26','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:47:26','2017-08-10 07:48:45',1,1,1,1,3),
-	(407,13,1,0,1,13,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'active','2017-08-10 07:50:07','a:1:{s:5:\"image\";N;}','2017-08-10 07:50:07','2017-08-10 07:50:07',1,1,1,1,4);
+	(407,13,1,0,1,13,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:1:{s:5:\"image\";N;}','2017-08-10 07:50:07','2017-08-10 07:50:07',1,1,1,1,4),
+	(407,14,1,0,1,14,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:29:42',1,1,1,1,4),
+	(407,15,1,0,1,15,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:29:52',1,1,1,1,4),
+	(407,16,1,0,1,16,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:31:24',1,1,1,1,4),
+	(407,17,1,0,1,17,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:32:48',1,1,1,1,4),
+	(407,18,1,0,1,18,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'active','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:56:43',1,1,1,1,4);
 
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2346,7 +2366,12 @@ VALUES
 	(5,'main',2,'widget','','2017-08-10 06:13:09','2017-08-10 06:13:09',1,0),
 	(8,'main',2,'widget','','2017-08-10 06:17:39','2017-08-10 06:17:39',1,0),
 	(9,'main',1,'widget','','2017-08-10 06:19:48','2017-08-10 06:19:48',1,0),
-	(13,'main',1,'widget','','2017-08-10 07:50:07','2017-08-10 07:50:07',1,0);
+	(13,'main',1,'widget','','2017-08-10 07:50:07','2017-08-10 07:50:07',1,0),
+	(14,'main',1,'widget','','2017-08-10 08:29:42','2017-08-10 08:29:42',1,0),
+	(15,'main',1,'widget','','2017-08-10 08:29:52','2017-08-10 08:29:52',1,0),
+	(16,'main',1,'widget','','2017-08-10 08:31:24','2017-08-10 08:31:24',1,0),
+	(17,'main',1,'widget','','2017-08-10 08:32:48','2017-08-10 08:32:48',1,0),
+	(18,'main',1,'widget','','2017-08-10 08:56:43','2017-08-10 08:56:43',1,0);
 
 /*!40000 ALTER TABLE `pages_blocks` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2399,7 +2424,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `email`, `password`, `active`, `deleted`, `is_god`)
 VALUES
-	(1,'annelies.vanextergem@wijs.be','$2y$10$krJbfrOr2ptk9OZMadxiLO5iRzdRF31b8qEH//mTarNH8jiACr6XS',1,0,1);
+	(1,'annelies.vanextergem@wijs.be','$2y$10$ij6qJ0VPZXSYCrC5fv77T.Z4/pcyGo405KXgiCI8QIXi93pmLKL1K',1,0,1);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2447,7 +2472,7 @@ LOCK TABLES `users_sessions` WRITE;
 
 INSERT INTO `users_sessions` (`id`, `user_id`, `session_id`, `secret_key`, `date`)
 VALUES
-	(1,1,'b0d0de35d415176256c693e829a2ec83','6e0436d633e62f342b2989a3a7a014c670480424','2017-08-10 07:50:07');
+	(1,1,'b0d0de35d415176256c693e829a2ec83','6e0436d633e62f342b2989a3a7a014c670480424','2017-08-10 09:48:07');
 
 /*!40000 ALTER TABLE `users_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2479,11 +2504,14 @@ VALUES
 	(1,'datetime_format','s:9:\"j F Y H:i\";'),
 	(1,'number_format','s:11:\"dot_nothing\";'),
 	(1,'password_key','s:23:\"598bb375a544f8.66816249\";'),
-	(1,'password_strength','s:6:\"strong\";'),
-	(1,'current_password_change','i:1502327669;'),
+	(1,'password_strength','s:4:\"weak\";'),
+	(1,'current_password_change','i:1502358487;'),
 	(1,'avatar','s:7:\"god.jpg\";'),
 	(1,'dashboard_sequence','a:2:{s:8:\"Settings\";a:1:{i:0;s:7:\"Analyse\";}s:5:\"Users\";a:1:{i:0;s:10:\"Statistics\";}}'),
-	(1,'current_login','s:10:\"1502327676\";');
+	(1,'current_login','s:10:\"1502327676\";'),
+	(1,'csv_split_character','s:1:\";\";'),
+	(1,'csv_line_ending','s:2:\"\\n\";'),
+	(1,'last_password_change','i:1502327669;');
 
 /*!40000 ALTER TABLE `users_settings` ENABLE KEYS */;
 UNLOCK TABLES;
