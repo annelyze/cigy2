@@ -39,10 +39,6 @@ class Seo extends BackendBaseActionIndex
         $this->form = new BackendForm('settingsSeo');
         $this->form->addCheckbox('seo_noodp', $this->get('fork.settings')->get('Core', 'seo_noodp', false));
         $this->form->addCheckbox('seo_noydir', $this->get('fork.settings')->get('Core', 'seo_noydir', false));
-        $this->form->addCheckbox(
-            'seo_nofollow_in_comments',
-            $this->get('fork.settings')->get('Core', 'seo_nofollow_in_comments', false)
-        );
     }
 
     protected function parse(): void
@@ -61,11 +57,6 @@ class Seo extends BackendBaseActionIndex
                 // smtp settings
                 $this->get('fork.settings')->set('Core', 'seo_noodp', $this->form->getField('seo_noodp')->getValue());
                 $this->get('fork.settings')->set('Core', 'seo_noydir', $this->form->getField('seo_noydir')->getValue());
-                $this->get('fork.settings')->set(
-                    'Core',
-                    'seo_nofollow_in_comments',
-                    $this->form->getField('seo_nofollow_in_comments')->getValue()
-                );
 
                 // assign report
                 $this->template->assign('report', true);

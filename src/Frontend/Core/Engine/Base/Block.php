@@ -13,7 +13,6 @@ use Common\Core\Header\Priority;
 use Common\Doctrine\Entity\Meta;
 use Common\Exception\RedirectException;
 use ForkCMS\App\KernelLoader;
-use Frontend\Core\Engine\Breadcrumb;
 use Frontend\Core\Engine\Exception;
 use Frontend\Core\Engine\Model;
 use Frontend\Core\Engine\Url;
@@ -37,13 +36,6 @@ class Block extends KernelLoader
      * @var string
      */
     protected $action;
-
-    /**
-     * The breadcrumb object
-     *
-     * @var Breadcrumb
-     */
-    protected $breadcrumb;
 
     /**
      * The data
@@ -115,7 +107,6 @@ class Block extends KernelLoader
         $this->header = $this->getContainer()->get('header');
         $this->url = $this->getContainer()->get('url');
         $this->template = $this->getContainer()->get('templating');
-        $this->breadcrumb = $this->getContainer()->get('breadcrumb');
 
         // set properties
         $this->setModule($module);

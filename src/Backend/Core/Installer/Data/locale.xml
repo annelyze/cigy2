@@ -121,57 +121,6 @@
         <translation language="pl"><![CDATA[Data urodzin]]></translation>
         <translation language="tr"><![CDATA[doğum tarihi]]></translation>
       </item>
-      <item type="label" name="Blog">
-        <translation language="nl"><![CDATA[blog]]></translation>
-        <translation language="en"><![CDATA[blog]]></translation>
-        <translation language="hu"><![CDATA[blog]]></translation>
-        <translation language="it"><![CDATA[blog]]></translation>
-        <translation language="fr"><![CDATA[blog]]></translation>
-        <translation language="ru"><![CDATA[Блог]]></translation>
-        <translation language="zh"><![CDATA[博客]]></translation>
-        <translation language="de"><![CDATA[Blog]]></translation>
-        <translation language="es"><![CDATA[Blog]]></translation>
-        <translation language="uk"><![CDATA[Блог]]></translation>
-        <translation language="lt"><![CDATA[tinklaraštis]]></translation>
-        <translation language="sv"><![CDATA[blogg]]></translation>
-        <translation language="el"><![CDATA[ιστολόγιο]]></translation>
-        <translation language="pl"><![CDATA[Blog]]></translation>
-        <translation language="tr"><![CDATA[blog]]></translation>
-      </item>
-      <item type="label" name="BlogArchive">
-        <translation language="nl"><![CDATA[blogarchief]]></translation>
-        <translation language="en"><![CDATA[blog archive]]></translation>
-        <translation language="hu"><![CDATA[blog archívum]]></translation>
-        <translation language="it"><![CDATA[archivio blog]]></translation>
-        <translation language="fr"><![CDATA[archive du blog]]></translation>
-        <translation language="ru"><![CDATA[Архив блога]]></translation>
-        <translation language="zh"><![CDATA[博客归档]]></translation>
-        <translation language="de"><![CDATA[Blogarchiv]]></translation>
-        <translation language="es"><![CDATA[Archivo del Blog]]></translation>
-        <translation language="uk"><![CDATA[Архів блога]]></translation>
-        <translation language="lt"><![CDATA[tinklaraščio archyvas]]></translation>
-        <translation language="sv"><![CDATA[bloggarkiv]]></translation>
-        <translation language="el"><![CDATA[αρχείο ιστολογίου]]></translation>
-        <translation language="pl"><![CDATA[Archiwum bloga]]></translation>
-        <translation language="tr"><![CDATA[blog arşivi]]></translation>
-      </item>
-      <item type="label" name="Breadcrumb">
-        <translation language="nl"><![CDATA[kruimelpad]]></translation>
-        <translation language="en"><![CDATA[breadcrumb]]></translation>
-        <translation language="hu"><![CDATA[breadcrumb]]></translation>
-        <translation language="it"><![CDATA[breadcrumb]]></translation>
-        <translation language="fr"><![CDATA[fil d'ariane]]></translation>
-        <translation language="ru"><![CDATA[Навигационная цепочка]]></translation>
-        <translation language="zh"><![CDATA[面包屑导航]]></translation>
-        <translation language="de"><![CDATA[Klickpfad]]></translation>
-        <translation language="es"><![CDATA[breadcrumb]]></translation>
-        <translation language="uk"><![CDATA[Хлібні крихти]]></translation>
-        <translation language="lt"><![CDATA[naršymo kelias]]></translation>
-        <translation language="sv"><![CDATA[brödsmulor]]></translation>
-        <translation language="el"><![CDATA[διαδρομή]]></translation>
-        <translation language="pl"><![CDATA[Ślady]]></translation>
-        <translation language="tr"><![CDATA[breadcrumb]]></translation>
-      </item>
       <item type="label" name="By">
         <translation language="nl"><![CDATA[door]]></translation>
         <translation language="en"><![CDATA[by]]></translation>
@@ -188,40 +137,6 @@
         <translation language="el"><![CDATA[από]]></translation>
         <translation language="pl"><![CDATA[przez]]></translation>
         <translation language="tr"><![CDATA[tarafından]]></translation>
-      </item>
-      <item type="label" name="Categories">
-        <translation language="nl"><![CDATA[categorieën]]></translation>
-        <translation language="en"><![CDATA[categories]]></translation>
-        <translation language="hu"><![CDATA[kategóriák]]></translation>
-        <translation language="it"><![CDATA[categorie]]></translation>
-        <translation language="fr"><![CDATA[catégories]]></translation>
-        <translation language="ru"><![CDATA[Категории]]></translation>
-        <translation language="zh"><![CDATA[分类]]></translation>
-        <translation language="de"><![CDATA[Kategorien]]></translation>
-        <translation language="es"><![CDATA[Categorías]]></translation>
-        <translation language="uk"><![CDATA[Категорії]]></translation>
-        <translation language="lt"><![CDATA[kategorijos]]></translation>
-        <translation language="sv"><![CDATA[kategorier]]></translation>
-        <translation language="el"><![CDATA[κατηγορίες]]></translation>
-        <translation language="pl"><![CDATA[Kategorie]]></translation>
-        <translation language="tr"><![CDATA[kategoriler]]></translation>
-      </item>
-      <item type="label" name="Category">
-        <translation language="nl"><![CDATA[categorie]]></translation>
-        <translation language="en"><![CDATA[category]]></translation>
-        <translation language="hu"><![CDATA[kategória]]></translation>
-        <translation language="it"><![CDATA[categoria]]></translation>
-        <translation language="fr"><![CDATA[catégorie]]></translation>
-        <translation language="ru"><![CDATA[категории:]]></translation>
-        <translation language="zh"><![CDATA[分类]]></translation>
-        <translation language="de"><![CDATA[Kategorie]]></translation>
-        <translation language="es"><![CDATA[Categoría]]></translation>
-        <translation language="uk"><![CDATA[Категорії]]></translation>
-        <translation language="lt"><![CDATA[kategorijos]]></translation>
-        <translation language="sv"><![CDATA[kategori]]></translation>
-        <translation language="el"><![CDATA[κατηγορία]]></translation>
-        <translation language="pl"><![CDATA[Kategoria]]></translation>
-        <translation language="tr"><![CDATA[kategori]]></translation>
       </item>
       <item type="label" name="City">
         <translation language="nl"><![CDATA[stad]]></translation>
@@ -256,57 +171,6 @@
         <translation language="el"><![CDATA[κλείσιμο]]></translation>
         <translation language="pl"><![CDATA[zakmnij]]></translation>
         <translation language="tr"><![CDATA[kapat]]></translation>
-      </item>
-      <item type="label" name="Comment">
-        <translation language="nl"><![CDATA[reactie]]></translation>
-        <translation language="en"><![CDATA[comment]]></translation>
-        <translation language="hu"><![CDATA[hozzászólás]]></translation>
-        <translation language="it"><![CDATA[commento]]></translation>
-        <translation language="fr"><![CDATA[commentaire]]></translation>
-        <translation language="ru"><![CDATA[Комментарий]]></translation>
-        <translation language="zh"><![CDATA[评论]]></translation>
-        <translation language="de"><![CDATA[Kommentar]]></translation>
-        <translation language="es"><![CDATA[Comentario]]></translation>
-        <translation language="uk"><![CDATA[Коментар]]></translation>
-        <translation language="lt"><![CDATA[komentaras]]></translation>
-        <translation language="sv"><![CDATA[kommentar]]></translation>
-        <translation language="el"><![CDATA[σχόλιο]]></translation>
-        <translation language="tr"><![CDATA[yorum]]></translation>
-        <translation language="pl"><![CDATA[Komentarz]]></translation>
-      </item>
-      <item type="label" name="CommentedOn">
-        <translation language="nl"><![CDATA[reageerde op]]></translation>
-        <translation language="en"><![CDATA[commented on]]></translation>
-        <translation language="hu"><![CDATA[hozzászóló]]></translation>
-        <translation language="it"><![CDATA[commentato il]]></translation>
-        <translation language="fr"><![CDATA[commenté sur]]></translation>
-        <translation language="ru"><![CDATA[Комментарий на]]></translation>
-        <translation language="zh"><![CDATA[评论了]]></translation>
-        <translation language="de"><![CDATA[kommentierte]]></translation>
-        <translation language="es"><![CDATA[ha comentado en]]></translation>
-        <translation language="uk"><![CDATA[Коментар на]]></translation>
-        <translation language="lt"><![CDATA[komentavo]]></translation>
-        <translation language="sv"><![CDATA[kommenterad den]]></translation>
-        <translation language="el"><![CDATA[έχει σχολιασθεί]]></translation>
-        <translation language="tr"><![CDATA[yorumladı]]></translation>
-        <translation language="pl"><![CDATA[Skomentowano w]]></translation>
-      </item>
-      <item type="label" name="Comments">
-        <translation language="nl"><![CDATA[reacties]]></translation>
-        <translation language="en"><![CDATA[comments]]></translation>
-        <translation language="hu"><![CDATA[hozzászólások]]></translation>
-        <translation language="it"><![CDATA[commenti]]></translation>
-        <translation language="fr"><![CDATA[commentaires]]></translation>
-        <translation language="ru"><![CDATA[Комментарии]]></translation>
-        <translation language="zh"><![CDATA[评论]]></translation>
-        <translation language="de"><![CDATA[Kommentare]]></translation>
-        <translation language="es"><![CDATA[Comentarios]]></translation>
-        <translation language="uk"><![CDATA[Коментарі]]></translation>
-        <translation language="lt"><![CDATA[komentarai]]></translation>
-        <translation language="sv"><![CDATA[kommentarer]]></translation>
-        <translation language="el"><![CDATA[σχόλια]]></translation>
-        <translation language="pl"><![CDATA[komentarze]]></translation>
-        <translation language="tr"><![CDATA[yorumlar]]></translation>
       </item>
       <item type="label" name="Contact">
         <translation language="nl"><![CDATA[contact]]></translation>
@@ -476,21 +340,6 @@
         <translation language="zh"><![CDATA[西班牙语]]></translation>
         <translation language="pl"><![CDATA[Hiszpański]]></translation>
         <translation language="tr"><![CDATA[İspanyolca]]></translation>
-      </item>
-      <item type="label" name="Faq">
-        <translation language="nl"><![CDATA[FAQ]]></translation>
-        <translation language="en"><![CDATA[FAQ]]></translation>
-        <translation language="fr"><![CDATA[FAQ]]></translation>
-        <translation language="es"><![CDATA[FAQ]]></translation>
-        <translation language="de"><![CDATA[FAQ]]></translation>
-        <translation language="ru"><![CDATA[ЧаВо]]></translation>
-        <translation language="lt"><![CDATA[DUK]]></translation>
-        <translation language="uk"><![CDATA[ЧаПи]]></translation>
-        <translation language="sv"><![CDATA[Vanliga frågor]]></translation>
-        <translation language="hu"><![CDATA[GYIK]]></translation>
-        <translation language="el"><![CDATA[Συχνές Ερωτήσεις]]></translation>
-        <translation language="zh"><![CDATA[FAQ]]></translation>
-        <translation language="tr"><![CDATA[SSS]]></translation>
       </item>
       <item type="label" name="Feedback">
         <translation language="nl"><![CDATA[feedback]]></translation>
@@ -686,23 +535,6 @@
         <translation language="el"><![CDATA[στην κατηγορία]]></translation>
         <translation language="pl"><![CDATA[w kategorii]]></translation>
       </item>
-      <item type="label" name="ItemsWithTag">
-        <translation language="nl"><![CDATA[items met tag "%1$s"]]></translation>
-        <translation language="en"><![CDATA[items with tag "%1$s"]]></translation>
-        <translation language="hu"><![CDATA[elem "%1$s" címkével]]></translation>
-        <translation language="it"><![CDATA[elementi con tag "%1$s"]]></translation>
-        <translation language="fr"><![CDATA[éléments comportant le tag "%1$s"]]></translation>
-        <translation language="ru"><![CDATA[Записи с тегом "%1$s"]]></translation>
-        <translation language="zh"><![CDATA[带有标签“%1$s”]]></translation>
-        <translation language="de"><![CDATA[Einträge mit Schlagwort "%1$s"]]></translation>
-        <translation language="es"><![CDATA[Elementos con la Etiqueta]]></translation>
-        <translation language="lt"><![CDATA[įrašai su žyme "%1$s"]]></translation>
-        <translation language="uk"><![CDATA[записи з тегом "%1$s"]]></translation>
-        <translation language="sv"><![CDATA[objekt med taggen "%1$s"]]></translation>
-        <translation language="el"><![CDATA[στοιχεία με ετικέτα "%1$s"]]></translation>
-        <translation language="pl"><![CDATA[Wpisy z tagiem]]></translation>
-        <translation language="tr"><![CDATA["%1$s" ile etiketlenmiş öğeler]]></translation>
-      </item>
       <item type="label" name="Language">
         <translation language="nl"><![CDATA[taal]]></translation>
         <translation language="en"><![CDATA[language]]></translation>
@@ -736,23 +568,6 @@
         <translation language="el"><![CDATA[επώνυμο]]></translation>
         <translation language="pl"><![CDATA[drugie imię]]></translation>
         <translation language="tr"><![CDATA[soyad]]></translation>
-      </item>
-      <item type="label" name="Location">
-        <translation language="nl"><![CDATA[locatie]]></translation>
-        <translation language="en"><![CDATA[location]]></translation>
-        <translation language="hu"><![CDATA[hely]]></translation>
-        <translation language="it"><![CDATA[localizzazione]]></translation>
-        <translation language="fr"><![CDATA[emplacement]]></translation>
-        <translation language="ru"><![CDATA[Местоположение]]></translation>
-        <translation language="zh"><![CDATA[现居地]]></translation>
-        <translation language="de"><![CDATA[Ort]]></translation>
-        <translation language="es"><![CDATA[Ubicación]]></translation>
-        <translation language="lt"><![CDATA[lokacija]]></translation>
-        <translation language="uk"><![CDATA[Розташування]]></translation>
-        <translation language="sv"><![CDATA[plats]]></translation>
-        <translation language="el"><![CDATA[τοποθεσία]]></translation>
-        <translation language="pl"><![CDATA[lokacja]]></translation>
-        <translation language="tr"><![CDATA[konum]]></translation>
       </item>
       <item type="label" name="Login">
         <translation language="nl"><![CDATA[aanmelden]]></translation>
@@ -1292,23 +1107,6 @@
         <translation language="el"><![CDATA[προηγούμενη σελίδα]]></translation>
         <translation language="pl"><![CDATA[poprzednia strona]]></translation>
       </item>
-      <item type="label" name="ProfileSettings">
-        <translation language="nl"><![CDATA[instellingen]]></translation>
-        <translation language="en"><![CDATA[settings]]></translation>
-        <translation language="fr"><![CDATA[préférences]]></translation>
-        <translation language="hu"><![CDATA[beállítások]]></translation>
-        <translation language="it"><![CDATA[impostazioni]]></translation>
-        <translation language="ru"><![CDATA[Настройки]]></translation>
-        <translation language="zh"><![CDATA[帐户设置]]></translation>
-        <translation language="de"><![CDATA[Einstellungen]]></translation>
-        <translation language="es"><![CDATA[preferencias]]></translation>
-        <translation language="lt"><![CDATA[nustatymai]]></translation>
-        <translation language="uk"><![CDATA[Налаштування]]></translation>
-        <translation language="sv"><![CDATA[inställningar]]></translation>
-        <translation language="el"><![CDATA[ρυθμίσεις]]></translation>
-        <translation language="pl"><![CDATA[ustawienia]]></translation>
-        <translation language="tr"><![CDATA[Profil ayarları]]></translation>
-      </item>
       <item type="label" name="Question">
         <translation language="nl"><![CDATA[vraag]]></translation>
         <translation language="en"><![CDATA[question]]></translation>
@@ -1353,23 +1151,6 @@
         <translation language="el"><![CDATA[πρόσφατα άρθρα]]></translation>
         <translation language="pl"><![CDATA[najnowsze artykuły]]></translation>
         <translation language="tr"><![CDATA[güncel yazılar]]></translation>
-      </item>
-      <item type="label" name="RecentComments">
-        <translation language="nl"><![CDATA[recente reacties]]></translation>
-        <translation language="en"><![CDATA[recent comments]]></translation>
-        <translation language="hu"><![CDATA[legutóbbi hozzászólások]]></translation>
-        <translation language="it"><![CDATA[commenti recenti]]></translation>
-        <translation language="fr"><![CDATA[commentaires récents]]></translation>
-        <translation language="ru"><![CDATA[Последние комментарии]]></translation>
-        <translation language="zh"><![CDATA[最新评论]]></translation>
-        <translation language="de"><![CDATA[neueste Kommentare]]></translation>
-        <translation language="es"><![CDATA[comentarios recientes]]></translation>
-        <translation language="lt"><![CDATA[naujausi komentarai]]></translation>
-        <translation language="uk"><![CDATA[Останні коментарі]]></translation>
-        <translation language="sv"><![CDATA[senaste kommentarer]]></translation>
-        <translation language="el"><![CDATA[τελευταία σχόλια]]></translation>
-        <translation language="pl"><![CDATA[najnowsze wpisy]]></translation>
-        <translation language="tr"><![CDATA[güncel yorumlar]]></translation>
       </item>
       <item type="label" name="Register">
         <translation language="nl"><![CDATA[registreren]]></translation>
@@ -1454,57 +1235,6 @@
         <translation language="el"><![CDATA[αποθήκευση]]></translation>
         <translation language="pl"><![CDATA[zapisz]]></translation>
         <translation language="tr"><![CDATA[Kaydet]]></translation>
-      </item>
-      <item type="label" name="Search">
-        <translation language="nl"><![CDATA[zoeken]]></translation>
-        <translation language="en"><![CDATA[search]]></translation>
-        <translation language="hu"><![CDATA[keres]]></translation>
-        <translation language="it"><![CDATA[cerca]]></translation>
-        <translation language="fr"><![CDATA[rechercher]]></translation>
-        <translation language="ru"><![CDATA[Поиск]]></translation>
-        <translation language="zh"><![CDATA[搜索]]></translation>
-        <translation language="de"><![CDATA[suchen]]></translation>
-        <translation language="es"><![CDATA[buscar]]></translation>
-        <translation language="lt"><![CDATA[ieškoti]]></translation>
-        <translation language="uk"><![CDATA[Пошук]]></translation>
-        <translation language="sv"><![CDATA[sök]]></translation>
-        <translation language="el"><![CDATA[αναζήτηση]]></translation>
-        <translation language="pl"><![CDATA[szukaj]]></translation>
-        <translation language="tr"><![CDATA[Ara]]></translation>
-      </item>
-      <item type="label" name="SearchAgain">
-        <translation language="nl"><![CDATA[zoek opnieuw]]></translation>
-        <translation language="en"><![CDATA[search again]]></translation>
-        <translation language="hu"><![CDATA[újból keres]]></translation>
-        <translation language="it"><![CDATA[cerca ancora]]></translation>
-        <translation language="fr"><![CDATA[chercher à nouveau]]></translation>
-        <translation language="ru"><![CDATA[Искать снова]]></translation>
-        <translation language="zh"><![CDATA[重新搜索]]></translation>
-        <translation language="de"><![CDATA[erneut suchen]]></translation>
-        <translation language="es"><![CDATA[buscar de nuevo]]></translation>
-        <translation language="lt"><![CDATA[ieškoti dar]]></translation>
-        <translation language="uk"><![CDATA[Шукати знову]]></translation>
-        <translation language="sv"><![CDATA[sök igen]]></translation>
-        <translation language="el"><![CDATA[επαναλάβατε την αναζήτηση]]></translation>
-        <translation language="pl"><![CDATA[szukaj ponownie]]></translation>
-        <translation language="tr"><![CDATA[Tekrar ara]]></translation>
-      </item>
-      <item type="label" name="SearchTerm">
-        <translation language="nl"><![CDATA[zoekterm]]></translation>
-        <translation language="en"><![CDATA[searchterm]]></translation>
-        <translation language="hu"><![CDATA[keresési feltételek]]></translation>
-        <translation language="it"><![CDATA[termine di ricerca]]></translation>
-        <translation language="fr"><![CDATA[chercher le terme]]></translation>
-        <translation language="ru"><![CDATA[Ключевые Слова]]></translation>
-        <translation language="zh"><![CDATA[搜索词]]></translation>
-        <translation language="de"><![CDATA[Suchbegriff]]></translation>
-        <translation language="es"><![CDATA[buscar el término]]></translation>
-        <translation language="lt"><![CDATA[raktažodžiai]]></translation>
-        <translation language="uk"><![CDATA[Ключові слова]]></translation>
-        <translation language="sv"><![CDATA[sökterm]]></translation>
-        <translation language="el"><![CDATA[όρος αναζήτησης]]></translation>
-        <translation language="pl"><![CDATA[Szukaj frazy]]></translation>
-        <translation language="tr"><![CDATA[arama terimi]]></translation>
       </item>
       <item type="label" name="Send">
         <translation language="nl"><![CDATA[verstuur]]></translation>
@@ -1640,23 +1370,6 @@
         <translation language="pl"><![CDATA[pokaż hasło]]></translation>
         <translation language="tr"><![CDATA[şifre görüntüle]]></translation>
       </item>
-      <item type="label" name="Sitemap">
-        <translation language="nl"><![CDATA[sitemap]]></translation>
-        <translation language="en"><![CDATA[sitemap]]></translation>
-        <translation language="hu"><![CDATA[oldaltérkép]]></translation>
-        <translation language="it"><![CDATA[mappa del sito]]></translation>
-        <translation language="fr"><![CDATA[sitemap]]></translation>
-        <translation language="ru"><![CDATA[Карта сайта]]></translation>
-        <translation language="zh"><![CDATA[站点地图]]></translation>
-        <translation language="de"><![CDATA[Sitemap]]></translation>
-        <translation language="es"><![CDATA[sitemap]]></translation>
-        <translation language="lt"><![CDATA[svetainės medis]]></translation>
-        <translation language="uk"><![CDATA[Мапа сайту]]></translation>
-        <translation language="sv"><![CDATA[webbplatskarta]]></translation>
-        <translation language="el"><![CDATA[χάρτης ιστοχώρου]]></translation>
-        <translation language="pl"><![CDATA[mapa strony]]></translation>
-        <translation language="tr"><![CDATA[sitemap]]></translation>
-      </item>
       <item type="label" name="SkipToContent">
         <translation language="nl"><![CDATA[ga naar de inhoud]]></translation>
         <translation language="en"><![CDATA[skip to content]]></translation>
@@ -1733,23 +1446,6 @@
         <translation language="el"><![CDATA[εγγραφή στη ροή RSS]]></translation>
         <translation language="pl"><![CDATA[subskrybuj kanał rss]]></translation>
       </item>
-      <item type="label" name="Tags">
-        <translation language="nl"><![CDATA[tags]]></translation>
-        <translation language="en"><![CDATA[tags]]></translation>
-        <translation language="hu"><![CDATA[címkék]]></translation>
-        <translation language="it"><![CDATA[tag]]></translation>
-        <translation language="fr"><![CDATA[tags]]></translation>
-        <translation language="ru"><![CDATA[Тэги]]></translation>
-        <translation language="zh"><![CDATA[标签]]></translation>
-        <translation language="de"><![CDATA[Schlagworte]]></translation>
-        <translation language="es"><![CDATA[etiquetas]]></translation>
-        <translation language="lt"><![CDATA[žymės]]></translation>
-        <translation language="uk"><![CDATA[Теги]]></translation>
-        <translation language="sv"><![CDATA[taggar]]></translation>
-        <translation language="el"><![CDATA[ετικέτες]]></translation>
-        <translation language="pl"><![CDATA[tagi]]></translation>
-        <translation language="tr"><![CDATA[etiketler]]></translation>
-      </item>
       <item type="label" name="The">
         <translation language="nl"><![CDATA[de]]></translation>
         <translation language="en"><![CDATA[the]]></translation>
@@ -1782,63 +1478,6 @@
         <translation language="el"><![CDATA[τίτλος]]></translation>
         <translation language="pl"><![CDATA[tytuł]]></translation>
         <translation language="tr"><![CDATA[Başlık]]></translation>
-      </item>
-      <item type="label" name="ToFaqOverview">
-        <translation language="nl"><![CDATA[naar het FAQ overzicht]]></translation>
-        <translation language="en"><![CDATA[to the FAQ overview]]></translation>
-        <translation language="ru"><![CDATA[обзор FAQ]]></translation>
-        <translation language="fr"><![CDATA[au l'ensemble de FAQ]]></translation>
-        <translation language="es"><![CDATA[al resumen del FAQ]]></translation>
-        <translation language="de"><![CDATA[zur Fragen-Übersicht]]></translation>
-        <translation language="lt"><![CDATA[DUK apžvalga]]></translation>
-        <translation language="sv"><![CDATA[till frågor och svar översikt]]></translation>
-        <translation language="hu"><![CDATA[GYIK áttekintése]]></translation>
-        <translation language="el"><![CDATA[στην ανασκόπηση των Συχνών Ερωτήσεων]]></translation>
-        <translation language="uk"><![CDATA[до перегляду ЧаПів]]></translation>
-        <translation language="zh"><![CDATA[去到FAQ概览页面]]></translation>
-      </item>
-      <item type="label" name="ToTagsOverview">
-        <translation language="nl"><![CDATA[naar het tags overzicht]]></translation>
-        <translation language="en"><![CDATA[to tags overview]]></translation>
-        <translation language="hu"><![CDATA[címkék áttekintése]]></translation>
-        <translation language="it"><![CDATA[alla visione d'insieme dei tag]]></translation>
-        <translation language="fr"><![CDATA[vers la vue d'ensemble des tags]]></translation>
-        <translation language="ru"><![CDATA[Обзор Тэгов]]></translation>
-        <translation language="zh"><![CDATA[去标签概览页]]></translation>
-        <translation language="de"><![CDATA[zur Schlagwortübersicht]]></translation>
-        <translation language="es"><![CDATA[a la visión general de las etiquetas]]></translation>
-        <translation language="lt"><![CDATA[žymių apžvalga]]></translation>
-        <translation language="uk"><![CDATA[Огляд тегів]]></translation>
-        <translation language="sv"><![CDATA[till taggöversikt]]></translation>
-        <translation language="el"><![CDATA[στην ανασκόπηση των ετικετών]]></translation>
-        <translation language="pl"><![CDATA[Przegląd tagów]]></translation>
-      </item>
-      <item type="label" name="Unsubscribe">
-        <translation language="en"><![CDATA[unsubscribe]]></translation>
-        <translation language="nl"><![CDATA[uitschrijven]]></translation>
-        <translation language="hu"><![CDATA[leiratkozás]]></translation>
-        <translation language="it"><![CDATA[cancella abbonamento]]></translation>
-        <translation language="fr"><![CDATA[se désabonner]]></translation>
-        <translation language="ru"><![CDATA[Отписаться]]></translation>
-        <translation language="zh"><![CDATA[取消订阅]]></translation>
-        <translation language="de"><![CDATA[abbestellen]]></translation>
-        <translation language="es"><![CDATA[Darse de baja]]></translation>
-        <translation language="lt"><![CDATA[nutraukti prenumeratą]]></translation>
-        <translation language="uk"><![CDATA[Відписатися]]></translation>
-        <translation language="sv"><![CDATA[avanmäl]]></translation>
-        <translation language="el"><![CDATA[διακοπή συνδρομής]]></translation>
-        <translation language="pl"><![CDATA[nie subskrybuj]]></translation>
-        <translation language="tr"><![CDATA[aboneliğinizi iptal edin]]></translation>
-      </item>
-      <item type="label" name="ViewLargeMap">
-        <translation language="nl"><![CDATA[Grote kaart weergeven]]></translation>
-        <translation language="en"><![CDATA[Display large map]]></translation>
-        <translation language="ru"><![CDATA[Показать большую карту]]></translation>
-        <translation language="el"><![CDATA[Εμφάνιση μεγάλου χάρτη]]></translation>
-        <translation language="uk"><![CDATA[Показати велику мапу]]></translation>
-        <translation language="hu"><![CDATA[Nagyobb méretű térkép]]></translation>
-        <translation language="zh"><![CDATA[显示大地图]]></translation>
-        <translation language="de"><![CDATA[Große Karte anzeigen]]></translation>
       </item>
       <item type="label" name="Website">
         <translation language="nl"><![CDATA[website]]></translation>
@@ -2018,23 +1657,6 @@
         <translation language="el"><![CDATA[η ερώτησή σας]]></translation>
         <translation language="zh"><![CDATA[你的问题]]></translation>
       </item>
-      <item type="message" name="ActivationIsSuccess">
-        <translation language="nl"><![CDATA[Je profiel werd geactiveerd.]]></translation>
-        <translation language="en"><![CDATA[Your profile was activated.]]></translation>
-        <translation language="fr"><![CDATA[Votre profil est activé.]]></translation>
-        <translation language="hu"><![CDATA[A profilod aktiválva.]]></translation>
-        <translation language="it"><![CDATA[Il tuo profilo è stato attivato.]]></translation>
-        <translation language="ru"><![CDATA[Ваш профиль активирован.]]></translation>
-        <translation language="zh"><![CDATA[你的帐户已经激活。]]></translation>
-        <translation language="de"><![CDATA[Dein Profil wurde aktiviert.]]></translation>
-        <translation language="es"><![CDATA[Tu perfil fue activado.]]></translation>
-        <translation language="lt"><![CDATA[Jūsų anketa buvo aktyvuota.]]></translation>
-        <translation language="uk"><![CDATA[Ваш профіль активовано]]></translation>
-        <translation language="sv"><![CDATA[Din profil är aktiverad]]></translation>
-        <translation language="el"><![CDATA[Το προφίλ σας ενεργοποιήθηκε]]></translation>
-        <translation language="pl"><![CDATA[Twój profil został aktywowany]]></translation>
-        <translation language="tr"><![CDATA[Profiliniz aktive edildi]]></translation>
-      </item>
       <item type="message" name="AlsoInteresting">
         <translation language="nl"><![CDATA[Ook interessant voor jou]]></translation>
         <translation language="en"><![CDATA[Also interesting for you]]></translation>
@@ -2063,168 +1685,6 @@
         <translation language="el"><![CDATA[Δεν βρήκατε αυτό που ψάχνατε; Κάντε τη δική σας ερώτηση!]]></translation>
         <translation language="zh"><![CDATA[没有找到你要找的答案？提个问题吧。]]></translation>
       </item>
-      <item type="message" name="BlogAllComments">
-        <translation language="nl"><![CDATA[Alle reacties op je blog.]]></translation>
-        <translation language="en"><![CDATA[All comments on your blog.]]></translation>
-        <translation language="hu"><![CDATA[Az összes hozzászólás a blogodon.]]></translation>
-        <translation language="it"><![CDATA[Tutti i commenti sul tuo blog.]]></translation>
-        <translation language="fr"><![CDATA[Tous les commentaires sur votre blog]]></translation>
-        <translation language="ru"><![CDATA[Все комментарии блога.]]></translation>
-        <translation language="zh"><![CDATA[你博客上的所有评论。]]></translation>
-        <translation language="de"><![CDATA[Alle Kommentare auf deinem Blog.]]></translation>
-        <translation language="es"><![CDATA[Todos los comentarios en tu blog.]]></translation>
-        <translation language="lt"><![CDATA[Visi komentarai tinklaraštyje.]]></translation>
-        <translation language="uk"><![CDATA[Всі коментарі блога]]></translation>
-        <translation language="sv"><![CDATA[All kommentarer på din blogg.]]></translation>
-        <translation language="el"><![CDATA[Όλα τα σχόλια στο ιστολόγιό σας]]></translation>
-        <translation language="pl"><![CDATA[Wszystkie komentarze na twoim blogu]]></translation>
-      </item>
-      <item type="message" name="BlogCommentInModeration">
-        <translation language="nl"><![CDATA[Je reactie wacht op goedkeuring.]]></translation>
-        <translation language="en"><![CDATA[Your comment is awaiting moderation.]]></translation>
-        <translation language="hu"><![CDATA[A hozzászólásod moderációra vár.]]></translation>
-        <translation language="it"><![CDATA[Il tuo commento è in attesa di moderazione.]]></translation>
-        <translation language="fr"><![CDATA[Votre commentaire est en attente de modération]]></translation>
-        <translation language="ru"><![CDATA[Ваш комментарий ожидает модерации.]]></translation>
-        <translation language="zh"><![CDATA[你的评论正等待审核。]]></translation>
-        <translation language="de"><![CDATA[Dein Kommentar erwartet Moderation.]]></translation>
-        <translation language="es"><![CDATA[Tu comentario está esperando moderación.]]></translation>
-        <translation language="lt"><![CDATA[Komentaras laukia patvirtinimo.]]></translation>
-        <translation language="uk"><![CDATA[Ваш коментар очікує перевірки]]></translation>
-        <translation language="sv"><![CDATA[Din kommentar inväntar granskning.]]></translation>
-        <translation language="el"><![CDATA[Το σχόλιό σας αναμένει έγκριση.]]></translation>
-        <translation language="pl"><![CDATA[Twój komentarz oczekuje na moderację]]></translation>
-      </item>
-      <item type="message" name="BlogCommentIsAdded">
-        <translation language="nl"><![CDATA[Je reactie werd toegevoegd.]]></translation>
-        <translation language="en"><![CDATA[Your comment was added.]]></translation>
-        <translation language="hu"><![CDATA[A hozzászólásod hozzáadva.]]></translation>
-        <translation language="it"><![CDATA[Il tuo commento è stato aggiunto.]]></translation>
-        <translation language="fr"><![CDATA[Votre commentaire a été ajouté]]></translation>
-        <translation language="ru"><![CDATA[Ваш комментарий успешно добавлен.]]></translation>
-        <translation language="zh"><![CDATA[你的评论已发布。]]></translation>
-        <translation language="de"><![CDATA[Dein Kommentar wurde hinzugefügt.]]></translation>
-        <translation language="es"><![CDATA[Tu comentario ha sido agregado.]]></translation>
-        <translation language="lt"><![CDATA[Komentaras įrašytas.]]></translation>
-        <translation language="uk"><![CDATA[Ваш коментар успішно доданий]]></translation>
-        <translation language="sv"><![CDATA[Din kommentar har lagts till.]]></translation>
-        <translation language="el"><![CDATA[Το σχόλιό σας προστέθηκε]]></translation>
-        <translation language="pl"><![CDATA[Twój komentarz został dodany]]></translation>
-      </item>
-      <item type="message" name="BlogCommentIsSpam">
-        <translation language="nl"><![CDATA[Je reactie werd gemarkeerd als spam.]]></translation>
-        <translation language="en"><![CDATA[Your comment was marked as spam.]]></translation>
-        <translation language="hu"><![CDATA[A hozzászólásod spamnek jelölve.]]></translation>
-        <translation language="it"><![CDATA[Il tuo commento è stato segnalato come spam.]]></translation>
-        <translation language="fr"><![CDATA[Votre commentaire a été marqué comme spam]]></translation>
-        <translation language="ru"><![CDATA[Ваш комментарий помечен как спам.]]></translation>
-        <translation language="zh"><![CDATA[你的评论被标记为垃圾评论]]></translation>
-        <translation language="de"><![CDATA[Dein Kommentar wurde als Spam markiert.]]></translation>
-        <translation language="es"><![CDATA[Tu comentario ha sido marcado como spam.]]></translation>
-        <translation language="lt"><![CDATA[Jūsų komentaras pažymėtas kaip spamas.]]></translation>
-        <translation language="uk"><![CDATA[Ваш коментар помічений як спам]]></translation>
-        <translation language="sv"><![CDATA[Din kommentar markerades som skräp,]]></translation>
-        <translation language="el"><![CDATA[Το σχόλιό σας χαρακτηρίσθηκε ανεπιθύμητη αλληλογραφία (spam)]]></translation>
-        <translation language="pl"><![CDATA[Twój komentarz został oznaczony jako spam]]></translation>
-      </item>
-      <item type="message" name="BlogEmailNotificationsNewComment">
-        <translation language="nl"><![CDATA[%1$s reageerde op <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="en"><![CDATA[%1$s commented on <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="hu"><![CDATA[%1$s hozzászólt <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="it"><![CDATA[%1s ha commentato <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="fr"><![CDATA[%1$s a commenté <a href="%2$s">%3$s</a>]]></translation>
-        <translation language="ru"><![CDATA[%1$s прокомментировал <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="zh"><![CDATA[%1$s 在<a href="%2$s">%3$s</a>发表了评论。]]></translation>
-        <translation language="de"><![CDATA[%1$s kommentierte <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="es"><![CDATA[%1$s ha comentado en <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="lt"><![CDATA[%1$s rekomendavo <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="uk"><![CDATA[%1$s прокоментував <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="sv"><![CDATA[%1$s kommenterade på <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="el"><![CDATA[Ο %1$s σχολίασε το <a href="%2$s">%3$s</a>.]]></translation>
-        <translation language="pl"><![CDATA[%1$s skomentował(a) w <a href="%2$s">%3$s</a>.]]></translation>
-      </item>
-      <item type="message" name="BlogEmailNotificationsNewCommentToModerate">
-        <translation language="nl"><![CDATA[%1$s reageerde op <a href="%2$s">%3$s</a>. <a href="%4$s">Modereer</a> deze reactie om ze zichtbaar te maken op de website.]]></translation>
-        <translation language="en"><![CDATA[%1$s commented on <a href="%2$s">%3$s</a>. <a href="%4$s">Moderate</a> the comment to publish it.]]></translation>
-        <translation language="hu"><![CDATA[%1$s hozzászólt <a href="%2$s">%3$s</a>. A hozzászólás <a href="%4$s">moderálása</a> a közzétételhez.]]></translation>
-        <translation language="it"><![CDATA[%1$s ha commentato <a href="%2$s">%3$s</a>. <a href="%4$s">Approva</a> il commento per pubblicarlo.]]></translation>
-        <translation language="fr"><![CDATA[%1$s a commenté <a href="%2$s">%3$s</a>. <a href="%4$s">Moderez</a> le commentaire pour le publier.]]></translation>
-        <translation language="ru"><![CDATA[%1$s прокомментировал <a href="%2$s">%3$s</a>. <a href="%4$s">Промодерируйте</a> комментарий для публикации его на сайте.]]></translation>
-        <translation language="zh"><![CDATA[%1$s在 <a href="%2$s">%3$s</a>发表了评论。 <a href="%4$s">审核通过</a> 这条评论并发布。]]></translation>
-        <translation language="de"><![CDATA[%1$s kommentierte <a href="%2$s">%3$s</a>. <a href="%4$s">Moderiere</a> den Kommentar um ihn zu veröffentlichen.]]></translation>
-        <translation language="lt"><![CDATA[%1$s pakomentavo <a href="%2$s">%3$s</a>. <a href="%4$s">Patvirtinkite</a> komentarą jei norite jį paskelbti.]]></translation>
-        <translation language="uk"><![CDATA[%1$s прокоментував <a href="%2$s">%3$s</a>. <a href="%4$s">Перевірте</a> коментар для публікації його на сайті.]]></translation>
-        <translation language="sv"><![CDATA[%1$s kommenterade på <a href="%2$s">%3$s</a>. <a href="%4$s">Moderera</a> kommentaren för att publicera den.]]></translation>
-        <translation language="el"><![CDATA[Ο %1$s σχολίασε το <a href="%2$s">%3$s</a>. <a href="%4$s">Εγκρίνατε</a> το σχόλιο προς δημοσίευση.]]></translation>
-        <translation language="pl"><![CDATA[%1$s skomentował <a href="%2$s>%3$s</a>.<a href="%4$s">Moderuj</a> ten komentarz aby go opublikować.]]></translation>
-      </item>
-      <item type="message" name="BlogNoComments">
-        <translation language="nl"><![CDATA[Reageer als eerste]]></translation>
-        <translation language="en"><![CDATA[Be the first to comment]]></translation>
-        <translation language="hu"><![CDATA[Légyen tiéd az első hozzászólás]]></translation>
-        <translation language="it"><![CDATA[Commenta per primo]]></translation>
-        <translation language="fr"><![CDATA[Soyez le premier à commenter]]></translation>
-        <translation language="ru"><![CDATA[Будьте первым, оставьте комментарий]]></translation>
-        <translation language="zh"><![CDATA[发表评论]]></translation>
-        <translation language="de"><![CDATA[Schreib den ersten Kommentar]]></translation>
-        <translation language="es"><![CDATA[Sé el primero en comentar]]></translation>
-        <translation language="lt"><![CDATA[Tavo komentaras bus pirmas!]]></translation>
-        <translation language="uk"><![CDATA[Будьте першими, залиште коментар]]></translation>
-        <translation language="sv"><![CDATA[Bli först att kommentera]]></translation>
-        <translation language="el"><![CDATA[Σχολιάστε, είστε ο πρώτος!]]></translation>
-        <translation language="pl"><![CDATA[Brak komentarzy]]></translation>
-      </item>
-      <item type="message" name="BlogNoItems">
-        <translation language="nl"><![CDATA[Er zijn nog geen blogposts.]]></translation>
-        <translation language="en"><![CDATA[There are no articles yet.]]></translation>
-        <translation language="hu"><![CDATA[Itt már nincs több cikk.]]></translation>
-        <translation language="it"><![CDATA[Ancora non ci sono articoli.]]></translation>
-        <translation language="fr"><![CDATA[Il n'y a pas encore d'articles.]]></translation>
-        <translation language="ru"><![CDATA[Не найдено записей.]]></translation>
-        <translation language="zh"><![CDATA[目前还没有文章。]]></translation>
-        <translation language="de"><![CDATA[Es gibt noch keine Artikel.]]></translation>
-        <translation language="es"><![CDATA[No hay artículos por el momento.]]></translation>
-        <translation language="lt"><![CDATA[Kolkas nėra įrašų.]]></translation>
-        <translation language="uk"><![CDATA[Записів не знайдено]]></translation>
-        <translation language="sv"><![CDATA[Det finns inga artiklar än]]></translation>
-        <translation language="el"><![CDATA[Δεν υπάρχουν ακόμη άρθρα.]]></translation>
-        <translation language="pl"><![CDATA[Brak artykułów]]></translation>
-        <translation language="tr"><![CDATA[Henüz hiç makaleleri bulunmamaktadır.]]></translation>
-      </item>
-      <item type="message" name="BlogNumberOfComments">
-        <translation language="nl"><![CDATA[Al %1$s reacties]]></translation>
-        <translation language="en"><![CDATA[%1$s comments]]></translation>
-        <translation language="hu"><![CDATA[%1$s hozzászólás]]></translation>
-        <translation language="it"><![CDATA[%1$s commenti]]></translation>
-        <translation language="fr"><![CDATA[%1$s commentaires]]></translation>
-        <translation language="ru"><![CDATA[%1$s комментариев]]></translation>
-        <translation language="zh"><![CDATA[%1$s 条评论]]></translation>
-        <translation language="de"><![CDATA[%1$s Kommentare]]></translation>
-        <translation language="es"><![CDATA[%1$s comentarios]]></translation>
-        <translation language="lt"><![CDATA[%1$s komentarai(-ų)]]></translation>
-        <translation language="uk"><![CDATA[Коментарів - %1$s]]></translation>
-        <translation language="sv"><![CDATA[%1$s kommentarer]]></translation>
-        <translation language="el"><![CDATA[%1$s σχόλια]]></translation>
-        <translation language="pl"><![CDATA[%1$s komentarzy]]></translation>
-        <translation language="tr"><![CDATA[%1$s yorum]]></translation>
-      </item>
-      <item type="message" name="BlogOneComment">
-        <translation language="nl"><![CDATA[Al 1 reactie]]></translation>
-        <translation language="en"><![CDATA[1 comment already]]></translation>
-        <translation language="hu"><![CDATA[1 hozzászólás van]]></translation>
-        <translation language="it"><![CDATA[già 1 commento]]></translation>
-        <translation language="fr"><![CDATA[Déjà 1 commentaire]]></translation>
-        <translation language="ru"><![CDATA[1 комментарий]]></translation>
-        <translation language="zh"><![CDATA[1条评论]]></translation>
-        <translation language="de"><![CDATA[bereits 1 Kommentar]]></translation>
-        <translation language="es"><![CDATA[1 comentario]]></translation>
-        <translation language="lt"><![CDATA[1 komentaras]]></translation>
-        <translation language="uk"><![CDATA[1 коментар]]></translation>
-        <translation language="sv"><![CDATA[1 kommentar redan]]></translation>
-        <translation language="el"><![CDATA[1 σχόλιο]]></translation>
-        <translation language="pl"><![CDATA[1 komentarz]]></translation>
-        <translation language="tr"><![CDATA[1 yorum]]></translation>
-      </item>
       <item type="message" name="ChangeEmail">
         <translation language="nl"><![CDATA[wijzig uw e-mail adres]]></translation>
         <translation language="en"><![CDATA[change your e-mail address]]></translation>
@@ -2240,39 +1700,6 @@
         <translation language="sv"><![CDATA[ändra din e-postadress]]></translation>
         <translation language="el"><![CDATA[Αλλάξτε τη διεύθυνση email σας]]></translation>
         <translation language="pl"><![CDATA[Zmień swój adres e-mail]]></translation>
-      </item>
-      <item type="message" name="Comment">
-        <translation language="nl"><![CDATA[reageer]]></translation>
-        <translation language="en"><![CDATA[comment]]></translation>
-        <translation language="hu"><![CDATA[hozzászólás]]></translation>
-        <translation language="it"><![CDATA[commento]]></translation>
-        <translation language="fr"><![CDATA[commentez]]></translation>
-        <translation language="ru"><![CDATA[Отправить]]></translation>
-        <translation language="zh"><![CDATA[评论]]></translation>
-        <translation language="de"><![CDATA[kommentieren]]></translation>
-        <translation language="es"><![CDATA[comment]]></translation>
-        <translation language="lt"><![CDATA[komentuoti]]></translation>
-        <translation language="uk"><![CDATA[Надіслати коментар]]></translation>
-        <translation language="sv"><![CDATA[kommentar]]></translation>
-        <translation language="el"><![CDATA[Σχολιάστε]]></translation>
-        <translation language="tr"><![CDATA[yorum]]></translation>
-        <translation language="pl"><![CDATA[komentarz]]></translation>
-      </item>
-      <item type="message" name="CommentsOn">
-        <translation language="nl"><![CDATA[Reacties op %1$s]]></translation>
-        <translation language="en"><![CDATA[Comments on %1$s]]></translation>
-        <translation language="hu"><![CDATA[Hozzászólás a(z) %1$s]]></translation>
-        <translation language="it"><![CDATA[Commenti riguardo %1$s]]></translation>
-        <translation language="fr"><![CDATA[Commentaires sur %1$s]]></translation>
-        <translation language="ru"><![CDATA[Комментарии к %1$s]]></translation>
-        <translation language="zh"><![CDATA[发表在 %1$s 上的评论]]></translation>
-        <translation language="de"><![CDATA[Kommentare zu %1$s]]></translation>
-        <translation language="es"><![CDATA[Comentarios en %1$s]]></translation>
-        <translation language="lt"><![CDATA[Komentaras apie %1$s]]></translation>
-        <translation language="uk"><![CDATA[Коментарі до %1$s]]></translation>
-        <translation language="sv"><![CDATA[Kommentarer på %1$s]]></translation>
-        <translation language="el"><![CDATA[Σχόλια γιά %1$s]]></translation>
-        <translation language="pl"><![CDATA[Komentarze w %1$s]]></translation>
       </item>
       <item type="message" name="ContactMessageSent">
         <translation language="nl"><![CDATA[Uw e-mail werd verzonden.]]></translation>
@@ -2306,13 +1733,6 @@
         <translation language="el"><![CDATA[Στείλτε email από τη φόρμα επικοινωνίας.]]></translation>
         <translation language="pl"><![CDATA[E-mail poprzez formularz kontaktowy.]]></translation>
       </item>
-      <item type="message" name="CookiesWarning">
-        <translation language="nl"><![CDATA[Om de gebruikerservaring van deze site te verbeteren gebruikt deze website <a href="/disclaimer">cookies</a>.]]></translation>
-        <translation language="en"><![CDATA[To improve the user experience on this site we use <a href="/disclaimer">cookies</a>.]]></translation>
-        <translation language="fr"><![CDATA[Pour améliorer l'expérience utilisateur sur ce site, nous utilisons des <a href="/disclaimer">cookies</a>.]]></translation>
-        <translation language="de"><![CDATA[Wir verwenden <a href="/disclaimer">Cookies</a> um Ihr Benutzer-Erlebnis zu verbessern.]]></translation>
-        <translation language="es"><![CDATA[Para mejorar la experiencia del usuario en este sitio utilizamos <a href="/disclaimer">cookies</a>.]]></translation>
-      </item>
       <item type="message" name="EN">
         <translation language="nl"><![CDATA[Engels]]></translation>
         <translation language="en"><![CDATA[English]]></translation>
@@ -2345,48 +1765,6 @@
         <translation language="el"><![CDATA[Σας συνιστούμε να ενεργοποιήσετε τη javascript γιά τη χρήση αυτού του ιστοχώρου.]]></translation>
         <translation language="pl"><![CDATA[Aby strona wyświetlana była poprawnie nalezy miec włączone javascript.]]></translation>
         <translation language="tr"><![CDATA[Javascripi etkinleştirin]]></translation>
-      </item>
-      <item type="message" name="FaqFeedbackSubject">
-        <translation language="nl"><![CDATA[Er is feedback op "%1$s"]]></translation>
-        <translation language="en"><![CDATA[There is feedback on "%1$s"]]></translation>
-        <translation language="ru"><![CDATA[Это ответ на "%1$s"]]></translation>
-        <translation language="fr"><![CDATA[Il y a des commentaires sur "%1$s"]]></translation>
-        <translation language="es"><![CDATA[hay un feedback en "%1$s"]]></translation>
-        <translation language="de"><![CDATA[Es gibt Feedback zu "%1$s"]]></translation>
-        <translation language="lt"><![CDATA[Atsiliepimai apie  "%1$s"]]></translation>
-        <translation language="uk"><![CDATA[Це відповідь на "%1$s"]]></translation>
-        <translation language="sv"><![CDATA[Det finns återkoppling på "%1$s"]]></translation>
-        <translation language="hu"><![CDATA[Van visszajelzés a(z) "%1$s"-hoz/hez.]]></translation>
-        <translation language="el"><![CDATA[Υπάρχουν γνώμες επάνω στο "%1$s"]]></translation>
-        <translation language="zh"><![CDATA["%1$s"有一条回复]]></translation>
-      </item>
-      <item type="message" name="FaqNoItems">
-        <translation language="nl"><![CDATA[Er zijn nog geen vragen.]]></translation>
-        <translation language="en"><![CDATA[There are no questions yet.]]></translation>
-        <translation language="ru"><![CDATA[Пока нет вопросов.]]></translation>
-        <translation language="fr"><![CDATA[Il n'ya pas encore de questions.]]></translation>
-        <translation language="es"><![CDATA[No hay preguntas aun.]]></translation>
-        <translation language="de"><![CDATA[Es gibt noch keine Fragen.]]></translation>
-        <translation language="lt"><![CDATA[Kolkas klausimų nėra.]]></translation>
-        <translation language="uk"><![CDATA[Запитань ще немає]]></translation>
-        <translation language="sv"><![CDATA[Det finns inga frågor än.]]></translation>
-        <translation language="hu"><![CDATA[Nincs még kérdés.]]></translation>
-        <translation language="el"><![CDATA[Δεν υπάρχουν ακόμη ερωτήσεις.]]></translation>
-        <translation language="zh"><![CDATA[还没有人提问。]]></translation>
-      </item>
-      <item type="message" name="FaqOwnQuestionSubject">
-        <translation language="nl"><![CDATA[Een vraag van %1$s.]]></translation>
-        <translation language="en"><![CDATA[A question from %1$s.]]></translation>
-        <translation language="ru"><![CDATA[Вопрос от %1$s.]]></translation>
-        <translation language="fr"><![CDATA[Une question de %1$s.]]></translation>
-        <translation language="es"><![CDATA[Una pregunta de %1$s.]]></translation>
-        <translation language="de"><![CDATA[Eine Frage von %1$s.]]></translation>
-        <translation language="lt"><![CDATA[Klausia %1$s.]]></translation>
-        <translation language="uk"><![CDATA[Запитання від from %1$s.]]></translation>
-        <translation language="sv"><![CDATA[En fråga från %1$s.]]></translation>
-        <translation language="hu"><![CDATA[Egy kérdés: %1$s.]]></translation>
-        <translation language="el"><![CDATA[Μία ερώτηση από %1$s.]]></translation>
-        <translation language="zh"><![CDATA[一条来自 %1$s 的问题。]]></translation>
       </item>
       <item type="message" name="Feedback">
         <translation language="nl"><![CDATA[Ben je geholpen met dit antwoord?]]></translation>
@@ -2514,21 +1892,6 @@
         <translation language="el"><![CDATA[Ξεχάσατε τον κωδικό σας;]]></translation>
         <translation language="pl"><![CDATA[zapomniałeś hasła?]]></translation>
         <translation language="tr"><![CDATA[Şifrenizi mi unuttunuz?]]></translation>
-      </item>
-      <item type="message" name="FormBuilderSubject">
-        <translation language="nl"><![CDATA[Nieuwe inzending voor formulier "%1$s".]]></translation>
-        <translation language="en"><![CDATA[New submission for form "%1$s".]]></translation>
-        <translation language="fr"><![CDATA[Nouvelle soumission pour le formulaire "%1$s".]]></translation>
-        <translation language="it"><![CDATA[Form "%1$s" compilata.]]></translation>
-        <translation language="hu"><![CDATA[New submission for form "%1$s".]]></translation>
-        <translation language="ru"><![CDATA[Новое сообщение из формы "%1$s".]]></translation>
-        <translation language="zh"><![CDATA[有人在表单“%1$s"提交了新内容。]]></translation>
-        <translation language="de"><![CDATA[Neue Einsendungen für Formular "%1$s".]]></translation>
-        <translation language="lt"><![CDATA[Naujas pranešimas - "%1$s".]]></translation>
-        <translation language="uk"><![CDATA[Нове повідомлення з форми "%1$s".]]></translation>
-        <translation language="sv"><![CDATA[Nya inskick för formuläret "%1$s".]]></translation>
-        <translation language="el"><![CDATA[Νέα υποβολή γιά τη φόρμα "%1$s".]]></translation>
-        <translation language="pl"><![CDATA[Nowe zgłoszenie dla formularza "%1$s".]]></translation>
       </item>
       <item type="message" name="FR">
         <translation language="nl"><![CDATA[Frans]]></translation>
@@ -2889,16 +2252,6 @@
         <translation language="el"><![CDATA[Η ερώτησή σας απεστάλη. Θα σας απαντήσουμε το συντομότερο δυνατόν.]]></translation>
         <translation language="zh"><![CDATA[你的问题已发送。我们将尽快给你答复。]]></translation>
       </item>
-      <item type="message" name="ProfilesLoggedInAs">
-        <translation language="nl"><![CDATA[Je bent aangemeld als <a href="%2$s">%1$s</a>.]]></translation>
-        <translation language="en"><![CDATA[You are logged on as <a href="%2$s">%1$s</a>.]]></translation>
-        <translation language="ru"><![CDATA[Вы вошли как <a href="%2$s">%1$s</a>.]]></translation>
-        <translation language="el"><![CDATA[Έχετε συνδεθεί ως <a href="%2$s">%1$s</a>.]]></translation>
-        <translation language="uk"><![CDATA[Ви зайшли як <a href="%2$s">%1$s</a>.]]></translation>
-        <translation language="hu"><![CDATA[Beléptél mint <a href="%2$s">%1$s</a>.]]></translation>
-        <translation language="zh"><![CDATA[你已作为 <a href="%2$s">%1$s</a> 登入。]]></translation>
-        <translation language="de"><![CDATA[Du bist eingeloggt als <a href="%2$s">%1$s</a>.]]></translation>
-      </item>
       <item type="message" name="QuestionsInSameCategory">
         <translation language="nl"><![CDATA[Andere vragen in deze categorie]]></translation>
         <translation language="en"><![CDATA[Other questions in this category]]></translation>
@@ -2944,55 +2297,6 @@
         <translation language="sv"><![CDATA[Med vänlig hälsning,<br/><br/>The Fork CMS teamet]]></translation>
         <translation language="el"><![CDATA[Με τιμή,<br/><br/>η ομάδα του Fork CMS]]></translation>
         <translation language="pl"><![CDATA[Z poważaniem,<br /><br />Zespół Fork CMS]]></translation>
-      </item>
-      <item type="message" name="RegisterIsSuccess">
-        <translation language="nl"><![CDATA[Welkom! Je ontvangt binnen de tien minuten een e-mail waarmee je je profiel kan activeren. Ondertussen kan je de website al gebruiken, zij het iets gelimiteerder.]]></translation>
-        <translation language="en"><![CDATA[Welcome! In less than ten minutes you will receive an activation mail. In the mean while you can use the website in a limited form.]]></translation>
-        <translation language="fr"><![CDATA[Bienvenue! Vous allez recevoir, dans moins de dix minutes, vous recevrez un e-mail vous permettant d'activer votre profile.]]></translation>
-        <translation language="it"><![CDATA[Benvenuto! Entro dieci minuti riceverai una mail di attivazione. Nel frattempo puoi usare il sito in forma limitata.]]></translation>
-        <translation language="hu"><![CDATA[Üdvözlünk! Kevesebb mint tíz percen belül kapni fogsz egy akcivációs levelet. Ez azt jelenti, hogy addig korlátozottan tudod használni a honlapot.]]></translation>
-        <translation language="ru"><![CDATA[Добро пожаловать! В ближайшие 10 минут вы получите сообщение с ссылкой на активацию профиля. В то же время, вы можете пользоваться сайтом без активации, но с ограничениями.]]></translation>
-        <translation language="zh"><![CDATA[欢迎！你将会在十分钟内受到一封激活邮件。与此同时，网站已经可以使用了，只是在正式激活前，部分功能会受到限制。]]></translation>
-        <translation language="de"><![CDATA[Willkommen! In weniger als zehn Minuten wirst du eine Aktivierungs-Mail erhalten. Bis dahin kannst du die Website in eingeschränkter Weise benutzen.]]></translation>
-        <translation language="es"><![CDATA[¡Bienvenido! En menos de 10 minutos recibiras un mail para activar tu cuenta. Mientras puedes acceder a la web de manera limitada.]]></translation>
-        <translation language="lt"><![CDATA[Sveiki! Per artimiausias 10 min. jus gausite pranešimą su nuorodą profilio aktyvacijai. Iki tol jus galėsite naršyti tinklpayję, bet su tam tikrais apribojimais.]]></translation>
-        <translation language="uk"><![CDATA[Ласкаво просимо! В найближчі 10 хвилин на Ваш e-mail Ви отримаєте повідомлення із посиланням на активацію профілю]]></translation>
-        <translation language="sv"><![CDATA[Välkommen! Om mindre än 10 minuter kommer du få ett aktiveringsmeddelande. Under tiden kan du besöka en begränsad version av webbplatsen.]]></translation>
-        <translation language="el"><![CDATA[Καλωσήλθατε! Σε λίγη ώρα θα λάβετε ένα email ενεργοποίησης. Στο μεταξύ μπορείτε να χρησιμοποιήσετε τον ιστοχώρο, αλλά με κάποιους περιορισμούς.]]></translation>
-        <translation language="pl"><![CDATA[Witamy! W mniej niż dziesięć minut otrzymasz mail aktywacyjny. W międzyczasie możesz korzystac z witryny w formie ograniczonej.]]></translation>
-      </item>
-      <item type="message" name="RegisterSalutation">
-        <translation language="nl"><![CDATA[Beste,]]></translation>
-        <translation language="en"><![CDATA[Dear,]]></translation>
-        <translation language="fr"><![CDATA[Bonjour,]]></translation>
-        <translation language="hu"><![CDATA[Kedves]]></translation>
-        <translation language="it"><![CDATA[Caro,]]></translation>
-        <translation language="ru"><![CDATA[Уважаемый,]]></translation>
-        <translation language="zh"><![CDATA[你好，]]></translation>
-        <translation language="de"><![CDATA[Liebe(r),]]></translation>
-        <translation language="es"><![CDATA[Hola,]]></translation>
-        <translation language="lt"><![CDATA[Gerb.,]]></translation>
-        <translation language="uk"><![CDATA[Шановний,]]></translation>
-        <translation language="sv"><![CDATA[Kära,]]></translation>
-        <translation language="el"><![CDATA[Αγαπητέ/ή]]></translation>
-        <translation language="pl"><![CDATA[Drogi,]]></translation>
-        <translation language="tr"><![CDATA[Sayın,]]></translation>
-      </item>
-      <item type="message" name="RegisterSubject">
-        <translation language="nl"><![CDATA[Activeer je Fork CMS-profiel]]></translation>
-        <translation language="en"><![CDATA[Activate your Fork CMS-profile]]></translation>
-        <translation language="fr"><![CDATA[Activez votre profil Fork CMS]]></translation>
-        <translation language="hu"><![CDATA[Fork CMS profilod aktiválva]]></translation>
-        <translation language="it"><![CDATA[Attiva il tuo profilo Fork CMS]]></translation>
-        <translation language="ru"><![CDATA[Вы должны активировать профиль.]]></translation>
-        <translation language="zh"><![CDATA[激活你的Fork CMS帐户]]></translation>
-        <translation language="de"><![CDATA[Aktiviere dein Fork CMS-Profil]]></translation>
-        <translation language="es"><![CDATA[Activar tu perfil Fork CMS]]></translation>
-        <translation language="lt"><![CDATA[Turite aktyvuoti savo profilį]]></translation>
-        <translation language="uk"><![CDATA[Ви повинні активувати профіль]]></translation>
-        <translation language="sv"><![CDATA[Aktivera din Fork CMS-profil]]></translation>
-        <translation language="el"><![CDATA[Ενεργοποιείστε το προφίλ σας στο Fork CMS]]></translation>
-        <translation language="pl"><![CDATA[Aktywuj swój profil Fork CMS]]></translation>
       </item>
       <item type="message" name="RelatedQuestions">
         <translation language="nl"><![CDATA[Lees ook]]></translation>
@@ -3040,22 +2344,6 @@
         <translation language="el"><![CDATA[Ο κωδικός σας αποθηκεύτηκε]]></translation>
         <translation language="pl"><![CDATA[Twoje hasło zostało zapisane]]></translation>
       </item>
-      <item type="message" name="SearchNoItems">
-        <translation language="nl"><![CDATA[Er zijn geen resultaten.]]></translation>
-        <translation language="en"><![CDATA[There were no results.]]></translation>
-        <translation language="hu"><![CDATA[Nincs találat.]]></translation>
-        <translation language="it"><![CDATA[Non ci sono risultati.]]></translation>
-        <translation language="fr"><![CDATA[Il n'y a pas de résultats.]]></translation>
-        <translation language="ru"><![CDATA[Не найдено.]]></translation>
-        <translation language="zh"><![CDATA[没有找到相关结果。]]></translation>
-        <translation language="de"><![CDATA[Für diesen Suchbegriff gibt es keine Ergebnisse.]]></translation>
-        <translation language="es"><![CDATA[Sin resultados.]]></translation>
-        <translation language="lt"><![CDATA[Nerasta.]]></translation>
-        <translation language="uk"><![CDATA[Не знайдено]]></translation>
-        <translation language="sv"><![CDATA[Det fanns inga resultat.]]></translation>
-        <translation language="el"><![CDATA[Δεν υπάρχουν αποτελέσματα.]]></translation>
-        <translation language="pl"><![CDATA[Brak wyników.]]></translation>
-      </item>
       <item type="message" name="SubscribeSuccess">
         <translation language="en"><![CDATA[You have successfully subscribed to the newsletter.]]></translation>
         <translation language="nl"><![CDATA[Je bent met success ingeschreven op de nieuwsbrief.]]></translation>
@@ -3071,22 +2359,6 @@
         <translation language="sv"><![CDATA[Du prenumererar nu på nyhetsbrevet.]]></translation>
         <translation language="el"><![CDATA[Έχετε εγγραφεί με επιτυχία συνδρομητής στο ενημερωτικό φυλλάδιο.]]></translation>
         <translation language="pl"><![CDATA[Udało Ci się zapisac do newslettera.]]></translation>
-      </item>
-      <item type="message" name="TagsNoItems">
-        <translation language="nl"><![CDATA[Er werden nog geen tags gebruikt.]]></translation>
-        <translation language="en"><![CDATA[No tags were used.]]></translation>
-        <translation language="hu"><![CDATA[Nincs címke használatban.]]></translation>
-        <translation language="it"><![CDATA[Non sono stati usati tag.]]></translation>
-        <translation language="fr"><![CDATA[Aucun tag n'a été utilisé.]]></translation>
-        <translation language="ru"><![CDATA[Нет тэгов.]]></translation>
-        <translation language="zh"><![CDATA[尚未使用标签。]]></translation>
-        <translation language="de"><![CDATA[Es wurden keine Schlagworte verwendet.]]></translation>
-        <translation language="es"><![CDATA[Ninguna etiqueta se ha usado.]]></translation>
-        <translation language="lt"><![CDATA[Nėra žymių.]]></translation>
-        <translation language="uk"><![CDATA[Тегів не має]]></translation>
-        <translation language="sv"><![CDATA[Inga taggar användes.]]></translation>
-        <translation language="el"><![CDATA[Δεν χρησιμοποιήθηκαν καθόλου ετικέτες.]]></translation>
-        <translation language="pl"><![CDATA[Nie wykorzystano jeszcze tagów]]></translation>
       </item>
       <item type="message" name="UnsubscribeSuccess">
         <translation language="en"><![CDATA[You have successfully unsubscribed from the newsletter.]]></translation>
@@ -3231,22 +2503,6 @@
         <translation language="sv"><![CDATA[Författare är ett obligatoriskt fält.]]></translation>
         <translation language="el"><![CDATA[Ο Συγγραφέας είναι υποχρεωτικό πεδίο.]]></translation>
         <translation language="pl"><![CDATA[Pole Autor jest wymagane.]]></translation>
-      </item>
-      <item type="error" name="CommentTimeout">
-        <translation language="nl"><![CDATA[Slow down cowboy]]></translation>
-        <translation language="en"><![CDATA[Slow down cowboy]]></translation>
-        <translation language="hu"><![CDATA[Lassíts cowboy]]></translation>
-        <translation language="it"><![CDATA[Vai piano cowboy]]></translation>
-        <translation language="fr"><![CDATA[Ralentissez cowboy]]></translation>
-        <translation language="ru"><![CDATA[Не торопись, ковбой]]></translation>
-        <translation language="zh"><![CDATA[休息一下吧]]></translation>
-        <translation language="de"><![CDATA[Slow down cowboy]]></translation>
-        <translation language="es"><![CDATA[Más lento cowboy]]></translation>
-        <translation language="lt"><![CDATA[Neskubėk, atsipusk ...]]></translation>
-        <translation language="uk"><![CDATA[Не поспішай, ковбоє]]></translation>
-        <translation language="sv"><![CDATA[Sakta ner cowboy]]></translation>
-        <translation language="el"><![CDATA[Λίγο πιό αργά...]]></translation>
-        <translation language="pl"><![CDATA[zwolnij kowboju]]></translation>
       </item>
       <item type="error" name="ContactErrorWhileSending">
         <translation language="nl"><![CDATA[Er ging iets mis tijdens het verzenden]]></translation>
@@ -3406,20 +2662,6 @@
         <translation language="hu"><![CDATA[Kérlek adj visszajelzést.]]></translation>
         <translation language="el"><![CDATA[Παρακλώ πείτε τη γνώμη σας]]></translation>
         <translation language="zh"><![CDATA[请回复。]]></translation>
-      </item>
-      <item type="error" name="FeedbackSpam">
-        <translation language="nl"><![CDATA[Jouw feedback werd als spam gemarkeerd.]]></translation>
-        <translation language="en"><![CDATA[Your feedback was marked as spam.]]></translation>
-        <translation language="ru"><![CDATA[Ваше сообщение было помечено как спам.]]></translation>
-        <translation language="fr"><![CDATA[Vos commentaires a été marqué comme spam.]]></translation>
-        <translation language="es"><![CDATA[Tu feedback ha sido marcado como spam.]]></translation>
-        <translation language="de"><![CDATA[Dein Feedback wurde als Spam eingestuft.]]></translation>
-        <translation language="lt"><![CDATA[Jūsų atsiliepimas pažymėtas kaip spamas.]]></translation>
-        <translation language="uk"><![CDATA[Ваше повідомленн]]></translation>
-        <translation language="sv"><![CDATA[Din återkoppling var markerad som skräp.]]></translation>
-        <translation language="hu"><![CDATA[A visszajelzésed spamnak jelölve.]]></translation>
-        <translation language="el"><![CDATA[Η γνώμη σας χαρακτηρίστηκε ανεπιθύμητο μήνυμα (spam)]]></translation>
-        <translation language="zh"><![CDATA[你的回复被标记为垃圾信息。]]></translation>
       </item>
       <item type="error" name="FieldIsRequired">
         <translation language="nl"><![CDATA[Dit veld is verplicht.]]></translation>
@@ -3605,20 +2847,6 @@
         <translation language="el"><![CDATA[Επιτρέπονται μόνον αριθμοί]]></translation>
         <translation language="pl"><![CDATA[Dozwolone sa tylko znaki numeryczne.]]></translation>
       </item>
-      <item type="error" name="OwnQuestionSpam">
-        <translation language="nl"><![CDATA[Jouw vraag werd als spam gemarkeerd.]]></translation>
-        <translation language="en"><![CDATA[Your question was marked as spam.]]></translation>
-        <translation language="ru"><![CDATA[Ваш вопрос был помечен как спам.]]></translation>
-        <translation language="fr"><![CDATA[Votre question a été marqué comme spam.]]></translation>
-        <translation language="es"><![CDATA[Tupregunta ha sido marcada como spam.]]></translation>
-        <translation language="de"><![CDATA[Deine Frage wurde als Spam eingestuft.]]></translation>
-        <translation language="lt"><![CDATA[Jūsų klausimas pažymėtas kaip spamas.]]></translation>
-        <translation language="uk"><![CDATA[Ваше запитання було помічено як спам.]]></translation>
-        <translation language="sv"><![CDATA[Dina fråga var markerad som skräp.]]></translation>
-        <translation language="hu"><![CDATA[A kérdésed spamnak jelölve.]]></translation>
-        <translation language="el"><![CDATA[Η ερώτησή σας χαρακτηρίστηκε ανεπιθύμητο μήνυμα (spam)]]></translation>
-        <translation language="zh"><![CDATA[你的问题被标记为垃圾内容。]]></translation>
-      </item>
       <item type="error" name="PasswordIsRequired">
         <translation language="nl"><![CDATA[Wachtwoord is een verplicht veld.]]></translation>
         <translation language="en"><![CDATA[Password is a required field.]]></translation>
@@ -3634,87 +2862,6 @@
         <translation language="sv"><![CDATA[Lösenord är ett obligatoriskt fält.]]></translation>
         <translation language="el"><![CDATA[Ο Κωδικός είναι υποχρεωτικό πεδίο.]]></translation>
         <translation language="pl"><![CDATA[Pole hasło jest wymagane.]]></translation>
-      </item>
-      <item type="error" name="ProfileIsActive">
-        <translation language="en"><![CDATA[This profile is already activated.]]></translation>
-        <translation language="nl"><![CDATA[Dit profiel is reeds geactiveerd.]]></translation>
-        <translation language="fr"><![CDATA[Ce profil a été activé.]]></translation>
-        <translation language="hu"><![CDATA[Ez a profil már aktiválva van.]]></translation>
-        <translation language="it"><![CDATA[Questo profilo è già stato attivato.]]></translation>
-        <translation language="ru"><![CDATA[Этот профиль уже активен.]]></translation>
-        <translation language="zh"><![CDATA[帐户已激活。]]></translation>
-        <translation language="de"><![CDATA[Dieses Profil ist bereits aktiviert.]]></translation>
-        <translation language="es"><![CDATA[Este perfil está actualmente activado.]]></translation>
-        <translation language="lt"><![CDATA[Šis profilis jau aktyvus.]]></translation>
-        <translation language="uk"><![CDATA[Цей профіль вже активовано.]]></translation>
-        <translation language="sv"><![CDATA[Denna profil är redan aktiverad.]]></translation>
-        <translation language="el"><![CDATA[Αυτό το προφίλ είναι ήδη ενεργοποιημένο.]]></translation>
-        <translation language="tr"><![CDATA[Bu profil daha önce etkinleştirildi.]]></translation>
-        <translation language="pl"><![CDATA[Ten profil został już aktywowany.]]></translation>
-      </item>
-      <item type="error" name="ProfilesBlockedLogin">
-        <translation language="nl"><![CDATA[Aanmelden mislukt. Dit profiel is geblokkeerd.]]></translation>
-        <translation language="en"><![CDATA[Login failed. This profile is blocked.]]></translation>
-        <translation language="fr"><![CDATA[Echec de la connexion. Ce profil est bloqué.]]></translation>
-        <translation language="hu"><![CDATA[Belépés megtagadva. Ez a profil blokkolva lett.]]></translation>
-        <translation language="it"><![CDATA[Login fallito. Questo profilo è bloccato.]]></translation>
-        <translation language="ru"><![CDATA[Ошибка входа. Профиль заблокирован.]]></translation>
-        <translation language="zh"><![CDATA[登录失败，这个帐户被封锁了。。]]></translation>
-        <translation language="de"><![CDATA[Anmeldung fehlgeschlagen. Dieses Profil ist gesperrt.]]></translation>
-        <translation language="es"><![CDATA[Falló login. Este perfil está bloqueado.]]></translation>
-        <translation language="lt"><![CDATA[Prisijungimo klaida. Profilis užblokuotas.]]></translation>
-        <translation language="uk"><![CDATA[Помилка входу. Профіль заблокований.]]></translation>
-        <translation language="sv"><![CDATA[Inloggningen misslyckades. Denna profil är blockerad.]]></translation>
-        <translation language="el"><![CDATA[Η Σύνδεση απέτυχε. Αυτό το προφίλ είναι μπλοκαρισμένο.]]></translation>
-        <translation language="pl"><![CDATA[Logowanie nie powiodło sie. Profil jest zablokowany.]]></translation>
-      </item>
-      <item type="error" name="ProfilesDeletedLogin">
-        <translation language="nl"><![CDATA[Aanmelden mislukt. Dit profiel is verwijderd.]]></translation>
-        <translation language="en"><![CDATA[Login failed. This profile has been deleted.]]></translation>
-        <translation language="fr"><![CDATA[Echec de la connexion. Ce profil a été supprimé.]]></translation>
-        <translation language="hu"><![CDATA[Belépés megtagadva. Ez a profil törölve lett.]]></translation>
-        <translation language="it"><![CDATA[Login fallito. Questo profilo è stato eliminato.]]></translation>
-        <translation language="ru"><![CDATA[Ошибка входа. Профиль удален.]]></translation>
-        <translation language="zh"><![CDATA[登录失败，这个帐户已被删除。]]></translation>
-        <translation language="de"><![CDATA[Anmeldung fehlgeschlagen. Dieses Profil wurde gelöscht.]]></translation>
-        <translation language="es"><![CDATA[Falló login. Este perfil ha sido eliminado.]]></translation>
-        <translation language="lt"><![CDATA[Prisijungimo klaida. Profilis ištrintas.]]></translation>
-        <translation language="uk"><![CDATA[Помилка входу. Профіль видалений.]]></translation>
-        <translation language="sv"><![CDATA[Inloggningen misslyckades. Denna profil är borttagen.]]></translation>
-        <translation language="el"><![CDATA[Η Σύνδεση απέτυχε. Αυτό το προφίλ έχει διαγραφεί.]]></translation>
-        <translation language="pl"><![CDATA[Logowanie nie powiodło się. Ponieważ ten profil został usunięty.]]></translation>
-      </item>
-      <item type="error" name="ProfilesInactiveLogin">
-        <translation language="nl"><![CDATA[Aanmelden mislukt. Dit profiel is nog niet geactiveerd. <a href="%1$s">Verstuur activatie e-mail opnieuw</a>.]]></translation>
-        <translation language="en"><![CDATA[Login failed. This profile is not yet activated. <a href="%1$s">Resend activation e-mail</a>.]]></translation>
-        <translation language="fr"><![CDATA[Echec de la connexion. Ce profil n'est pas encore activé. <a href="%1$s">Envoyez à nouveau le-mail d'activation</a>.]]></translation>
-        <translation language="hu"><![CDATA[Belépés megtagadva. Ez a profil nincs aktiválva. <a href="%1$s">Aktivációs e-mail újraküldése.</a>]]></translation>
-        <translation language="it"><![CDATA[Login fallito. Questo profilo non è stato ancora attivato. <a href="%1$s">Resend activation e-mail</a>]]></translation>
-        <translation language="ru"><![CDATA[Ошибка входа. Профиль не был активирован. <a href="%1$s">Отправить письмо активации еще раз</a>.]]></translation>
-        <translation language="zh"><![CDATA[登录失败，这个帐户还没激活。Login failed. This profile is not yet activated. <a href="%1$s">点此重新发送激活邮件</a>。]]></translation>
-        <translation language="de"><![CDATA[Anmelden fehlgeschlagen. Dieses Profil ist noch nicht aktiviert. <a href="%1$s">Aktivierungsmail erneut senden</a>.]]></translation>
-        <translation language="es"><![CDATA[Falló login. Este perfil no ha sido activado aun. <a href="%1$s">Re-envia el e-mail de activación</a>.]]></translation>
-        <translation language="lt"><![CDATA[Prisijungimo klaida. Profilis nebuvo aktyvuotas. <a href="%1$s">Dar kartą gauti aktyvacijos nuorodą į paštą</a>.]]></translation>
-        <translation language="uk"><![CDATA[Помилка входу. Профіль не був активирований. <a href="%1$s">Надіслати листа для активації ще раз</a>.]]></translation>
-        <translation language="sv"><![CDATA[Inloggningen misslyckades. Denna profil är inte aktiverad än. <a href="%1$s">Skicka aktiveringsmeddelande igen</a>.Inloggning]]></translation>
-        <translation language="el"><![CDATA[Η Σύνδεση απέτυχε. Αυτό το προφίλ δεν έχει ακόμη ενεργοποιηθεί. <a href="%1$s">Επανάληψη αποστολής του email ενεργοποίησης</a>.]]></translation>
-        <translation language="pl"><![CDATA[Nieudane logowanie. Ten profil nie został jeszcze aktywowany. <a href="%1$s">Wyślij ponownie link aktywacyjny na e-mail</a>.]]></translation>
-      </item>
-      <item type="error" name="ProfilesInvalidLogin">
-        <translation language="nl"><![CDATA[Aanmelden mislukt. Controleer je e-mail en je wachtwoord.]]></translation>
-        <translation language="en"><![CDATA[Login failed. Please check your e-mail and your password.]]></translation>
-        <translation language="fr"><![CDATA[Echec de la connexion. V&eacute;rifiez votre e-mail et votre mot de passe.]]></translation>
-        <translation language="hu"><![CDATA[Belépés megtagadva. Kérlek ellenőrizd az e-mail-t és a jelszót.]]></translation>
-        <translation language="it"><![CDATA[Login fallito. Ricontrolla la tua e-mail e la password per favore.]]></translation>
-        <translation language="ru"><![CDATA[Ошибка входа. Проверьте правильность пары логин\пароль.]]></translation>
-        <translation language="zh"><![CDATA[登录失败，请确认邮箱和密码输入正确。]]></translation>
-        <translation language="de"><![CDATA[Anmeldung fehlgeschlagen. Bitte überprüf deine E-Mail-Adresse und dein Passwort.]]></translation>
-        <translation language="es"><![CDATA[Falló login. Por favor comprueba tu e-mail y tu contraseña.]]></translation>
-        <translation language="lt"><![CDATA[Prisijungimo klaida. Patikrinkite ar teisingas slaptažodis ir slapyvardis.]]></translation>
-        <translation language="uk"><![CDATA[Помилка входу. Перевірте правильність пари логін/пароль]]></translation>
-        <translation language="sv"><![CDATA[Inloggningen misslyckades. Vänligen kontrollera din e-postadress och lösenord.]]></translation>
-        <translation language="el"><![CDATA[Η Σύνδεση απέτυχε. Παρακαλώ ελέγξτε το email σας και τον Κωδικό σας.]]></translation>
-        <translation language="pl"><![CDATA[Logowanie nie powiodło się. Sprawdź swój e-mail i hasło.]]></translation>
       </item>
       <item type="error" name="QuestionIsRequired">
         <translation language="nl"><![CDATA[Gelieve een vraag te formuleren.]]></translation>
@@ -3762,22 +2909,6 @@
         <translation language="el"><![CDATA[Η εγγραφή συνδρομής απέτυχε]]></translation>
         <translation language="pl"><![CDATA[Zapisywanie nie powiodło się]]></translation>
       </item>
-      <item type="error" name="TermIsRequired">
-        <translation language="nl"><![CDATA[De zoekterm is verplicht.]]></translation>
-        <translation language="en"><![CDATA[The searchterm is required.]]></translation>
-        <translation language="hu"><![CDATA[A keresési feltétel közelető.]]></translation>
-        <translation language="it"><![CDATA[Il termine di ricerca è obbligatorio.]]></translation>
-        <translation language="fr"><![CDATA[Le terme recherché est requis.]]></translation>
-        <translation language="ru"><![CDATA[Ключевые слова - обязательное поле]]></translation>
-        <translation language="zh"><![CDATA[请输入关键词。]]></translation>
-        <translation language="de"><![CDATA[Es muss ein Suchbegriff angegeben werden.]]></translation>
-        <translation language="es"><![CDATA[El término a buscar es requerido.]]></translation>
-        <translation language="lt"><![CDATA[Raktiniai žodžiai - būtini.]]></translation>
-        <translation language="uk"><![CDATA[Ключові слова - обов'язкове поле.]]></translation>
-        <translation language="sv"><![CDATA[Sökterm måste anges.]]></translation>
-        <translation language="el"><![CDATA[Ο όρος αναζήτησης είναι υποχρεωτικός]]></translation>
-        <translation language="pl"><![CDATA[Szukana fraza jest wymagana.]]></translation>
-      </item>
       <item type="error" name="UnsubscribeFailed">
         <translation language="en"><![CDATA[Unsubscribing failed]]></translation>
         <translation language="nl"><![CDATA[Het uitschrijven is niet gelukt]]></translation>
@@ -3809,21 +2940,6 @@
         <translation language="pl"><![CDATA[archiwum]]></translation>
         <translation language="tr"><![CDATA[arsiv]]></translation>
       </item>
-      <item type="action" name="ArticleCommentsRss">
-        <translation language="nl"><![CDATA[reacties-op-rss]]></translation>
-        <translation language="en"><![CDATA[comments-on-rss]]></translation>
-        <translation language="hu"><![CDATA[hozzaszolasok-rss-en]]></translation>
-        <translation language="it"><![CDATA[commenti-su-rss]]></translation>
-        <translation language="fr"><![CDATA[commentaires-sur-rss]]></translation>
-        <translation language="ru"><![CDATA[RSS-лента-комментариев]]></translation>
-        <translation language="zh"><![CDATA[文章评论rss]]></translation>
-        <translation language="de"><![CDATA[kommentare-zu-rss]]></translation>
-        <translation language="es"><![CDATA[comentarios-en-rss]]></translation>
-        <translation language="lt"><![CDATA[komentarai-rss]]></translation>
-        <translation language="sv"><![CDATA[kommentarer-på-rss]]></translation>
-        <translation language="el"><![CDATA[σχόλια-στο-rss]]></translation>
-        <translation language="pl"><![CDATA[komentarze-w-rss]]></translation>
-      </item>
       <item type="action" name="Category">
         <translation language="nl"><![CDATA[categorie]]></translation>
         <translation language="en"><![CDATA[category]]></translation>
@@ -3839,54 +2955,6 @@
         <translation language="el"><![CDATA[κατηγορία]]></translation>
         <translation language="pl"><![CDATA[kategoria]]></translation>
         <translation language="tr"><![CDATA[kategori]]></translation>
-      </item>
-      <item type="action" name="Comment">
-        <translation language="nl"><![CDATA[reageer]]></translation>
-        <translation language="en"><![CDATA[comment]]></translation>
-        <translation language="hu"><![CDATA[hozzaszolas]]></translation>
-        <translation language="it"><![CDATA[commento]]></translation>
-        <translation language="fr"><![CDATA[commentaire]]></translation>
-        <translation language="ru"><![CDATA[комментарий]]></translation>
-        <translation language="zh"><![CDATA[评论]]></translation>
-        <translation language="de"><![CDATA[kommentar]]></translation>
-        <translation language="es"><![CDATA[comentario]]></translation>
-        <translation language="lt"><![CDATA[komentaras]]></translation>
-        <translation language="sv"><![CDATA[kommentera]]></translation>
-        <translation language="el"><![CDATA[σχόλιο]]></translation>
-        <translation language="pl"><![CDATA[komentarz]]></translation>
-        <translation language="tr"><![CDATA[yorum]]></translation>
-      </item>
-      <item type="action" name="Comments">
-        <translation language="nl"><![CDATA[reacties]]></translation>
-        <translation language="en"><![CDATA[comments]]></translation>
-        <translation language="hu"><![CDATA[hozzaszolasok]]></translation>
-        <translation language="it"><![CDATA[commenti]]></translation>
-        <translation language="fr"><![CDATA[commentaires]]></translation>
-        <translation language="ru"><![CDATA[комментарии]]></translation>
-        <translation language="zh"><![CDATA[评论]]></translation>
-        <translation language="de"><![CDATA[kommentare]]></translation>
-        <translation language="es"><![CDATA[comentarios]]></translation>
-        <translation language="lt"><![CDATA[komentarai]]></translation>
-        <translation language="sv"><![CDATA[kommentarer]]></translation>
-        <translation language="el"><![CDATA[σχόλια]]></translation>
-        <translation language="pl"><![CDATA[komentarze]]></translation>
-        <translation language="tr"><![CDATA[yorumlar]]></translation>
-      </item>
-      <item type="action" name="CommentsRss">
-        <translation language="nl"><![CDATA[reacties-rss]]></translation>
-        <translation language="en"><![CDATA[comments-rss]]></translation>
-        <translation language="hu"><![CDATA[hozzaszolasok-rss]]></translation>
-        <translation language="it"><![CDATA[commenti-rss]]></translation>
-        <translation language="fr"><![CDATA[commentaires-rss]]></translation>
-        <translation language="ru"><![CDATA[rss-комментарии]]></translation>
-        <translation language="zh"><![CDATA[全部评论rss]]></translation>
-        <translation language="de"><![CDATA[kommentar-rss]]></translation>
-        <translation language="es"><![CDATA[comentarios-rss]]></translation>
-        <translation language="lt"><![CDATA[komentaru-rss]]></translation>
-        <translation language="sv"><![CDATA[kommentarer-rss]]></translation>
-        <translation language="el"><![CDATA[σχόλια-rss]]></translation>
-        <translation language="pl"><![CDATA[komentarze-rss]]></translation>
-        <translation language="tr"><![CDATA[yorum-rss]]></translation>
       </item>
       <item type="action" name="Detail">
         <translation language="nl"><![CDATA[detail]]></translation>
@@ -3962,19 +3030,6 @@
         <translation language="pl"><![CDATA[rss]]></translation>
         <translation language="tr"><![CDATA[rss]]></translation>
       </item>
-      <item type="action" name="Spam">
-        <translation language="nl"><![CDATA[spam]]></translation>
-        <translation language="en"><![CDATA[spam]]></translation>
-        <translation language="ru"><![CDATA[спам]]></translation>
-        <translation language="fr"><![CDATA[spam]]></translation>
-        <translation language="es"><![CDATA[spam]]></translation>
-        <translation language="de"><![CDATA[spam]]></translation>
-        <translation language="lt"><![CDATA[spamas]]></translation>
-        <translation language="sv"><![CDATA[skräp]]></translation>
-        <translation language="hu"><![CDATA[spam]]></translation>
-        <translation language="el"><![CDATA[ανεπιθύμητη-αλληλογραφία]]></translation>
-        <translation language="zh"><![CDATA[举报]]></translation>
-      </item>
       <item type="action" name="Subscribe">
         <translation language="en"><![CDATA[subscribe]]></translation>
         <translation language="nl"><![CDATA[inschrijven]]></translation>
@@ -4023,23 +3078,6 @@
   </Frontend>
   <Backend>
     <Core>
-      <item type="label" name="ProfileSettings">
-        <translation language="nl"><![CDATA[instellingen]]></translation>
-        <translation language="en"><![CDATA[settings]]></translation>
-        <translation language="fr"><![CDATA[préférences]]></translation>
-        <translation language="hu"><![CDATA[beállítások]]></translation>
-        <translation language="it"><![CDATA[impostazioni]]></translation>
-        <translation language="ru"><![CDATA[Настройки]]></translation>
-        <translation language="zh"><![CDATA[帐户设置]]></translation>
-        <translation language="de"><![CDATA[Einstellungen]]></translation>
-        <translation language="es"><![CDATA[preferencias]]></translation>
-        <translation language="lt"><![CDATA[nustatymai]]></translation>
-        <translation language="uk"><![CDATA[Налаштування]]></translation>
-        <translation language="sv"><![CDATA[inställningar]]></translation>
-        <translation language="el"><![CDATA[ρυθμίσεις]]></translation>
-        <translation language="pl"><![CDATA[ustawienia]]></translation>
-        <translation language="tr"><![CDATA[Profil ayarları]]></translation>
-      </item>
       <item type="label" name="AccountManagement">
         <translation language="nl"><![CDATA[account beheer]]></translation>
         <translation language="en"><![CDATA[account management]]></translation>
@@ -4247,40 +3285,6 @@
         <translation language="tr"><![CDATA[tüm e-posta adresleri]]></translation>
         <translation language="pl"><![CDATA[wszystkie e-maile]]></translation>
       </item>
-      <item type="label" name="AllComments">
-        <translation language="nl"><![CDATA[alle reacties]]></translation>
-        <translation language="en"><![CDATA[all comments]]></translation>
-        <translation language="hu"><![CDATA[összes hozzaszólás]]></translation>
-        <translation language="it"><![CDATA[tutti i commenti]]></translation>
-        <translation language="ru"><![CDATA[Все комментарии]]></translation>
-        <translation language="zh"><![CDATA[所有评论]]></translation>
-        <translation language="de"><![CDATA[alle Kommentare]]></translation>
-        <translation language="fr"><![CDATA[tous les commentaires]]></translation>
-        <translation language="es"><![CDATA[todos los comentarios]]></translation>
-        <translation language="lt"><![CDATA[visi komentarai]]></translation>
-        <translation language="uk"><![CDATA[Всі коментарі]]></translation>
-        <translation language="sv"><![CDATA[alla kommentarer]]></translation>
-        <translation language="el"><![CDATA[όλα τα σχόλια]]></translation>
-        <translation language="pl"><![CDATA[wszystkie komentarze]]></translation>
-        <translation language="tr"><![CDATA[tüm yorumlar]]></translation>
-      </item>
-      <item type="label" name="AllowComments">
-        <translation language="nl"><![CDATA[reacties toestaan]]></translation>
-        <translation language="en"><![CDATA[allow comments]]></translation>
-        <translation language="hu"><![CDATA[hozzaszólások jóváhagyása]]></translation>
-        <translation language="it"><![CDATA[consenti commenti]]></translation>
-        <translation language="ru"><![CDATA[Разрешить комментарии]]></translation>
-        <translation language="zh"><![CDATA[允许评论]]></translation>
-        <translation language="de"><![CDATA[Kommentare erlauben]]></translation>
-        <translation language="fr"><![CDATA[autoriser les commentaires]]></translation>
-        <translation language="es"><![CDATA[permitir comentarios]]></translation>
-        <translation language="lt"><![CDATA[galima komentuoti]]></translation>
-        <translation language="uk"><![CDATA[Дозволити коментарі]]></translation>
-        <translation language="sv"><![CDATA[tillåt kommentarer]]></translation>
-        <translation language="el"><![CDATA[να επιτρέπονται τα σχόλια]]></translation>
-        <translation language="pl"><![CDATA[zazwól na komentarze]]></translation>
-        <translation language="tr"><![CDATA[yorumlara izin ver]]></translation>
-      </item>
       <item type="label" name="AllPages">
         <translation language="nl"><![CDATA[alle pagina's]]></translation>
         <translation language="en"><![CDATA[all pages]]></translation>
@@ -4392,23 +3396,6 @@
         <translation language="el"><![CDATA[κλειδί API]]></translation>
         <translation language="tr"><![CDATA[API key]]></translation>
         <translation language="pl"><![CDATA[Klucz API]]></translation>
-      </item>
-      <item type="label" name="APIKeys">
-        <translation language="nl"><![CDATA[API keys]]></translation>
-        <translation language="en"><![CDATA[API keys]]></translation>
-        <translation language="hu"><![CDATA[API kulcsok]]></translation>
-        <translation language="it"><![CDATA[Chiavi API]]></translation>
-        <translation language="ru"><![CDATA[API ключи]]></translation>
-        <translation language="zh"><![CDATA[API keys]]></translation>
-        <translation language="de"><![CDATA[API keys]]></translation>
-        <translation language="fr"><![CDATA[Clefs API]]></translation>
-        <translation language="es"><![CDATA[API keys]]></translation>
-        <translation language="lt"><![CDATA[API raktai]]></translation>
-        <translation language="uk"><![CDATA[API ключі]]></translation>
-        <translation language="sv"><![CDATA[API nyklar]]></translation>
-        <translation language="el"><![CDATA[κλειδιά API]]></translation>
-        <translation language="tr"><![CDATA[API keys]]></translation>
-        <translation language="pl"><![CDATA[Klucze API]]></translation>
       </item>
       <item type="label" name="APIURL">
         <translation language="nl"><![CDATA[API URL]]></translation>
@@ -5017,40 +4004,6 @@
         <translation language="zh"><![CDATA[中文]]></translation>
         <translation language="tr"><![CDATA[Çince]]></translation>
       </item>
-      <item type="label" name="Comment">
-        <translation language="nl"><![CDATA[reactie]]></translation>
-        <translation language="en"><![CDATA[comment]]></translation>
-        <translation language="hu"><![CDATA[komment]]></translation>
-        <translation language="it"><![CDATA[commento]]></translation>
-        <translation language="ru"><![CDATA[Комментарий]]></translation>
-        <translation language="zh"><![CDATA[评论]]></translation>
-        <translation language="de"><![CDATA[Kommentar]]></translation>
-        <translation language="fr"><![CDATA[commentaire]]></translation>
-        <translation language="es"><![CDATA[comentario]]></translation>
-        <translation language="lt"><![CDATA[komentaras]]></translation>
-        <translation language="uk"><![CDATA[Коментар]]></translation>
-        <translation language="sv"><![CDATA[kommentar]]></translation>
-        <translation language="el"><![CDATA[σχόλιο]]></translation>
-        <translation language="tr"><![CDATA[yorum]]></translation>
-        <translation language="pl"><![CDATA[komenatrz]]></translation>
-      </item>
-      <item type="label" name="Comments">
-        <translation language="nl"><![CDATA[reacties]]></translation>
-        <translation language="en"><![CDATA[comments]]></translation>
-        <translation language="hu"><![CDATA[kommentek]]></translation>
-        <translation language="it"><![CDATA[commenti]]></translation>
-        <translation language="ru"><![CDATA[Комментарии]]></translation>
-        <translation language="zh"><![CDATA[评论]]></translation>
-        <translation language="de"><![CDATA[Kommentare]]></translation>
-        <translation language="fr"><![CDATA[commentaires]]></translation>
-        <translation language="es"><![CDATA[comentarios]]></translation>
-        <translation language="lt"><![CDATA[komentarai]]></translation>
-        <translation language="uk"><![CDATA[Коментарі]]></translation>
-        <translation language="sv"><![CDATA[kommentarer]]></translation>
-        <translation language="el"><![CDATA[σχόλια]]></translation>
-        <translation language="tr"><![CDATA[yorumlar]]></translation>
-        <translation language="pl"><![CDATA[komenatrze]]></translation>
-      </item>
       <item type="label" name="ConfirmPassword">
         <translation language="nl"><![CDATA[bevestig wachtwoord]]></translation>
         <translation language="en"><![CDATA[confirm password]]></translation>
@@ -5563,38 +4516,6 @@
         <translation language="el"><![CDATA[μεταβλήθηκε στις]]></translation>
         <translation language="pl"><![CDATA[edytowane w]]></translation>
       </item>
-      <item type="label" name="Editor">
-        <translation language="nl"><![CDATA[editor]]></translation>
-        <translation language="en"><![CDATA[editor]]></translation>
-        <translation language="hu"><![CDATA[szerkesztő]]></translation>
-        <translation language="it"><![CDATA[editor]]></translation>
-        <translation language="ru"><![CDATA[Изменил]]></translation>
-        <translation language="zh"><![CDATA[编辑人]]></translation>
-        <translation language="de"><![CDATA[Editor]]></translation>
-        <translation language="fr"><![CDATA[éditeur]]></translation>
-        <translation language="es"><![CDATA[editor]]></translation>
-        <translation language="lt"><![CDATA[redagavo:]]></translation>
-        <translation language="uk"><![CDATA[Змінив]]></translation>
-        <translation language="sv"><![CDATA[redaktör]]></translation>
-        <translation language="el"><![CDATA[επεξεργαστής κειμένου]]></translation>
-        <translation language="pl"><![CDATA[edytor]]></translation>
-      </item>
-      <item type="label" name="EditProfile">
-        <translation language="nl"><![CDATA[bewerk profiel]]></translation>
-        <translation language="en"><![CDATA[edit profile]]></translation>
-        <translation language="hu"><![CDATA[profil szerkesztése]]></translation>
-        <translation language="it"><![CDATA[modifica profilo]]></translation>
-        <translation language="ru"><![CDATA[Редактировать профиль]]></translation>
-        <translation language="zh"><![CDATA[编辑个人档案]]></translation>
-        <translation language="de"><![CDATA[Profil bearbeiten]]></translation>
-        <translation language="fr"><![CDATA[éditer le profil]]></translation>
-        <translation language="es"><![CDATA[editar perfil]]></translation>
-        <translation language="lt"><![CDATA[keisti profilį]]></translation>
-        <translation language="uk"><![CDATA[Редагувати профіль]]></translation>
-        <translation language="sv"><![CDATA[ändra profil]]></translation>
-        <translation language="el"><![CDATA[μεταβολή προφίλ]]></translation>
-        <translation language="pl"><![CDATA[edytuj profil]]></translation>
-      </item>
       <item type="label" name="EditTemplate">
         <translation language="nl"><![CDATA[template wijzigen]]></translation>
         <translation language="en"><![CDATA[edit template]]></translation>
@@ -5800,22 +4721,6 @@
         <translation language="tr"><![CDATA[ekstra metataglar]]></translation>
         <translation language="pl"><![CDATA[dodatkowe metatagi]]></translation>
       </item>
-      <item type="label" name="Faq">
-        <translation language="nl"><![CDATA[FAQ]]></translation>
-        <translation language="en"><![CDATA[FAQ]]></translation>
-        <translation language="hu"><![CDATA[GYIK]]></translation>
-        <translation language="it"><![CDATA[FAQ]]></translation>
-        <translation language="ru"><![CDATA[FAQ]]></translation>
-        <translation language="zh"><![CDATA[FAQ]]></translation>
-        <translation language="de"><![CDATA[FAQ]]></translation>
-        <translation language="fr"><![CDATA[FAQ]]></translation>
-        <translation language="es"><![CDATA[FAQ]]></translation>
-        <translation language="lt"><![CDATA[D.U.K.]]></translation>
-        <translation language="uk"><![CDATA[ЧаПи]]></translation>
-        <translation language="sv"><![CDATA[FAQ]]></translation>
-        <translation language="el"><![CDATA[Συχνές Ερωτήσεις]]></translation>
-        <translation language="pl"><![CDATA[FAQ]]></translation>
-      </item>
       <item type="label" name="Feedback">
         <translation language="nl"><![CDATA[feedback]]></translation>
         <translation language="en"><![CDATA[feedback]]></translation>
@@ -5860,21 +4765,6 @@
         <translation language="sv"><![CDATA[filnamn]]></translation>
         <translation language="el"><![CDATA[όνομα αρχείου]]></translation>
         <translation language="pl"><![CDATA[nazwa pliku]]></translation>
-      </item>
-      <item type="label" name="FilterCommentsForSpam">
-        <translation language="nl"><![CDATA[filter reacties op spam]]></translation>
-        <translation language="en"><![CDATA[filter comments for spam]]></translation>
-        <translation language="hu"><![CDATA[szűrő megjegyzések spam miatt]]></translation>
-        <translation language="it"><![CDATA[filtra i commenti dallo spam]]></translation>
-        <translation language="ru"><![CDATA[Фильтровать комментарии от спама]]></translation>
-        <translation language="zh"><![CDATA[垃圾评论过滤器]]></translation>
-        <translation language="fr"><![CDATA[filtrer les commentaires pour le spam]]></translation>
-        <translation language="de"><![CDATA[Kommentare nach Spam filtern]]></translation>
-        <translation language="es"><![CDATA[filtrar comentarios por spam]]></translation>
-        <translation language="lt"><![CDATA[filtruoti komentarus nuo šlamšto]]></translation>
-        <translation language="uk"><![CDATA[Фільтрувати коментарі від спаму]]></translation>
-        <translation language="sv"><![CDATA[filtrera kommentarer för spam]]></translation>
-        <translation language="el"><![CDATA[σχόλια φίλτρου γιά ανεπιθύμητη αλληλογραφία]]></translation>
       </item>
       <item type="label" name="Follow">
         <translation language="nl"><![CDATA[follow]]></translation>
@@ -5923,22 +4813,6 @@
         <translation language="sv"><![CDATA[glömt lösenord]]></translation>
         <translation language="el"><![CDATA[ξέχασα τον κωδικό]]></translation>
         <translation language="pl"><![CDATA[zapomniałeś hasło]]></translation>
-      </item>
-      <item type="label" name="FormBuilder">
-        <translation language="nl"><![CDATA[formbuilder]]></translation>
-        <translation language="en"><![CDATA[formbuilder]]></translation>
-        <translation language="hu"><![CDATA[űrlapkészítő]]></translation>
-        <translation language="it"><![CDATA[formbuilder]]></translation>
-        <translation language="ru"><![CDATA[Генератор Форм]]></translation>
-        <translation language="zh"><![CDATA[表单创建器]]></translation>
-        <translation language="fr"><![CDATA[créateur de formulaire]]></translation>
-        <translation language="de"><![CDATA[Formbuilder]]></translation>
-        <translation language="es"><![CDATA[creador de formulario]]></translation>
-        <translation language="lt"><![CDATA[formų generatorius]]></translation>
-        <translation language="uk"><![CDATA[Генератор форм]]></translation>
-        <translation language="sv"><![CDATA[formulärbyggare]]></translation>
-        <translation language="el"><![CDATA[σχεδιαστής φορμών]]></translation>
-        <translation language="pl"><![CDATA[Kreator formularzy]]></translation>
       </item>
       <item type="label" name="FR">
         <translation language="nl"><![CDATA[Frans]]></translation>
@@ -6065,21 +4939,6 @@
         <translation language="sv"><![CDATA[grupp]]></translation>
         <translation language="el"><![CDATA[ομάδα]]></translation>
         <translation language="pl"><![CDATA[grupa]]></translation>
-      </item>
-      <item type="label" name="GroupMap">
-        <translation language="nl"><![CDATA[algemene kaart: alle locaties]]></translation>
-        <translation language="en"><![CDATA[general map: all locations]]></translation>
-        <translation language="hu"><![CDATA[általános térkép: minden hely]]></translation>
-        <translation language="it"><![CDATA[mappa generale: tutte le posizioni]]></translation>
-        <translation language="ru"><![CDATA[Главная карта: Все]]></translation>
-        <translation language="zh"><![CDATA[常规地图：所有位置]]></translation>
-        <translation language="fr"><![CDATA[Carte globale: tous les emplacements]]></translation>
-        <translation language="de"><![CDATA[Allgemeine Karte: Alle Orte]]></translation>
-        <translation language="es"><![CDATA[mapa general: todas las localizaciones]]></translation>
-        <translation language="lt"><![CDATA[Pagrindinis žemėlapis: visos vietos]]></translation>
-        <translation language="uk"><![CDATA[Головна мапа: все]]></translation>
-        <translation language="sv"><![CDATA[översiktskarta: alla platser]]></translation>
-        <translation language="el"><![CDATA[γενικός χάρτης : όλες οι τοποθεσίες]]></translation>
       </item>
       <item type="label" name="Groups">
         <translation language="nl"><![CDATA[groepen]]></translation>
@@ -6522,21 +5381,6 @@
         <translation language="sv"><![CDATA[senast sparad]]></translation>
         <translation language="el"><![CDATA[τελευταία αποθήκευση]]></translation>
       </item>
-      <item type="label" name="LatestComments">
-        <translation language="nl"><![CDATA[laatste reacties]]></translation>
-        <translation language="en"><![CDATA[latest comments]]></translation>
-        <translation language="hu"><![CDATA[utolsó komment]]></translation>
-        <translation language="it"><![CDATA[ultimi commenti]]></translation>
-        <translation language="ru"><![CDATA[Последние Комментарии]]></translation>
-        <translation language="zh"><![CDATA[最新评论]]></translation>
-        <translation language="de"><![CDATA[neueste Kommentare]]></translation>
-        <translation language="fr"><![CDATA[derniers commentaires]]></translation>
-        <translation language="es"><![CDATA[últimos comentarios]]></translation>
-        <translation language="lt"><![CDATA[komentuota]]></translation>
-        <translation language="uk"><![CDATA[Останні коментарі]]></translation>
-        <translation language="sv"><![CDATA[senast kommentar]]></translation>
-        <translation language="el"><![CDATA[τελευταία σχόλια]]></translation>
-      </item>
       <item type="label" name="Layout">
         <translation language="nl"><![CDATA[layout]]></translation>
         <translation language="en"><![CDATA[layout]]></translation>
@@ -6594,21 +5438,6 @@
         <translation language="uk"><![CDATA[Мова]]></translation>
         <translation language="sv"><![CDATA[språk]]></translation>
         <translation language="el"><![CDATA[τοπικές ρυθμίσεις]]></translation>
-      </item>
-      <item type="label" name="Location">
-        <translation language="nl"><![CDATA[locatie]]></translation>
-        <translation language="en"><![CDATA[location]]></translation>
-        <translation language="hu"><![CDATA[hely]]></translation>
-        <translation language="it"><![CDATA[posizione]]></translation>
-        <translation language="ru"><![CDATA[Положение]]></translation>
-        <translation language="zh"><![CDATA[位置]]></translation>
-        <translation language="fr"><![CDATA[emplacement]]></translation>
-        <translation language="de"><![CDATA[Ort]]></translation>
-        <translation language="es"><![CDATA[localización]]></translation>
-        <translation language="lt"><![CDATA[lokacija]]></translation>
-        <translation language="uk"><![CDATA[Положення]]></translation>
-        <translation language="sv"><![CDATA[lokalisering]]></translation>
-        <translation language="el"><![CDATA[τοποθεσία]]></translation>
       </item>
       <item type="label" name="Login">
         <translation language="nl"><![CDATA[aanmelden]]></translation>
@@ -6693,156 +5522,6 @@
         <translation language="el"><![CDATA[Λιθουανικά]]></translation>
         <translation language="zh"><![CDATA[立陶宛语]]></translation>
       </item>
-      <item type="label" name="Mailmotor">
-        <translation language="en"><![CDATA[mailmotor]]></translation>
-        <translation language="nl"><![CDATA[mailmotor]]></translation>
-        <translation language="hu"><![CDATA[mailmotor]]></translation>
-        <translation language="it"><![CDATA[mailmotor]]></translation>
-        <translation language="ru"><![CDATA[MailMotor]]></translation>
-        <translation language="zh"><![CDATA[邮件]]></translation>
-        <translation language="de"><![CDATA[mailmotor]]></translation>
-        <translation language="fr"><![CDATA[mailmotor]]></translation>
-        <translation language="es"><![CDATA[mailmotor]]></translation>
-        <translation language="lt"><![CDATA[mailmotor]]></translation>
-        <translation language="uk"><![CDATA[MailMotor]]></translation>
-        <translation language="sv"><![CDATA[mailmotor]]></translation>
-        <translation language="el"><![CDATA[μηχανή αποστολής email (mailmotor)]]></translation>
-      </item>
-      <item type="label" name="MailmotorClicks">
-        <translation language="en"><![CDATA[clicks]]></translation>
-        <translation language="nl"><![CDATA[kliks]]></translation>
-        <translation language="hu"><![CDATA[kattintás]]></translation>
-        <translation language="it"><![CDATA[click]]></translation>
-        <translation language="ru"><![CDATA[Клики]]></translation>
-        <translation language="zh"><![CDATA[点击]]></translation>
-        <translation language="de"><![CDATA[Klicks]]></translation>
-        <translation language="fr"><![CDATA[clics]]></translation>
-        <translation language="es"><![CDATA[clicks]]></translation>
-        <translation language="lt"><![CDATA[paspaudimai]]></translation>
-        <translation language="uk"><![CDATA[Кліки]]></translation>
-        <translation language="sv"><![CDATA[klick]]></translation>
-        <translation language="el"><![CDATA[κλικαρίσματα]]></translation>
-      </item>
-      <item type="label" name="MailmotorGroups">
-        <translation language="en"><![CDATA[groups]]></translation>
-        <translation language="nl"><![CDATA[doelgroepen]]></translation>
-        <translation language="hu"><![CDATA[csoportok]]></translation>
-        <translation language="it"><![CDATA[gruppi]]></translation>
-        <translation language="ru"><![CDATA[Группы]]></translation>
-        <translation language="zh"><![CDATA[邮件组]]></translation>
-        <translation language="de"><![CDATA[Gruppen]]></translation>
-        <translation language="fr"><![CDATA[groupes]]></translation>
-        <translation language="lt"><![CDATA[groups]]></translation>
-        <translation language="uk"><![CDATA[Групи]]></translation>
-        <translation language="es"><![CDATA[grupos]]></translation>
-        <translation language="sv"><![CDATA[grupper]]></translation>
-        <translation language="el"><![CDATA[ομάδες]]></translation>
-      </item>
-      <item type="label" name="MailmotorLatestMailing">
-        <translation language="en"><![CDATA[last sent mailing]]></translation>
-        <translation language="nl"><![CDATA[laatst verzonden mailing]]></translation>
-        <translation language="hu"><![CDATA[utoljára küldött mail]]></translation>
-        <translation language="it"><![CDATA[ultimo invio]]></translation>
-        <translation language="ru"><![CDATA[Последняя рассылка]]></translation>
-        <translation language="zh"><![CDATA[最后一次发送]]></translation>
-        <translation language="fr"><![CDATA[dernier mailing envoyé]]></translation>
-        <translation language="de"><![CDATA[zuletzt versandter Newsletter]]></translation>
-        <translation language="es"><![CDATA[último envio]]></translation>
-        <translation language="lt"><![CDATA[paskutiniai siuntiniai]]></translation>
-        <translation language="uk"><![CDATA[Остання розсилка]]></translation>
-        <translation language="sv"><![CDATA[senast skickade mail]]></translation>
-        <translation language="el"><![CDATA[τελευταία ταχυδρόμηση]]></translation>
-      </item>
-      <item type="label" name="MailmotorOpened">
-        <translation language="en"><![CDATA[opened]]></translation>
-        <translation language="nl"><![CDATA[geopend]]></translation>
-        <translation language="hu"><![CDATA[megnyitott]]></translation>
-        <translation language="it"><![CDATA[aperto]]></translation>
-        <translation language="ru"><![CDATA[Открыто]]></translation>
-        <translation language="zh"><![CDATA[已打开]]></translation>
-        <translation language="de"><![CDATA[geöffnet]]></translation>
-        <translation language="fr"><![CDATA[ouvert]]></translation>
-        <translation language="es"><![CDATA[abierto]]></translation>
-        <translation language="lt"><![CDATA[ativira]]></translation>
-        <translation language="uk"><![CDATA[Відкрито]]></translation>
-        <translation language="sv"><![CDATA[öppnat]]></translation>
-        <translation language="el"><![CDATA[έναρξη ταχυδρόμησης]]></translation>
-      </item>
-      <item type="label" name="MailmotorSendDate">
-        <translation language="en"><![CDATA[send date]]></translation>
-        <translation language="nl"><![CDATA[verzenddatum]]></translation>
-        <translation language="hu"><![CDATA[küldés dátuma]]></translation>
-        <translation language="it"><![CDATA[data di invio]]></translation>
-        <translation language="ru"><![CDATA[Дата отправки]]></translation>
-        <translation language="zh"><![CDATA[发送日期]]></translation>
-        <translation language="fr"><![CDATA[date d'envoi]]></translation>
-        <translation language="de"><![CDATA[Versanddatum]]></translation>
-        <translation language="es"><![CDATA[fecha de envio]]></translation>
-        <translation language="lt"><![CDATA[išsiuntimo data]]></translation>
-        <translation language="uk"><![CDATA[Дата надсилання]]></translation>
-        <translation language="sv"><![CDATA[skickat den]]></translation>
-        <translation language="el"><![CDATA[ημερομηνία αποστολής]]></translation>
-      </item>
-      <item type="label" name="MailmotorSent">
-        <translation language="en"><![CDATA[sent]]></translation>
-        <translation language="nl"><![CDATA[verzonden]]></translation>
-        <translation language="hu"><![CDATA[elküldött]]></translation>
-        <translation language="it"><![CDATA[inviato]]></translation>
-        <translation language="ru"><![CDATA[Отправлено]]></translation>
-        <translation language="zh"><![CDATA[已发送]]></translation>
-        <translation language="fr"><![CDATA[envoyé]]></translation>
-        <translation language="de"><![CDATA[versandt]]></translation>
-        <translation language="es"><![CDATA[enviado]]></translation>
-        <translation language="lt"><![CDATA[išsiųsta]]></translation>
-        <translation language="uk"><![CDATA[Надіслано]]></translation>
-        <translation language="sv"><![CDATA[skickat]]></translation>
-        <translation language="el"><![CDATA[απεστάλη]]></translation>
-      </item>
-      <item type="label" name="MailmotorStatistics">
-        <translation language="en"><![CDATA[statistics]]></translation>
-        <translation language="nl"><![CDATA[statistieken]]></translation>
-        <translation language="hu"><![CDATA[statisztikák]]></translation>
-        <translation language="it"><![CDATA[statistiche]]></translation>
-        <translation language="ru"><![CDATA[Статистика]]></translation>
-        <translation language="zh"><![CDATA[统计]]></translation>
-        <translation language="de"><![CDATA[Statistik]]></translation>
-        <translation language="fr"><![CDATA[statistiques]]></translation>
-        <translation language="es"><![CDATA[estadisticas]]></translation>
-        <translation language="lt"><![CDATA[statistika]]></translation>
-        <translation language="uk"><![CDATA[Статистика]]></translation>
-        <translation language="sv"><![CDATA[statistik]]></translation>
-        <translation language="el"><![CDATA[στατιστικά]]></translation>
-      </item>
-      <item type="label" name="MailmotorSubscriptions">
-        <translation language="en"><![CDATA[subscriptions]]></translation>
-        <translation language="nl"><![CDATA[inschrijvingen]]></translation>
-        <translation language="hu"><![CDATA[feliratkozók]]></translation>
-        <translation language="it"><![CDATA[abbonamenti]]></translation>
-        <translation language="ru"><![CDATA[Подписки]]></translation>
-        <translation language="zh"><![CDATA[订阅]]></translation>
-        <translation language="fr"><![CDATA[abonnements]]></translation>
-        <translation language="de"><![CDATA[Anmeldungen]]></translation>
-        <translation language="es"><![CDATA[subscripciones]]></translation>
-        <translation language="lt"><![CDATA[prenumeratos]]></translation>
-        <translation language="uk"><![CDATA[Підписки]]></translation>
-        <translation language="sv"><![CDATA[prenumerera]]></translation>
-        <translation language="el"><![CDATA[συνδρομές]]></translation>
-      </item>
-      <item type="label" name="MailmotorUnsubscriptions">
-        <translation language="en"><![CDATA[unsubscriptions]]></translation>
-        <translation language="nl"><![CDATA[uitschrijvingen]]></translation>
-        <translation language="hu"><![CDATA[leiratkozók]]></translation>
-        <translation language="it"><![CDATA[cancellazioni abbonamento]]></translation>
-        <translation language="ru"><![CDATA[Отписки]]></translation>
-        <translation language="zh"><![CDATA[退订]]></translation>
-        <translation language="fr"><![CDATA[désabonnements]]></translation>
-        <translation language="de"><![CDATA[Abmeldungen]]></translation>
-        <translation language="es"><![CDATA[dados de baja]]></translation>
-        <translation language="lt"><![CDATA[Atsisakymai]]></translation>
-        <translation language="uk"><![CDATA[Відписки]]></translation>
-        <translation language="sv"><![CDATA[avsluta prenumeration]]></translation>
-        <translation language="el"><![CDATA[ακυρώσεις συνδρομών]]></translation>
-      </item>
       <item type="label" name="MainContent">
         <translation language="nl"><![CDATA[hoofdinhoud]]></translation>
         <translation language="en"><![CDATA[main content]]></translation>
@@ -6857,21 +5536,6 @@
         <translation language="uk"><![CDATA[Контент]]></translation>
         <translation language="sv"><![CDATA[huvudinnehållet]]></translation>
         <translation language="el"><![CDATA[κυρίως περιεχόμενο]]></translation>
-      </item>
-      <item type="label" name="MarkAsSpam">
-        <translation language="nl"><![CDATA[markeer als spam]]></translation>
-        <translation language="en"><![CDATA[mark as spam]]></translation>
-        <translation language="hu"><![CDATA[spamnak jelől]]></translation>
-        <translation language="it"><![CDATA[contrassegna come spam]]></translation>
-        <translation language="ru"><![CDATA[Пометить как спам]]></translation>
-        <translation language="zh"><![CDATA[标记为垃圾评论]]></translation>
-        <translation language="de"><![CDATA[als Spam makieren]]></translation>
-        <translation language="fr"><![CDATA[marquer comme spam]]></translation>
-        <translation language="es"><![CDATA[marcar como spam]]></translation>
-        <translation language="lt"><![CDATA[pažymėti kaip spamą]]></translation>
-        <translation language="uk"><![CDATA[Помітити як спам]]></translation>
-        <translation language="sv"><![CDATA[markera som spam]]></translation>
-        <translation language="el"><![CDATA[σημάδεμα ως ανεπιθύμητο]]></translation>
       </item>
       <item type="label" name="Marketing">
         <translation language="nl"><![CDATA[marketing]]></translation>
@@ -7097,21 +5761,6 @@
         <translation language="uk"><![CDATA[Відправити в опубліковані]]></translation>
         <translation language="sv"><![CDATA[flytta till publicerad]]></translation>
         <translation language="el"><![CDATA[μετακίνηση στα δημοσιευμένα]]></translation>
-      </item>
-      <item type="label" name="MoveToSpam">
-        <translation language="nl"><![CDATA[verplaats naar spam]]></translation>
-        <translation language="en"><![CDATA[move to spam]]></translation>
-        <translation language="hu"><![CDATA[move to spam]]></translation>
-        <translation language="it"><![CDATA[sposta in spam]]></translation>
-        <translation language="ru"><![CDATA[Пометить как спам]]></translation>
-        <translation language="zh"><![CDATA[移到垃圾箱]]></translation>
-        <translation language="fr"><![CDATA[déplacer vers spam]]></translation>
-        <translation language="de"><![CDATA[verschieben zu Spam]]></translation>
-        <translation language="es"><![CDATA[mover a spam]]></translation>
-        <translation language="lt"><![CDATA[pekelti į spamą]]></translation>
-        <translation language="uk"><![CDATA[Помітити як спам]]></translation>
-        <translation language="sv"><![CDATA[flytta till spam]]></translation>
-        <translation language="el"><![CDATA[μετακίνηση στα ανεπιθύμητα]]></translation>
       </item>
       <item type="label" name="Name">
         <translation language="nl"><![CDATA[naam]]></translation>
@@ -7685,22 +6334,6 @@
         <translation language="el"><![CDATA[ανά επίσκεψη]]></translation>
         <translation language="tr"><![CDATA[Ziyaret başına]]></translation>
       </item>
-      <item type="label" name="PingBlogServices">
-        <translation language="nl"><![CDATA[ping blogservices]]></translation>
-        <translation language="en"><![CDATA[ping blogservices]]></translation>
-        <translation language="hu"><![CDATA[ping blogservices]]></translation>
-        <translation language="it"><![CDATA[ping ai servizi di blog]]></translation>
-        <translation language="ru"><![CDATA[Пинг блого-сервисов]]></translation>
-        <translation language="zh"><![CDATA[ping博客服务]]></translation>
-        <translation language="fr"><![CDATA[ping blogservices]]></translation>
-        <translation language="de"><![CDATA[Blogging-Dienste anpingen]]></translation>
-        <translation language="es"><![CDATA[ping blogservices]]></translation>
-        <translation language="lt"><![CDATA[pingai tinklaraščiui]]></translation>
-        <translation language="uk"><![CDATA[Пінг блого-сервісів]]></translation>
-        <translation language="sv"><![CDATA[pinga bloggtjänster]]></translation>
-        <translation language="el"><![CDATA[πίνγκ τις υπηρεσίες ιστολογίων]]></translation>
-        <translation language="tr"><![CDATA[Ping blog servisi]]></translation>
-      </item>
       <item type="label" name="PL">
         <translation language="hu"><![CDATA[lengyel]]></translation>
         <translation language="ru"><![CDATA[Польский]]></translation>
@@ -7845,39 +6478,6 @@
         <translation language="el"><![CDATA[τιμή]]></translation>
         <translation language="tr"><![CDATA[Fiyat]]></translation>
       </item>
-      <item type="label" name="Profile">
-        <translation language="nl"><![CDATA[profiel]]></translation>
-        <translation language="en"><![CDATA[profile]]></translation>
-        <translation language="hu"><![CDATA[profil]]></translation>
-        <translation language="ru"><![CDATA[Профиль]]></translation>
-        <translation language="it"><![CDATA[profilo]]></translation>
-        <translation language="zh"><![CDATA[个人档案]]></translation>
-        <translation language="de"><![CDATA[Profil]]></translation>
-        <translation language="fr"><![CDATA[profil]]></translation>
-        <translation language="es"><![CDATA[perfil]]></translation>
-        <translation language="lt"><![CDATA[profilis]]></translation>
-        <translation language="uk"><![CDATA[Профіль]]></translation>
-        <translation language="sv"><![CDATA[profil]]></translation>
-        <translation language="el"><![CDATA[προφίλ]]></translation>
-        <translation language="tr"><![CDATA[Profil]]></translation>
-      </item>
-      <item type="label" name="Profiles">
-        <translation language="nl"><![CDATA[profielen]]></translation>
-        <translation language="en"><![CDATA[profiles]]></translation>
-        <translation language="hu"><![CDATA[profilok]]></translation>
-        <translation language="ru"><![CDATA[Профили]]></translation>
-        <translation language="it"><![CDATA[profili]]></translation>
-        <translation language="zh"><![CDATA[资料]]></translation>
-        <translation language="de"><![CDATA[Profile]]></translation>
-        <translation language="fr"><![CDATA[profiles]]></translation>
-        <translation language="es"><![CDATA[perfiles]]></translation>
-        <translation language="lt"><![CDATA[profiliai]]></translation>
-        <translation language="uk"><![CDATA[Профілі]]></translation>
-        <translation language="sv"><![CDATA[profiler]]></translation>
-        <translation language="el"><![CDATA[προφίλ]]></translation>
-        <translation language="pl"><![CDATA[profile]]></translation>
-        <translation language="tr"><![CDATA[Profiller]]></translation>
-      </item>
       <item type="label" name="Publish">
         <translation language="nl"><![CDATA[publiceer]]></translation>
         <translation language="en"><![CDATA[publish]]></translation>
@@ -8013,21 +6613,6 @@
         <translation language="uk"><![CDATA[Останні статті (список)]]></translation>
         <translation language="sv"><![CDATA[nya artiklar (lista)]]></translation>
         <translation language="el"><![CDATA[πρόσφατα άρθρα (λίστα)]]></translation>
-      </item>
-      <item type="label" name="RecentComments">
-        <translation language="nl"><![CDATA[recente reacties]]></translation>
-        <translation language="en"><![CDATA[recent comments]]></translation>
-        <translation language="hu"><![CDATA[újabb kommentek]]></translation>
-        <translation language="ru"><![CDATA[Последние комментарии]]></translation>
-        <translation language="it"><![CDATA[commenti recenti]]></translation>
-        <translation language="zh"><![CDATA[最新评论]]></translation>
-        <translation language="de"><![CDATA[neueste Kommentare]]></translation>
-        <translation language="fr"><![CDATA[commentaires récents]]></translation>
-        <translation language="es"><![CDATA[comentarios recientes]]></translation>
-        <translation language="lt"><![CDATA[naujausi komentarai]]></translation>
-        <translation language="uk"><![CDATA[Останні коментарі]]></translation>
-        <translation language="sv"><![CDATA[senaste kommentarer]]></translation>
-        <translation language="el"><![CDATA[πρόσφατα σχόλια]]></translation>
       </item>
       <item type="label" name="RecentlyEdited">
         <translation language="nl"><![CDATA[recent bewerkt]]></translation>
@@ -8318,57 +6903,6 @@
         <translation language="el"><![CDATA[προγραμματάκια σκριπτ]]></translation>
         <translation language="tr"><![CDATA[scriptler]]></translation>
       </item>
-      <item type="label" name="Search">
-        <translation language="nl"><![CDATA[zoeken]]></translation>
-        <translation language="en"><![CDATA[search]]></translation>
-        <translation language="hu"><![CDATA[keres]]></translation>
-        <translation language="ru"><![CDATA[Поиск]]></translation>
-        <translation language="it"><![CDATA[cerca]]></translation>
-        <translation language="zh"><![CDATA[搜索]]></translation>
-        <translation language="de"><![CDATA[Suche]]></translation>
-        <translation language="fr"><![CDATA[rechercher]]></translation>
-        <translation language="es"><![CDATA[buscar]]></translation>
-        <translation language="lt"><![CDATA[ieškoti]]></translation>
-        <translation language="uk"><![CDATA[Пошук]]></translation>
-        <translation language="sv"><![CDATA[skript]]></translation>
-        <translation language="el"><![CDATA[αναζήτηση]]></translation>
-        <translation language="tr"><![CDATA[ara]]></translation>
-        <translation language="pl"><![CDATA[szukaj]]></translation>
-      </item>
-      <item type="label" name="SearchAgain">
-        <translation language="nl"><![CDATA[opnieuw zoeken]]></translation>
-        <translation language="en"><![CDATA[search again]]></translation>
-        <translation language="hu"><![CDATA[újból keres]]></translation>
-        <translation language="ru"><![CDATA[Искать снова]]></translation>
-        <translation language="it"><![CDATA[cerca ancora]]></translation>
-        <translation language="zh"><![CDATA[重新搜索]]></translation>
-        <translation language="de"><![CDATA[erneut suchen]]></translation>
-        <translation language="fr"><![CDATA[chercher à nouveau]]></translation>
-        <translation language="es"><![CDATA[buscar de nuevo]]></translation>
-        <translation language="lt"><![CDATA[ieškoti iš naujo]]></translation>
-        <translation language="uk"><![CDATA[Шукати знову]]></translation>
-        <translation language="sv"><![CDATA[sök igen]]></translation>
-        <translation language="el"><![CDATA[επανάληψη αναζήτησης]]></translation>
-        <translation language="tr"><![CDATA[yeniden ara]]></translation>
-        <translation language="pl"><![CDATA[szukaj ponownie]]></translation>
-      </item>
-      <item type="label" name="SearchForm">
-        <translation language="nl"><![CDATA[zoekformulier]]></translation>
-        <translation language="en"><![CDATA[search form]]></translation>
-        <translation language="hu"><![CDATA[kereső mező]]></translation>
-        <translation language="ru"><![CDATA[Форма поиска]]></translation>
-        <translation language="it"><![CDATA[form di ricerca]]></translation>
-        <translation language="zh"><![CDATA[搜索表单]]></translation>
-        <translation language="de"><![CDATA[Suchfeld]]></translation>
-        <translation language="fr"><![CDATA[formulaire de recherche]]></translation>
-        <translation language="es"><![CDATA[formulario de búsqueda]]></translation>
-        <translation language="lt"><![CDATA[paieškos forma]]></translation>
-        <translation language="uk"><![CDATA[Форма пошуку]]></translation>
-        <translation language="sv"><![CDATA[sökformulär]]></translation>
-        <translation language="el"><![CDATA[φόρμα αναζήτησης]]></translation>
-        <translation language="tr"><![CDATA[arama formu]]></translation>
-        <translation language="pl"><![CDATA[formularz szukania]]></translation>
-      </item>
       <item type="label" name="Send">
         <translation language="nl"><![CDATA[verzenden]]></translation>
         <translation language="en"><![CDATA[send]]></translation>
@@ -8526,22 +7060,6 @@
         <translation language="sv"><![CDATA[logga ut]]></translation>
         <translation language="el"><![CDATA[αποσύνδεση]]></translation>
       </item>
-      <item type="label" name="Sitemap">
-        <translation language="nl"><![CDATA[sitemap]]></translation>
-        <translation language="en"><![CDATA[sitemap]]></translation>
-        <translation language="hu"><![CDATA[oldaltérkép]]></translation>
-        <translation language="ru"><![CDATA[Карта Сайта]]></translation>
-        <translation language="it"><![CDATA[sitemap]]></translation>
-        <translation language="zh"><![CDATA[站点地图]]></translation>
-        <translation language="de"><![CDATA[Sitemap]]></translation>
-        <translation language="fr"><![CDATA[sitemap]]></translation>
-        <translation language="es"><![CDATA[sitemap]]></translation>
-        <translation language="lt"><![CDATA[tinklapio struktūra]]></translation>
-        <translation language="uk"><![CDATA[Мапа сайту]]></translation>
-        <translation language="sv"><![CDATA[sajtkarta]]></translation>
-        <translation language="el"><![CDATA[χάρτης ιστοχώρου]]></translation>
-        <translation language="pl"><![CDATA[mapa strony]]></translation>
-      </item>
       <item type="label" name="Slideshow">
         <translation language="de"><![CDATA[Slideshow]]></translation>
         <translation language="ru"><![CDATA[Слайд-шоу]]></translation>
@@ -8638,38 +7156,6 @@
         <translation language="sv"><![CDATA[källa]]></translation>
         <translation language="el"><![CDATA[πηγή]]></translation>
         <translation language="tr"><![CDATA[kaynak]]></translation>
-      </item>
-      <item type="label" name="Spam">
-        <translation language="nl"><![CDATA[spam]]></translation>
-        <translation language="en"><![CDATA[spam]]></translation>
-        <translation language="hu"><![CDATA[spam]]></translation>
-        <translation language="ru"><![CDATA[Спам]]></translation>
-        <translation language="it"><![CDATA[spam]]></translation>
-        <translation language="zh"><![CDATA[垃圾]]></translation>
-        <translation language="de"><![CDATA[Spam]]></translation>
-        <translation language="fr"><![CDATA[spam]]></translation>
-        <translation language="es"><![CDATA[spam]]></translation>
-        <translation language="lt"><![CDATA[spamas]]></translation>
-        <translation language="uk"><![CDATA[Спам]]></translation>
-        <translation language="sv"><![CDATA[spam]]></translation>
-        <translation language="el"><![CDATA[ανεπιθύμητη αλληλογραφία (spam)]]></translation>
-        <translation language="tr"><![CDATA[spam]]></translation>
-      </item>
-      <item type="label" name="SpamFilter">
-        <translation language="nl"><![CDATA[spamfilter]]></translation>
-        <translation language="en"><![CDATA[spamfilter]]></translation>
-        <translation language="hu"><![CDATA[spamfilter]]></translation>
-        <translation language="ru"><![CDATA[Спам Фильтр]]></translation>
-        <translation language="it"><![CDATA[filtro anti spam]]></translation>
-        <translation language="zh"><![CDATA[垃圾滤镜]]></translation>
-        <translation language="de"><![CDATA[Spamfilter]]></translation>
-        <translation language="fr"><![CDATA[filtre de spam]]></translation>
-        <translation language="es"><![CDATA[filtro de spam]]></translation>
-        <translation language="lt"><![CDATA[spamo filtras]]></translation>
-        <translation language="uk"><![CDATA[Спам фільтр]]></translation>
-        <translation language="sv"><![CDATA[spamfilter]]></translation>
-        <translation language="el"><![CDATA[φίλτρο spam]]></translation>
-        <translation language="tr"><![CDATA[spamfiltresi]]></translation>
       </item>
       <item type="label" name="SplitCharacter">
         <translation language="nl"><![CDATA[scheidingsteken]]></translation>
@@ -8875,39 +7361,6 @@
         <translation language="uk"><![CDATA[Синоніми]]></translation>
         <translation language="sv"><![CDATA[synonymer]]></translation>
         <translation language="el"><![CDATA[συνώνυμα]]></translation>
-      </item>
-      <item type="label" name="TagCloud">
-        <translation language="nl"><![CDATA[tag-cloud]]></translation>
-        <translation language="en"><![CDATA[tagcloud]]></translation>
-        <translation language="hu"><![CDATA[címkefelhő]]></translation>
-        <translation language="ru"><![CDATA[Облако Т]]></translation>
-        <translation language="it"><![CDATA[tagcloud]]></translation>
-        <translation language="zh"><![CDATA[标签云]]></translation>
-        <translation language="fr"><![CDATA[nuage de tags]]></translation>
-        <translation language="de"><![CDATA[Schlagwortwolke]]></translation>
-        <translation language="es"><![CDATA[nube de etiquetas]]></translation>
-        <translation language="lt"><![CDATA[debiesies žymės]]></translation>
-        <translation language="uk"><![CDATA[Хмарка тегів]]></translation>
-        <translation language="sv"><![CDATA[tagg moln]]></translation>
-        <translation language="el"><![CDATA[νέφος ετικετών]]></translation>
-        <translation language="tr"><![CDATA[etiket bulutu]]></translation>
-      </item>
-      <item type="label" name="Tags">
-        <translation language="nl"><![CDATA[tags]]></translation>
-        <translation language="en"><![CDATA[tags]]></translation>
-        <translation language="hu"><![CDATA[címkék]]></translation>
-        <translation language="ru"><![CDATA[Тэги]]></translation>
-        <translation language="it"><![CDATA[tag]]></translation>
-        <translation language="zh"><![CDATA[标签]]></translation>
-        <translation language="de"><![CDATA[Schlagworte]]></translation>
-        <translation language="fr"><![CDATA[tags]]></translation>
-        <translation language="es"><![CDATA[etiquetas]]></translation>
-        <translation language="lt"><![CDATA[žymės]]></translation>
-        <translation language="uk"><![CDATA[Теги]]></translation>
-        <translation language="sv"><![CDATA[taggar]]></translation>
-        <translation language="el"><![CDATA[ετικέτες]]></translation>
-        <translation language="tr"><![CDATA[etiketler]]></translation>
-        <translation language="pl"><![CDATA[tagi]]></translation>
       </item>
       <item type="label" name="Template">
         <translation language="nl"><![CDATA[template]]></translation>
@@ -9817,142 +8270,6 @@
         <translation language="el"><![CDATA[Κινέζικα]]></translation>
         <translation language="zh"><![CDATA[中文]]></translation>
       </item>
-      <item type="message" name="CommentDeleted">
-        <translation language="nl"><![CDATA[De reactie werd verwijderd.]]></translation>
-        <translation language="en"><![CDATA[The comment was deleted.]]></translation>
-        <translation language="hu"><![CDATA[A komment törölve.]]></translation>
-        <translation language="it"><![CDATA[Il commento è stato eliminato.]]></translation>
-        <translation language="ru"><![CDATA[Комментарий удален.]]></translation>
-        <translation language="zh"><![CDATA[评论已删除。]]></translation>
-        <translation language="fr"><![CDATA[Le commentaire a été effacé.]]></translation>
-        <translation language="de"><![CDATA[Der Kommentar wurde gelöscht.]]></translation>
-        <translation language="es"><![CDATA[El comentario fue eliminado.]]></translation>
-        <translation language="lt"><![CDATA[Komentaras ištrintas]]></translation>
-        <translation language="uk"><![CDATA[Коментар виделено.]]></translation>
-        <translation language="sv"><![CDATA[Kommentaren har tagits bort.]]></translation>
-        <translation language="el"><![CDATA[Το σχόλιο διεγράφη.]]></translation>
-      </item>
-      <item type="message" name="CommentMovedModeration">
-        <translation language="nl"><![CDATA[De reactie werd verplaatst naar moderatie.]]></translation>
-        <translation language="en"><![CDATA[The comment was moved to moderation.]]></translation>
-        <translation language="hu"><![CDATA[A komment moderálva.]]></translation>
-        <translation language="it"><![CDATA[Il commento è stato spostato in moderazione.]]></translation>
-        <translation language="ru"><![CDATA[Комментарий отправлен на модерацию.]]></translation>
-        <translation language="zh"><![CDATA[评论已被移动到待审核队列。]]></translation>
-        <translation language="fr"><![CDATA[Le commentaire est en attente de modération.]]></translation>
-        <translation language="de"><![CDATA[Der Kommentar wurde zur Moderation verschoben.]]></translation>
-        <translation language="es"><![CDATA[El comentario fue movido a moderación.]]></translation>
-        <translation language="lt"><![CDATA[Komentarai peržiūrimi]]></translation>
-        <translation language="uk"><![CDATA[Коментар очікує перевірки.]]></translation>
-        <translation language="sv"><![CDATA[Kommentaren flyttades för granskning.]]></translation>
-        <translation language="el"><![CDATA[Το σχόλιο μετακινήθηκε προς έγκριση.]]></translation>
-      </item>
-      <item type="message" name="CommentMovedPublished">
-        <translation language="nl"><![CDATA[De reactie werd gepubliceerd.]]></translation>
-        <translation language="en"><![CDATA[The comment was published.]]></translation>
-        <translation language="hu"><![CDATA[A komment közzétéve.]]></translation>
-        <translation language="it"><![CDATA[Il commento è stato pubblicato.]]></translation>
-        <translation language="ru"><![CDATA[Комментарий опубликован.]]></translation>
-        <translation language="zh"><![CDATA[评论已发布。]]></translation>
-        <translation language="fr"><![CDATA[Le commentaire a été publié.]]></translation>
-        <translation language="de"><![CDATA[Der Kommentar wurde veröffentlicht.]]></translation>
-        <translation language="es"><![CDATA[El comentario fue publicado.]]></translation>
-        <translation language="lt"><![CDATA[Komentaras paskelbtas]]></translation>
-        <translation language="uk"><![CDATA[Коментар опубліковано.]]></translation>
-        <translation language="sv"><![CDATA[Kommentaren blev publicerad.]]></translation>
-        <translation language="el"><![CDATA[Το σχόλιο δημοσιεύτηκε.]]></translation>
-      </item>
-      <item type="message" name="CommentMovedSpam">
-        <translation language="nl"><![CDATA[De reactie werd gemarkeerd als spam.]]></translation>
-        <translation language="en"><![CDATA[The comment was marked as spam.]]></translation>
-        <translation language="hu"><![CDATA[A komment spamnak jelölve.]]></translation>
-        <translation language="it"><![CDATA[Il commento è stato segnalato come spam.]]></translation>
-        <translation language="ru"><![CDATA[Комментарий помечен как спам.]]></translation>
-        <translation language="zh"><![CDATA[已被标记为垃圾评论。]]></translation>
-        <translation language="fr"><![CDATA[Le commentaire a été marqué comme spam.]]></translation>
-        <translation language="de"><![CDATA[Der Kommentar wurde als Spam makiert.]]></translation>
-        <translation language="es"><![CDATA[El comentario fue marcado como spam.]]></translation>
-        <translation language="lt"><![CDATA[Komentaras pažymėtas kaip spamas]]></translation>
-        <translation language="uk"><![CDATA[Коментар відмічено як спам.]]></translation>
-        <translation language="sv"><![CDATA[Kommentaren var markerad som spam.]]></translation>
-        <translation language="el"><![CDATA[Το σχόλιο σημαδεύτηκε ως ανεπιθύμητο.]]></translation>
-      </item>
-      <item type="message" name="CommentsDeleted">
-        <translation language="nl"><![CDATA[De reacties werden verwijderd.]]></translation>
-        <translation language="en"><![CDATA[The comments were deleted.]]></translation>
-        <translation language="hu"><![CDATA[A kommentek törölve.]]></translation>
-        <translation language="it"><![CDATA[I commenti sono stati eliminati.]]></translation>
-        <translation language="ru"><![CDATA[Комментарии удалены.]]></translation>
-        <translation language="zh"><![CDATA[评论已被删除。]]></translation>
-        <translation language="fr"><![CDATA[Le commentaire a été effacé.]]></translation>
-        <translation language="de"><![CDATA[Die Kommentare wurden gelöscht.]]></translation>
-        <translation language="es"><![CDATA[Los comentarios que están eliminados.]]></translation>
-        <translation language="lt"><![CDATA[Komentaras ištrintas]]></translation>
-        <translation language="uk"><![CDATA[Коментарі видалені.]]></translation>
-        <translation language="sv"><![CDATA[Kommentarerna blev borttagen.]]></translation>
-        <translation language="el"><![CDATA[Τα σχόλια διεγράφησαν.]]></translation>
-        <translation language="tr"><![CDATA[Yorumlar silindi.]]></translation>
-      </item>
-      <item type="message" name="CommentsMovedModeration">
-        <translation language="nl"><![CDATA[De reacties werden verplaatst naar moderatie.]]></translation>
-        <translation language="en"><![CDATA[The comments were moved to moderation.]]></translation>
-        <translation language="hu"><![CDATA[A kommentek moderálva.]]></translation>
-        <translation language="it"><![CDATA[I commenti sono stati spostati in moderazione.]]></translation>
-        <translation language="ru"><![CDATA[Комментарии отправлены на модерацию.]]></translation>
-        <translation language="zh"><![CDATA[所选评论已被移动到待审核队列。]]></translation>
-        <translation language="fr"><![CDATA[Les commentaires sont en attente de modération.]]></translation>
-        <translation language="de"><![CDATA[Die Kommentare wurden zur Moderation verschoben.]]></translation>
-        <translation language="es"><![CDATA[Los comentarios que fueron movidos a moderación.]]></translation>
-        <translation language="lt"><![CDATA[Komentarai peržiūrimi]]></translation>
-        <translation language="uk"><![CDATA[Коментарі надіслані на перевірку]]></translation>
-        <translation language="sv"><![CDATA[Kommentarerna flyttades till granskning.]]></translation>
-        <translation language="el"><![CDATA[Τα σχόλια μετακινήθηκαν προς έγκριση.]]></translation>
-      </item>
-      <item type="message" name="CommentsMovedPublished">
-        <translation language="nl"><![CDATA[De reacties werden gepubliceerd.]]></translation>
-        <translation language="en"><![CDATA[The comments were published.]]></translation>
-        <translation language="hu"><![CDATA[A kommentek közzétéve.]]></translation>
-        <translation language="it"><![CDATA[I commenti sono stati pubblicati.]]></translation>
-        <translation language="ru"><![CDATA[Комментарии опубликованы.]]></translation>
-        <translation language="zh"><![CDATA[所选评论已发布。]]></translation>
-        <translation language="fr"><![CDATA[Les commentaires ont été publiés.]]></translation>
-        <translation language="de"><![CDATA[Die Kommentare wurden veröffentlicht.]]></translation>
-        <translation language="es"><![CDATA[Los comentarios que fueron publicados.]]></translation>
-        <translation language="lt"><![CDATA[Komentarai paskelbti]]></translation>
-        <translation language="uk"><![CDATA[Коментарі опубліковані.]]></translation>
-        <translation language="sv"><![CDATA[Kommentarerna blev publicerad.]]></translation>
-        <translation language="el"><![CDATA[Τα σχόλια δημοσιεύτηκαν.]]></translation>
-      </item>
-      <item type="message" name="CommentsMovedSpam">
-        <translation language="nl"><![CDATA[De reacties werden gemarkeerd als spam.]]></translation>
-        <translation language="en"><![CDATA[The comments were marked as spam.]]></translation>
-        <translation language="hu"><![CDATA[A kommentek spamnak jelölve.]]></translation>
-        <translation language="it"><![CDATA[I commenti sono stati segnalati come spam.]]></translation>
-        <translation language="ru"><![CDATA[Комментарии помечены как спам.]]></translation>
-        <translation language="zh"><![CDATA[已标记为垃圾评论。]]></translation>
-        <translation language="fr"><![CDATA[Les commentaires ont été marqués comme spam.]]></translation>
-        <translation language="de"><![CDATA[Die Kommentare wurden als Spam markiert.]]></translation>
-        <translation language="es"><![CDATA[Los comentarios que fueron marcados como spam.]]></translation>
-        <translation language="lt"><![CDATA[Komentarai pažymėti kaip spamas]]></translation>
-        <translation language="uk"><![CDATA[Коментарі відмічені як спам.]]></translation>
-        <translation language="sv"><![CDATA[Kommentarerna blev markerade som spam.]]></translation>
-        <translation language="el"><![CDATA[Τα σχόλια σημαδεύτηκαν ως ανεπιθύμητα.]]></translation>
-      </item>
-      <item type="message" name="CommentsToModerate">
-        <translation language="nl"><![CDATA[%1$s reactie(s) te modereren.]]></translation>
-        <translation language="en"><![CDATA[%1$s comment(s) to moderate.]]></translation>
-        <translation language="hu"><![CDATA[%1$s komment moderálva.]]></translation>
-        <translation language="it"><![CDATA[%1$s commento/i da moderare.]]></translation>
-        <translation language="ru"><![CDATA[%1$s коммент. ждут модерации.]]></translation>
-        <translation language="zh"><![CDATA[有%1$s条评论待审核]]></translation>
-        <translation language="fr"><![CDATA[%1$s commentaire(s) à modérer.]]></translation>
-        <translation language="de"><![CDATA[%1$s Kommentar(e) zu moderieren.]]></translation>
-        <translation language="es"><![CDATA[%1$s comentario(s) a moderación.]]></translation>
-        <translation language="lt"><![CDATA[%1$s komentarai(-ų) laukia patvirtinimo.]]></translation>
-        <translation language="uk"><![CDATA[%1$s коментарів чакає на перевірку.]]></translation>
-        <translation language="sv"><![CDATA[%1$s kommentera (er) till moderering.]]></translation>
-        <translation language="el"><![CDATA[Υπάρχουν %1$s σχόλια γιά έγκριση.]]></translation>
-      </item>
       <item type="message" name="ConfigurationError">
         <translation language="nl"><![CDATA[Sommige instellingen zijn nog niet geconfigureerd:]]></translation>
         <translation language="en"><![CDATA[Some settings aren't configured yet:]]></translation>
@@ -10011,21 +8328,6 @@
         <translation language="uk"><![CDATA[Дійсно видалити ці записи]]></translation>
         <translation language="sv"><![CDATA[Är du säker på att du vill ta bort denna/dessa objekt(s)?]]></translation>
         <translation language="el"><![CDATA[Σίγουρα θέλετε να διαγράψετε αυτό/ά το/τα αντικείμενο(να);]]></translation>
-      </item>
-      <item type="message" name="ConfirmMassSpam">
-        <translation language="nl"><![CDATA[Ben je zeker dat je deze item(s) wil markeren als spam?]]></translation>
-        <translation language="en"><![CDATA[Are your sure you want to mark this/these item(s) as spam?]]></translation>
-        <translation language="hu"><![CDATA[Biztos spamnak jelölöd ez(eke)t?]]></translation>
-        <translation language="it"><![CDATA[Sei sicuro di voler segnalare questo/i elemento/i come spam?]]></translation>
-        <translation language="ru"><![CDATA[Действительно пометить эти записи как спам?]]></translation>
-        <translation language="zh"><![CDATA[你确定要标记这（几）条为垃圾内容吗？]]></translation>
-        <translation language="fr"><![CDATA[Etes-vous sûr de vouloir marquer ce/ces élément(s)  comme spam?]]></translation>
-        <translation language="de"><![CDATA[Willst du diesen/diese Eintrag/Einträge wirklich als Spam markieren?]]></translation>
-        <translation language="es"><![CDATA[¿Estás seguro de que quieres marcar este/estos elemento(s) como spam?]]></translation>
-        <translation language="lt"><![CDATA[Ar tikrai tai spamas?]]></translation>
-        <translation language="uk"><![CDATA[Дійно відмітити ці записи як спам?]]></translation>
-        <translation language="sv"><![CDATA[Är du säker på att du vill markera denna/dessa objekt(s)?]]></translation>
-        <translation language="el"><![CDATA[Σίγουρα θέλετε να σημαδέψετε αυτά τα αντικείμενα ως ανεπιθύμητα;]]></translation>
       </item>
       <item type="message" name="DE">
         <translation language="nl"><![CDATA[Duits]]></translation>
@@ -10088,23 +8390,6 @@
         <translation language="sv"><![CDATA[ändra kategorin "%1$s"]]></translation>
         <translation language="el"><![CDATA[Μεταβολή της κατηγορίας "%1$s"]]></translation>
         <translation language="tr"><![CDATA["%1$s" isimli kategoriyi düzenle]]></translation>
-      </item>
-      <item type="message" name="EditComment">
-        <translation language="nl"><![CDATA[bewerk reactie]]></translation>
-        <translation language="en"><![CDATA[edit comment]]></translation>
-        <translation language="hu"><![CDATA[komment szerkesztés]]></translation>
-        <translation language="it"><![CDATA[modifica commento]]></translation>
-        <translation language="ru"><![CDATA[Редактировать комментарий.]]></translation>
-        <translation language="zh"><![CDATA[编辑评论]]></translation>
-        <translation language="fr"><![CDATA[éditer le commentaire]]></translation>
-        <translation language="de"><![CDATA[bearbeite Kommentar]]></translation>
-        <translation language="es"><![CDATA[editar comentario]]></translation>
-        <translation language="lt"><![CDATA[redaguoti komentarus]]></translation>
-        <translation language="uk"><![CDATA[Редагувати коментар]]></translation>
-        <translation language="sv"><![CDATA[ändra kommentar]]></translation>
-        <translation language="el"><![CDATA[μεταβολή σχολίου]]></translation>
-        <translation language="pl"><![CDATA[edytuj komentarz]]></translation>
-        <translation language="tr"><![CDATA[Yorumu düzenle]]></translation>
       </item>
       <item type="message" name="Edited">
         <translation language="nl"><![CDATA[Het item werd opgeslagen.]]></translation>
@@ -10273,20 +8558,6 @@
         <translation language="sv"><![CDATA[En fyrkantig bild ger de bästa resultaten.]]></translation>
         <translation language="el"><![CDATA[Μία τετράγωνη εικόνα παράγει τα καλύτερα αποτελέσματα.]]></translation>
         <translation language="tr"><![CDATA[En iyi sonucu kare bir resimle alabilirsiniz.]]></translation>
-      </item>
-      <item type="message" name="HelpBlogger">
-        <translation language="nl"><![CDATA[Selecteer het bestand dat u heeft geëxporteerd van <a href="http://blogger.com">Blogger</a>.]]></translation>
-        <translation language="en"><![CDATA[Select the file that you exported from <a href="http://blogger.com">Blogger</a>.]]></translation>
-        <translation language="hu"><![CDATA[Fájl kiválasztása, amit exporálni akarsz a <a href="http://blogger.com">Blogger</a>-ba.]]></translation>
-        <translation language="it"><![CDATA[Seleziona il file che hai esportato da <a href="http://blogger.com">Blogger</a>.]]></translation>
-        <translation language="ru"><![CDATA[Выберите экспортируемый файл из <a href="http://blogger.com"> Blogger </>.]]></translation>
-        <translation language="zh"><![CDATA[选择从Select the file that you exported from <a href="http://blogger.com">Blogger</a>导入的文件。]]></translation>
-        <translation language="de"><![CDATA[Wähle die von <a href="http://blogger.com">Blogger</a> exportierte Datei.]]></translation>
-        <translation language="fr"><![CDATA[Choisissez le fichier que vous avez exporté depuis <a href="http://blogger.com">Blogger</a>]]></translation>
-        <translation language="es"><![CDATA[Seleccciona el archivo que has exportado de <a href="http://blogger.com">Blogger</a>.]]></translation>
-        <translation language="lt"><![CDATA[Pasirinkite eksportuojamą bylą iš <a href="http://blogger.com">Blogger</a>]]></translation>
-        <translation language="sv"><![CDATA[Välj den fil som du exporterade från <a href="http://blogger.com">Blogger</a>.]]></translation>
-        <translation language="el"><![CDATA[Επιλέξτε το αρχείο που εξάγατε από τον <a href="http://blogger.com">Blogger</a>.]]></translation>
       </item>
       <item type="message" name="HelpDrafts">
         <translation language="nl"><![CDATA[Hier kan je jouw kladversie zien. Dit zijn tijdelijke versies.]]></translation>
@@ -10730,35 +9001,6 @@
         <translation language="el"><![CDATA[Κινέζικα]]></translation>
         <translation language="tr"><![CDATA[Çince]]></translation>
       </item>
-      <item type="message" name="NoAkismetKey">
-        <translation language="nl"><![CDATA[Om de spamfilter te activeren moet je een Akismet-key <a href="%1$s">ingeven</a>.]]></translation>
-        <translation language="en"><![CDATA[If you want to enable the spam-protection you should <a href="%1$s">configure</a> an Akismet-key.]]></translation>
-        <translation language="hu"><![CDATA[Ha spam védelmet szeretnénk, <a href="%1$s">be kell állítani</a> az Akismet-kulcsot.]]></translation>
-        <translation language="it"><![CDATA[Se vuoi abilitare la protezione anti spam devi <a href="%1$s">configurare</a> una chiave Askimet.]]></translation>
-        <translation language="ru"><![CDATA[Для включения спам-защиты <a href="%1$s">сконфигурируйте</a> Akismet-ключ.]]></translation>
-        <translation language="zh"><![CDATA[如果你想启用垃圾评论防火墙 <a href="%1$s">设置</a> 一个Akismet-key。]]></translation>
-        <translation language="de"><![CDATA[Wenn du den Spam-Schutz aktivieren möchtest, solltest du einen Akismet-Key <a href="%1$s">konfigurieren</a>.]]></translation>
-        <translation language="fr"><![CDATA[Si vous souhaitez activer la protection contre le spam, vous devez <a href="%1$s">configurer</a> une clef Akismet.]]></translation>
-        <translation language="es"><![CDATA[Si quieres activar la protección anti-spam debes <a href="%1$s">configurar</a> una Akismet-key.]]></translation>
-        <translation language="lt"><![CDATA[Norėdami įjungti apsaugą nuo spamo, <a href="%1$s">įrašykite</a> Akismet-raktą.]]></translation>
-        <translation language="sv"><![CDATA[Om du vill aktivera spam-skydd bör du <a href="%1$s"> nge</a> en Akismet-nyckel.]]></translation>
-        <translation language="el"><![CDATA[Αν επιθυμείτε να ενεργοποιήσετε την προφύλαξη από ανεπιθύμητη αλληλογραφία,, πρέπει να <a href="%1$s">ρυθμίσετε</a> ένα κλειδί Akismet.]]></translation>
-      </item>
-      <item type="message" name="NoComments">
-        <translation language="nl"><![CDATA[Er zijn nog geen reacties in deze categorie.]]></translation>
-        <translation language="en"><![CDATA[There are no comments in this category yet.]]></translation>
-        <translation language="hu"><![CDATA[Még nincsenek hozzászólások ebben a kategóriában.]]></translation>
-        <translation language="it"><![CDATA[Non ci sono ancora commenti in questa categoria.]]></translation>
-        <translation language="ru"><![CDATA[Нет комментариев в этой категории.]]></translation>
-        <translation language="zh"><![CDATA[这个分类中还没有评论。]]></translation>
-        <translation language="de"><![CDATA[Es gibt noch keine Kommentare in dieser Kategorie.]]></translation>
-        <translation language="fr"><![CDATA[Il n'y a pas encore de commentaires dans cette catégorie.]]></translation>
-        <translation language="es"><![CDATA[No se encuentran comentarios en está categoría aun.]]></translation>
-        <translation language="lt"><![CDATA[Komentarų nėra šioje kategorijoje]]></translation>
-        <translation language="uk"><![CDATA[Немає комантарів в цій категорії]]></translation>
-        <translation language="sv"><![CDATA[Det finns inga kommentarer i denna kategori ännu.]]></translation>
-        <translation language="el"><![CDATA[Δεν υπάρχουν ακόμη σχόλια σε αυτή την κατηγορία.]]></translation>
-      </item>
       <item type="message" name="NoEmailaddresses">
         <translation language="nl"><![CDATA[Nog geen emailadressen.]]></translation>
         <translation language="en"><![CDATA[No email addresses.]]></translation>
@@ -10819,21 +9061,6 @@
         <translation language="sv"><![CDATA[Det finns inga nyckelord ännu.]]></translation>
         <translation language="el"><![CDATA[Δεν υπάρχουν ακόμη λέξεις κλειδιά.]]></translation>
       </item>
-      <item type="message" name="NoPublishedComments">
-        <translation language="nl"><![CDATA[Er zijn nog geen gepubliceerde reacties.]]></translation>
-        <translation language="en"><![CDATA[There are no published comments.]]></translation>
-        <translation language="hu"><![CDATA[Nincsenek közzétett hozzászólások.]]></translation>
-        <translation language="it"><![CDATA[Non sono ancora stati pubblicati commenti.]]></translation>
-        <translation language="ru"><![CDATA[Нет опубликованных комментариев.]]></translation>
-        <translation language="zh"><![CDATA[还没有公开的评论。]]></translation>
-        <translation language="de"><![CDATA[Es gibt keine veröffentlichten Kommentare.]]></translation>
-        <translation language="fr"><![CDATA[Il n'y a pas de commentaires publiés.]]></translation>
-        <translation language="es"><![CDATA[No hay comentarios publicados.]]></translation>
-        <translation language="lt"><![CDATA[Nėra paskelbtų komentarų]]></translation>
-        <translation language="uk"><![CDATA[Немає опублікованих коментарів]]></translation>
-        <translation language="sv"><![CDATA[Det finns inga publicerade kommentarer.]]></translation>
-        <translation language="el"><![CDATA[Δεν υπάρχουν δημοσιευμένα σχόλια.]]></translation>
-      </item>
       <item type="message" name="NoReferrers">
         <translation language="nl"><![CDATA[Er zijn nog geen statistieken van verwijzende sites.]]></translation>
         <translation language="en"><![CDATA[There are no referrers yet.]]></translation>
@@ -10893,21 +9120,6 @@
         <translation language="uk"><![CDATA[Ще ніхто не підписувався на розсилки]]></translation>
         <translation language="sv"><![CDATA[Ingen prenumererar på e-postlistan ännu.]]></translation>
         <translation language="el"><![CDATA[Δεν έχει εγγραφεί ακόμη κανένας στη λίστα παραληπτών.]]></translation>
-      </item>
-      <item type="message" name="NoTags">
-        <translation language="nl"><![CDATA[Je hebt nog geen tags ingegeven.]]></translation>
-        <translation language="en"><![CDATA[You didn't add tags yet.]]></translation>
-        <translation language="hu"><![CDATA[Még nem adtál címkéket.]]></translation>
-        <translation language="it"><![CDATA[Non hai ancora inserito tag.]]></translation>
-        <translation language="ru"><![CDATA[Вы не добавили тэги.]]></translation>
-        <translation language="zh"><![CDATA[你还没有添加标签。]]></translation>
-        <translation language="de"><![CDATA[Du hast noch keine Schlagworte hinzugefügt.]]></translation>
-        <translation language="fr"><![CDATA[Vous n'avez pas encore ajouté de tag.]]></translation>
-        <translation language="es"><![CDATA[No puedes agregar etiquetas aun.]]></translation>
-        <translation language="lt"><![CDATA[Jus dar nesukūrėte žymių]]></translation>
-        <translation language="uk"><![CDATA[Ви не додали теги]]></translation>
-        <translation language="sv"><![CDATA[Du har inte angivet en tagg ännu.]]></translation>
-        <translation language="el"><![CDATA[Δεν έχετε ακόμη προσθέσει ετικέτες.]]></translation>
       </item>
       <item type="message" name="NoUnsubscriptions">
         <translation language="en"><![CDATA[No one unsubscribed from from the mailinglist yet.]]></translation>
@@ -11189,34 +9401,6 @@
         <translation language="sv"><![CDATA[Något blev fel.]]></translation>
         <translation language="el"><![CDATA[Συνέβη κάποιο σφάλμα.]]></translation>
       </item>
-      <item type="error" name="AddTagBeforeSubmitting">
-        <translation language="nl"><![CDATA[Voeg de tag eerst toe.]]></translation>
-        <translation language="en"><![CDATA[Add the tag before submitting.]]></translation>
-        <translation language="hu"><![CDATA[Küldés előtt adj hozzá egy címkét.]]></translation>
-        <translation language="it"><![CDATA[Aggiungi il tag prima di andare avanti.]]></translation>
-        <translation language="ru"><![CDATA[Добавьте Тэгов перед отправкой.]]></translation>
-        <translation language="zh"><![CDATA[在提交前请添加标签。]]></translation>
-        <translation language="fr"><![CDATA[Veuillez ajouter le tag avant de valider.]]></translation>
-        <translation language="de"><![CDATA[Füge das Tag hinzu, bevor du den Eintrag speicherst.]]></translation>
-        <translation language="es"><![CDATA[Agregar etiqueta antes de seguir adelante.]]></translation>
-        <translation language="lt"><![CDATA[Įrašykite žymes prieš siųsdami]]></translation>
-        <translation language="sv"><![CDATA[Lägg till taggen innan du skickar.]]></translation>
-        <translation language="el"><![CDATA[Προσθήκη της ετικέτας πριν την υποβολή.]]></translation>
-      </item>
-      <item type="error" name="AkismetKey">
-        <translation language="nl"><![CDATA[Akismet API-key werd nog niet geconfigureerd. <a href="%1$s">Configureer</a>]]></translation>
-        <translation language="en"><![CDATA[Akismet API-key is not yet configured. <a href="%1$s">Configure</a>]]></translation>
-        <translation language="hu"><![CDATA[Az Akismet API-kulcs még nincs beállítva. <a href="%1$s">Beállítás</a>]]></translation>
-        <translation language="it"><![CDATA[La chiave Askimet non è ancora stata configurata. <a href="%1$s">Configura</a>]]></translation>
-        <translation language="ru"><![CDATA[Akismet API-ключ не сконфигурирован. <a href="%1$s">Сконфигурировать</a>]]></translation>
-        <translation language="zh"><![CDATA[还未设置Akismet API-key。<a href="%1$s">点此设置</a>]]></translation>
-        <translation language="fr"><![CDATA[La clef API d'Akismet n'est pas configurée. <a href="%1$s">Configurer</a>]]></translation>
-        <translation language="de"><![CDATA[Akismet API-Key ist noch nicht konfiguriert.]]></translation>
-        <translation language="es"><![CDATA[Akismet API-key no ha sido configurada aun.]]></translation>
-        <translation language="lt"><![CDATA[Akismet API-raktas nesukonfigūruotas. <a href="%1$s">Įrašykite</a>]]></translation>
-        <translation language="sv"><![CDATA[Akismet API-nyckeln är ännu inte konfigurerad. <a href="%1$s">Konfiguration</a>]]></translation>
-        <translation language="el"><![CDATA[Δεν έχει ακόμη ρυθμιστεί το κλειδί API του Akismet. <a href="%1$s">Ρύθμιση</a>]]></translation>
-      </item>
       <item type="error" name="AlphaNumericCharactersOnly">
         <translation language="nl"><![CDATA[Enkel alfanumerieke karakters zijn toegestaan.]]></translation>
         <translation language="en"><![CDATA[Only alphanumeric characters are allowed.]]></translation>
@@ -11489,20 +9673,6 @@
         <translation language="el"><![CDATA[Συνέβη κάποιο σφάλμα.]]></translation>
         <translation language="tr"><![CDATA[Bir şeyler yanlış gitti]]></translation>
       </item>
-      <item type="error" name="GoogleMapsKey">
-        <translation language="nl"><![CDATA[Google maps API-key werd nog niet geconfigureerd. <a href="%1$s">Configureren</a>]]></translation>
-        <translation language="en"><![CDATA[Google maps API-key is not configured. <a href="%1$s">Configure</a>]]></translation>
-        <translation language="hu"><![CDATA[Google maps API-kulcs nincs beállítva. <a href="%1$s">Beállítás</a>]]></translation>
-        <translation language="ru"><![CDATA[Google Maps API ключ не сконфигурирован. <a href="%1$s">Configura</a>]]></translation>
-        <translation language="it"><![CDATA[La chiave API di Google Maps non è configurata. <a href="%1$s">Сконфигурировать</a>]]></translation>
-        <translation language="zh"><![CDATA[还没设置谷歌地图的API-key。<a href="%1$s">点此设置</a>]]></translation>
-        <translation language="fr"><![CDATA[La clef API GOogle Map n'est pas configurée. <a href="%1$s">Configurer</a>]]></translation>
-        <translation language="de"><![CDATA[Google-Maps API-Key ist nicht konfiguriert.]]></translation>
-        <translation language="es"><![CDATA[La API-key de Google maps no está configurada.]]></translation>
-        <translation language="lt"><![CDATA[Google žemėlapio API-raktas nesukonfigūruotas. <a href="%1$s">Pakeisti</a>.]]></translation>
-        <translation language="sv"><![CDATA[Google maps API-nyckel är inte konfigurerad. <en href="%1$s">Konfigurera</en>]]></translation>
-        <translation language="el"><![CDATA[Δεν έχει ακόμη ρυθμιστεί το κλειδί API των Google maps. <a href="%1$s">Ρύθμιση</a>]]></translation>
-      </item>
       <item type="error" name="InvalidAPIKey">
         <translation language="nl"><![CDATA[Ongeldige API key.]]></translation>
         <translation language="en"><![CDATA[Invalid API key.]]></translation>
@@ -11705,20 +9875,6 @@
       <item type="error" name="NoActionSelected">
         <translation language="nl"><![CDATA[Geen actie geselecteerd.]]></translation>
         <translation language="en"><![CDATA[No action selected.]]></translation>
-      </item>
-      <item type="error" name="NoCommentsSelected">
-        <translation language="nl"><![CDATA[Er waren geen reacties geselecteerd.]]></translation>
-        <translation language="en"><![CDATA[No comments were selected.]]></translation>
-        <translation language="hu"><![CDATA[Nincs hosszászólás kiválasztva.]]></translation>
-        <translation language="it"><![CDATA[Nessun commento è stato selezionato.]]></translation>
-        <translation language="ru"><![CDATA[Комментарии не выбраны.]]></translation>
-        <translation language="zh"><![CDATA[没有评论被选中。]]></translation>
-        <translation language="fr"><![CDATA[Aucun commentaire n'a été sélectionné.]]></translation>
-        <translation language="de"><![CDATA[Es waren keine Kommentare gewählt.]]></translation>
-        <translation language="es"><![CDATA[No se han seleccionado comentarios.]]></translation>
-        <translation language="lt"><![CDATA[Nepasirinktas komentaras]]></translation>
-        <translation language="sv"><![CDATA[Inga kommentarer var valda.]]></translation>
-        <translation language="el"><![CDATA[Δεν επελέγη κανένα σχόλιο.]]></translation>
       </item>
       <item type="error" name="NoItemsSelected">
         <translation language="nl"><![CDATA[Er waren geen items geselecteerd.]]></translation>

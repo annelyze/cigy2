@@ -20,20 +20,12 @@ use Symfony\Component\HttpKernel\KernelInterface;
 use Frontend\Core\Engine\Block\ExtraInterface as FrontendBlockExtra;
 use Frontend\Core\Engine\Block\Widget as FrontendBlockWidget;
 use Backend\Core\Engine\Model as BackendModel;
-use Frontend\Modules\Profiles\Engine\Authentication as FrontendAuthenticationModel;
 
 /**
  * Frontend page class, this class will handle everything on a page
  */
 class Page extends KernelLoader
 {
-    /**
-     * Breadcrumb instance
-     *
-     * @var Breadcrumb
-     */
-    protected $breadcrumb;
-
     /**
      * Array of extras linked to this page
      *
@@ -124,8 +116,6 @@ class Page extends KernelLoader
             $this->record = Model::getPage(Response::HTTP_NOT_FOUND);
         }
 
-        $this->checkAuthentication();
-
         // we need to set the correct id
         $this->pageId = (int) $this->record['id'];
 
@@ -137,7 +127,6 @@ class Page extends KernelLoader
             }
         }
 
-        $this->breadcrumb = new Breadcrumb($this->getKernel());
         $this->footer = new Footer($this->getKernel());
 
         $this->processPage();
@@ -146,51 +135,11 @@ class Page extends KernelLoader
         array_map([$this, 'processExtra'], $this->extras);
     }
 
-    private function checkAuthentication(): void
-    {
-        // no authentication needed
-        if (!isset($this->record['data']['auth_required'])
-            || !$this->record['data']['auth_required']
-            || !BackendModel::isModuleInstalled('Profiles')
-        ) {
-            return;
-        }
-
-        if (!FrontendAuthenticationModel::isLoggedIn()) {
-            $this->redirect(
-                Navigation::getUrlForBlock('Profiles', 'Login') . '?queryString=' . $this->url->getQueryString()
-            );
-        }
-
-        // specific groups for auth?
-        if (empty($this->record['data']['auth_groups'])) {
-            // no further checks needed
-            return;
-        }
-
-        foreach ($this->record['data']['auth_groups'] as $group) {
-            if (FrontendAuthenticationModel::getProfile()->isInGroup($group)) {
-                // profile is in a group that is allowed to see the page
-                return;
-            }
-        }
-
-        // turns out the logged in profile isn't in a group that is allowed to see the page
-        $this->record = Model::getPage(Response::HTTP_NOT_FOUND);
-    }
-
     public function display(): Response
     {
         // assign the id so we can use it as an option
         $this->template->assignGlobal('isPage' . $this->pageId, true);
         $this->template->assignGlobal('isChildOfPage' . $this->record['parent_id'], true);
-
-        // hide the cookiebar from within the code to prevent flickering
-        $this->template->assignGlobal(
-            'cookieBarHide',
-            !$this->get('fork.settings')->get('Core', 'show_cookie_bar', false)
-            || $this->getContainer()->get('fork.cookie')->hasHiddenCookieBar()
-        );
 
         $this->parsePositions();
 
@@ -201,7 +150,6 @@ class Page extends KernelLoader
         }
 
         $this->header->parse();
-        $this->breadcrumb->parse();
         $this->parseLanguages();
         $this->footer->parse();
 

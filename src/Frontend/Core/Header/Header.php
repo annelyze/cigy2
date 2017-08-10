@@ -344,8 +344,6 @@ class Header extends KernelLoader
      */
     public function parse(): void
     {
-        $facebook = new Facebook($this->get('fork.settings'));
-        $facebook->addOpenGraphMeta($this);
         $this->parseSeo();
 
         // in debug mode we don't want our pages to be indexed.
@@ -359,11 +357,6 @@ class Header extends KernelLoader
         $this->jsFiles->parse($this->template, 'jsFiles');
 
         $siteHTMLHeader = (string) $this->get('fork.settings')->get('Core', 'site_html_header', '') . "\n";
-        $siteHTMLHeader .= new GoogleAnalytics(
-            $this->get('fork.settings'),
-            Model::getRequest()->getHttpHost(),
-            $this->get('fork.cookie')
-        );
         $siteHTMLHeader .= "\n" . $this->jsData;
         $this->template->assignGlobal('siteHTMLHeader', trim($siteHTMLHeader));
 
@@ -489,35 +482,5 @@ class Header extends KernelLoader
         }
 
         $this->pageTitle = $value . ' - ' . $this->pageTitle;
-    }
-
-    /**
-     * @param string $title The title (maximum 70 characters)
-     * @param string $description A brief description of the card (maximum 200 characters)
-     * @param string $imageUrl The URL of the image (minimum 280x150 and <1MB)
-     * @param string $cardType The cardtype, possible types: https://dev.twitter.com/cards/types
-     * @param string $siteHandle (optional)  Twitter handle of the site
-     * @param string $creatorHandle (optional) Twitter handle of the author
-     */
-    public function setTwitterCard(
-        string $title,
-        string $description,
-        string $imageUrl,
-        string $cardType = 'summary',
-        string $siteHandle = null,
-        string $creatorHandle = null
-    ): void {
-        $this->meta->addMetaData(MetaData::forName('twitter:card', $cardType));
-        $this->meta->addMetaData(MetaData::forName('twitter:title', $title));
-        $this->meta->addMetaData(MetaData::forName('twitter:description', $description));
-        $this->meta->addMetaData(MetaData::forName('twitter:image', $imageUrl));
-
-        if ($siteHandle !== null) {
-            $this->meta->addMetaData(MetaData::forName('twitter:site', $siteHandle));
-        }
-
-        if ($creatorHandle !== null) {
-            $this->meta->addMetaData(MetaData::forName('twitter:creator', $creatorHandle));
-        }
     }
 }

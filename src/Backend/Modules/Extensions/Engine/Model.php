@@ -142,35 +142,10 @@ class Model
     public static function checkSettings(): array
     {
         $warnings = [];
-        $akismetModules = self::getModulesThatRequireAkismet();
-        $googleMapsModules = self::getModulesThatRequireGoogleMaps();
 
         // check if this action is allowed
         if (!BackendAuthentication::isAllowedAction('Index', 'Settings')) {
             return [];
-        }
-
-        // check if the akismet key is available if there are modules that require it
-        if (!empty($akismetModules) && BackendModel::get('fork.settings')->get('Core', 'akismet_key', null) == '') {
-            // add warning
-            $warnings[] = [
-                'message' => sprintf(
-                    BL::err('AkismetKey'),
-                    BackendModel::createUrlForAction('Index', 'Settings')
-                ),
-            ];
-        }
-
-        // check if the google maps key is available if there are modules that require it
-        if (!empty($googleMapsModules)
-            && BackendModel::get('fork.settings')->get('Core', 'google_maps_key', null) == '') {
-            // add warning
-            $warnings[] = [
-                'message' => sprintf(
-                    BL::err('GoogleMapsKey'),
-                    BackendModel::createUrlForAction('Index', 'Settings')
-                ),
-            ];
         }
 
         return $warnings;
@@ -488,62 +463,6 @@ class Model
         }
 
         return $manageableModules;
-    }
-
-    /**
-     * Fetch the list of modules that require Akismet API key
-     *
-     * @return array
-     */
-    public static function getModulesThatRequireAkismet(): array
-    {
-        return self::getModulesThatRequireSetting('akismet');
-    }
-
-    /**
-     * Fetch the list of modules that require Google Maps API key
-     *
-     * @return array
-     */
-    public static function getModulesThatRequireGoogleMaps(): array
-    {
-        return self::getModulesThatRequireSetting('google_maps');
-    }
-
-    /**
-     * Fetch the list of modules that require Google Recaptcha API key
-     *
-     * @return array
-     */
-    public static function getModulesThatRequireGoogleRecaptcha(): array
-    {
-        return self::getModulesThatRequireSetting('google_recaptcha');
-    }
-
-    /**
-     * Fetch the list of modules that require a certain setting. The setting is affixed by 'requires_'
-     *
-     * @param string $setting
-     *
-     * @return array
-     */
-    private static function getModulesThatRequireSetting(string $setting): array
-    {
-        if ($setting === '') {
-            return [];
-        }
-
-        /** @var ModulesSettings $moduleSettings */
-        $moduleSettings = BackendModel::get('fork.settings');
-
-        return array_filter(
-            BackendModel::getModules(),
-            function (string $module) use ($moduleSettings, $setting): bool {
-                $requiresGoogleRecaptcha = $moduleSettings->get($module, 'requires_' . $setting, false);
-
-                return $requiresGoogleRecaptcha;
-            }
-        );
     }
 
     public static function getTemplate(int $id): array

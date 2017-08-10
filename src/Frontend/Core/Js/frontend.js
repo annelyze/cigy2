@@ -14,22 +14,11 @@ var jsFrontend =
         // init stuff
         jsFrontend.initAjax();
 
-        jsFrontend.cookieBar.init();
-
         // init controls
         jsFrontend.controls.init();
 
         // init form
         jsFrontend.forms.init();
-
-        // init gravatar
-        jsFrontend.gravatar.init();
-
-        // init statistics
-        jsFrontend.statistics.init();
-
-        // init twitter
-        jsFrontend.twitter.init();
     },
 
     // init
@@ -67,40 +56,6 @@ jsFrontend.controls =
 };
 
 /**
- * Handles the cookieBar
- */
-jsFrontend.cookieBar =
-{
-    init: function()
-    {
-        // if there is no cookiebar we shouldn't do anything
-        if($('#cookie-bar').length === 0) return;
-
-        $cookieBar = $('#cookie-bar');
-
-        // @remark: as you can see we use PHP-serialized values so we can use them in PHP too.
-        // hide the cookieBar if needed
-        if(utils.cookies.readCookie('cookie_bar_hide') == 'b%3A1%3B') {
-            $cookieBar.hide();
-        }
-
-        $cookieBar.on('click', '[data-role="cookie-bar-button"]', function(e) {
-            e.preventDefault();
-
-            if ($(e.currentTarget).data('action') == 'agree') {
-                utils.cookies.setCookie('cookie_bar_agree', 'Y');
-                utils.cookies.setCookie('cookie_bar_hide', 'Y');
-            }
-            else {
-                utils.cookies.setCookie('cookie_bar_agree', 'N');
-                utils.cookies.setCookie('cookie_bar_hide', 'Y');
-            }
-            $cookieBar.hide();
-        });
-    }
-};
-
-/**
  * Data related methods
  */
 jsFrontend.data =
@@ -130,40 +85,6 @@ jsFrontend.data =
 
         // return
         return eval('jsFrontend.data.data.' + key);
-    }
-};
-
-/**
- * Facebook related
- */
-jsFrontend.facebook =
-{
-    // will be called after Facebook is initialized
-    afterInit: function()
-    {
-        // is GA available?
-        if(typeof _gaq == 'object')
-        {
-            // subscribe and track like
-            FB.Event.subscribe('edge.create', function(targetUrl) { _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]); });
-
-            // subscribe and track unlike
-            FB.Event.subscribe('edge.remove', function(targetUrl) { _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]); });
-
-            // subscribe and track message
-            FB.Event.subscribe('message.send', function(targetUrl) { _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]); });
-        }
-        else if(typeof ga == 'object')
-        {
-            // subscribe and track like
-            FB.Event.subscribe('edge.create', function(targetUrl) { ga('send', 'social', 'facebook', 'like', targetUrl); });
-
-            // subscribe and track unlike
-            FB.Event.subscribe('edge.remove', function(targetUrl) { ga('send', 'social', 'facebook', 'unlike', targetUrl); });
-
-            // subscribe and track message
-            FB.Event.subscribe('message.send', function(targetUrl) { ga('send', 'social', 'facebook', 'send', targetUrl); });
-        }
     }
 };
 
@@ -400,43 +321,6 @@ jsFrontend.forms =
 };
 
 /**
- * Gravatar related javascript
- */
-jsFrontend.gravatar =
-{
-    // init, something like a constructor
-    init: function()
-    {
-        $('.replaceWithGravatar').each(function()
-        {
-            var element = $(this);
-            var gravatarId = element.data('gravatarId');
-            var size = element.attr('height');
-
-            // valid gravatar id
-            if(gravatarId !== '')
-            {
-                // build url
-                var url = 'https://www.gravatar.com/avatar/' + gravatarId + '?r=g&d=404';
-
-                // add size if set before
-                if(size !== '') url += '&s=' + size;
-
-                // create new image
-                var gravatar = new Image();
-                gravatar.src = url;
-
-                // reset src
-                gravatar.onload = function()
-                {
-                    element.attr('src', url).addClass('gravatarLoaded');
-                };
-            }
-        });
-    }
-};
-
-/**
  * Locale
  */
 jsFrontend.locale =
@@ -504,109 +388,6 @@ jsFrontend.locale =
     msg: function(key)
     {
         return jsFrontend.locale.get('msg', key);
-    }
-};
-
-/**
- * Google analytics related javascript
- */
-jsFrontend.statistics =
-{
-    // init, something like a constructor
-    init: function()
-    {
-        jsFrontend.statistics.trackOutboundLinks();
-    },
-
-    // track all outbound links
-    trackOutboundLinks: function()
-    {
-        // check if Google Analytics is available
-        if(typeof _gaq === 'object' || typeof ga === 'function')
-        {
-            // create a new selector
-            $.expr[':'].external = function(obj) {
-                return (typeof obj.href != 'undefined') && !obj.href.match(/^mailto:/) && (obj.hostname != location.hostname);
-            };
-
-            // bind on all links that don't have the class noTracking
-            $(document).on('click', 'a:external:not(.noTracking)', function(e)
-            {
-                // only simulate direct links
-                var hasTarget = (typeof $(this).attr('target') != 'undefined');
-                if(!hasTarget) e.preventDefault();
-
-                var link = $(this).attr('href');
-
-                // outbound link by default
-                var type = 'Outbound Links';
-                var pageView = '/Outbound Links/' + link;
-
-                // set mailto
-                if(link.match(/^mailto:/))
-                {
-                    type = 'Mailto';
-                    pageView = '/Mailto/' + link.substring(7);
-                }
-
-                // set anchor
-                if(link.match(/^#/))
-                {
-                    type = 'Anchors';
-                    pageView = '/Anchor/' + link.substring(1);
-                }
-
-                // track in Google Analytics
-                if(typeof _gaq === 'object')
-                {
-                    _gaq.push(['_trackEvent', type, pageView]);
-                }
-                else
-                {
-                    ga('send', 'event', type, pageView);
-                }
-
-                // set time out
-                if(!hasTarget) setTimeout(function() { document.location.href = link; }, 100);
-            });
-        }
-    }
-};
-
-/**
- * Twitter related stuff
- */
-jsFrontend.twitter =
-{
-    init: function()
-    {
-        // if GA is integrated and a tweet button is used
-        if(typeof twttr === 'object' && (typeof _gaq === 'object' || typeof ga === 'object'))
-        {
-            // bind event, so we can track the tweets
-            twttr.events.on('tweet', function(e)
-            {
-                // valid event?
-                if(e)
-                {
-                    // init var
-                    var targetUrl = null;
-
-                    // get url
-                    if(e.target && e.target.nodeName == 'IFRAME') targetUrl = utils.url.extractParamFromUri(e.target.src, 'url');
-
-                    // push to GA
-                    if(typeof _gaq === 'object')
-                    {
-                        _gaq.push(['_trackSocial', 'twitter', 'tweet', targetUrl]);
-                    }
-                    else
-                    {
-                        ga('send', 'social', 'twitter', 'tweet', targetUrl);
-                    }
-                }
-            });
-        }
     }
 };
 

@@ -11,10 +11,6 @@ final class ModulesHandler extends InstallerHandler
 {
     public function processInstallationData(InstallationData $installationData): InstallationData
     {
-        if ($installationData->hasExampleData() === true) {
-            $installationData->addModule('Blog');
-        }
-
         return $installationData;
     }
 }

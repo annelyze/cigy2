@@ -17,7 +17,6 @@ use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use TijsVerkoyen\Akismet\Akismet;
 
 /**
  * This class will initiate the frontend-application
@@ -308,22 +307,6 @@ class Model extends BaseModel
     {
         return self::getContainer()->has('request_stack')
                && self::getContainer()->get('request_stack')->getCurrentRequest() !== null;
-    }
-
-    protected static function getAkismet(): Akismet
-    {
-        $akismetKey = self::get('fork.settings')->get('Core', 'akismet_key');
-
-        // invalid key, so we can't detect spam
-        if (empty($akismetKey)) {
-            throw new InvalidArgumentException('no akismet key found');
-        }
-
-        $akismet = new Akismet($akismetKey, SITE_URL);
-        $akismet->setTimeOut(10);
-        $akismet->setUserAgent('Fork CMS/' . FORK_VERSION);
-
-        return $akismet;
     }
 
     public static function getSession(): SessionInterface

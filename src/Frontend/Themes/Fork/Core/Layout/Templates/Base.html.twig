@@ -2,10 +2,6 @@
 
 <body class="{{ LANGUAGE }}" itemscope itemtype="http://schema.org/WebPage">
 <div id="root">
-  {% block cookies %}
-    {% include "Core/Layout/Templates/Cookies.html.twig" %}
-  {% endblock %}
-
   <div class="header header-blue" style="background-image: url('{{ FRONTEND_FILES_URL }}/Pages/images/source/{{ page.data.image }}');">
     {% block navigation %}
       <nav class="navbar navbar-default navbar-static-top">
@@ -55,12 +51,6 @@
   </div>
 
   <div class="container">
-
-    {% block breadcrumb %}
-      {# Breadcrumb #}
-      {% include "Core/Layout/Templates/Breadcrumb.html.twig" %}
-    {% endblock %}
-
     {# Main content #}
     {% block main %}
 

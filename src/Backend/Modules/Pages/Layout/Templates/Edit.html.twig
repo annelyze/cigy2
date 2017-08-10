@@ -85,11 +85,6 @@
           <li class="pull-right" role="presentation">
             <a href="#tabRedirect" aria-controls="tabRedirect" role="tab" data-toggle="tab">{{ 'lbl.Redirect'|trans|ucfirst }}</a>
           </li>
-          {% if showTags %}
-            <li class="pull-right" role="presentation">
-              <a href="#tabTags" aria-controls="tabTags" role="tab" data-toggle="tab">{{ 'lbl.Tags'|trans|ucfirst }}</a>
-            </li>
-          {% endif %}
           <li class="pull-right" role="presentation">
             <a href="#tabSEO" aria-controls="tabSEO" role="tab" data-toggle="tab">{{ 'lbl.SEO'|trans|ucfirst }}</a>
           </li>
@@ -273,9 +268,6 @@
                     </ul>
                   </div>
                   {% endif %}
-                  <li class="checkbox hidden" data-role="remove-from-search-index">
-                    <label for="removeFromSearchIndex" class="control-label">{% form_field remove_from_search_index %} {{ 'msg.RemoveFromSearchIndex'|trans|ucfirst }}</label>
-                  </li>
                 </div>
               </div>
             </div>
@@ -298,16 +290,6 @@
               </div>
             </div>
           </div>
-          {% if showTags %}
-            <div role="tabpanel" class="tab-pane" id="tabTags">
-              <div class="row">
-                <div class="col-md-12">
-                  <p class="tab-pane-title">{{ 'msg.AddTagsHere'|trans }}</p>
-                  {% form_field tags %} {% form_field_error tags %}
-                </div>
-              </div>
-            </div>
-          {% endif %}
           <div role="tabpanel" class="tab-pane" id="tabSEO">
             {% seo %}
           </div>
@@ -346,13 +328,6 @@
           <span class="fa fa-exclamation-triangle"></span>{{ 'msg.ContentSaveWarning'|trans }}
         </div>
         <div class="box contentBlock" style="margin: 0;">
-          <div class="blockContent HTML optionsRTE">
-            <fieldset>
-              {{ block.formElements.txtHTML.parse() | raw }}
-              {{ block.formElements.txtHTMLError.parse() | raw }}
-            </fieldset>
-          </div>
-
           {# this will store the selected extra #}
           {{ block.formElements.hidExtraId.parse() | raw }}
 
@@ -374,7 +349,7 @@
     {% endfor %}
   </div>
 
-  {# Dialog to select the content (editor, module or widget). Do not change the ID! #}
+  {# Dialog to select the content (module or widget). Do not change the ID! #}
   <div class="modal fade" id="addBlock" tabindex="-1" role="dialog"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -410,12 +385,6 @@
               <option value="-1">-</option>
             </select>
           </div>
-          <div id="userTemplateHolder" class="form-group"  style="display: none;">
-            <label for="userTemplate">{{ 'lbl.WhichTemplate'|trans|capitalize }}</label>
-            <select class="form-control" id="userTemplate">
-              <option value="-1">-</option>
-            </select>
-          </div>
         </div>
 
         <div class="modal-footer">
@@ -424,31 +393,6 @@
           </button>
           <button id="addBlockSubmit" type="button" class="btn btn-primary">
             <span class="fa fa-plus-square"></span>{{ 'lbl.Add'|trans|ucfirst }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {# Dialog to select user templates #}
-  <div class="modal fade" id="addUserTemplate" tabindex="-1" role="dialog"
-    aria-labelledby="{{ 'lbl.ChooseATemplate'|trans|capitalize }}" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <span class="modal-title h4">{{ 'lbl.Content'|trans|capitalize }}</span>
-        </div>
-        <div class="modal-body">
-          <div id="userTemplateHiddenPlaceholder" style="display:none;"></div>
-          <div id="userTemplatePlaceholder"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">
-            <span class="fa fa-times"></span>{{ 'lbl.Cancel'|trans|capitalize }}
-          </button>
-          <button type="button" class="btn btn-primary js-submit-user-template">
-            <span class="fa fa-check"></span>{{ 'lbl.OK'|trans|capitalize }}
           </button>
         </div>
       </div>
@@ -523,39 +467,6 @@
       </div>
     </div>
   </div>
-
-  {# Text editor block #}
-  <div class="modal fade" id="blockHtml" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <span class="modal-title h4">{{ 'lbl.Editor'|trans|ucfirst }}</span>
-        </div>
-        <div class="modal-body">
-          <div class="alert alert-warning">
-            <span class="fa fa-exclamation-triangle"></span>{{ 'msg.ContentSaveWarning'|trans|raw }}
-          </div>
-          <br>
-          <div class="form-group">
-            {% form_field html %}
-            {% form_field_error html %}
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button id="blockHtmlCancel" type="button" class="btn btn-default" data-dismiss="modal">
-            <span class="fa fa-times"></span>{{ 'lbl.Cancel'|trans|ucfirst }}
-          </button>
-          <button id="blockHtmlSubmit" type="button" class="btn btn-primary">
-            <span class="fa fa-plus-square"></span>{{ 'lbl.Add'|trans|ucfirst }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endform %}
 
   {# Page delete confirm block #}
   {% if item %}

@@ -40,7 +40,6 @@ class DataGrid extends \SpoonDataGrid
         'detail' => 'fa-eye',
         'details' => 'fa-eye',
         'approve' => 'fa-thumbs-o-up',
-        'mark_as_spam' => 'fa-ban',
         'install' => 'fa-download',
         'use_revision' => 'fa-file-o',
         'use_draft' => 'fa-file-o',
@@ -118,7 +117,7 @@ class DataGrid extends \SpoonDataGrid
         // known actions that should have a button
         if (in_array(
             $lowercasedName,
-            ['add', 'edit', 'delete', 'detail', 'details', 'approve', 'mark_as_spam', 'install'],
+            ['add', 'edit', 'delete', 'detail', 'details', 'approve', 'install'],
             true
         )) {
             // rebuild value, it should have special markup
@@ -157,7 +156,6 @@ class DataGrid extends \SpoonDataGrid
                 'detail',
                 'details',
                 'approve',
-                'mark_as_spam',
                 'install',
                 'use_revision',
                 'use_draft',

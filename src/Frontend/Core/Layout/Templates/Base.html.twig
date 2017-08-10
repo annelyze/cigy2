@@ -24,15 +24,6 @@
 {% endblock %}
 
 <div class="content container">
-  {% block cookies %}
-    {% include "Core/Layout/Templates/Cookies.html.twig" %}
-  {% endblock %}
-
-  {% block breadcrumb %}
-    {# Breadcrumb #}
-    {% include "Core/Layout/Templates/Breadcrumb.html.twig" %}
-  {% endblock %}
-
   {% block pageTitle %}
     {# Page title #}
     {% if not hideContentTitle %}

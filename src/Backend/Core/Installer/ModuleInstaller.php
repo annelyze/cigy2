@@ -72,30 +72,20 @@ class ModuleInstaller
     private $variables = [];
 
     /**
-     * Should example data be installed.
-     *
-     * @var bool
-     */
-    private $example;
-
-    /**
      * @param SpoonDatabase $database The database-connection.
      * @param array $languages The selected frontend languages.
      * @param array $interfaceLanguages The selected backend languages.
-     * @param bool $example Should example data be installed.
      * @param array $variables The passed variables.
      */
     public function __construct(
         SpoonDatabase $database,
         array $languages,
         array $interfaceLanguages,
-        bool $example = false,
         array $variables = []
     ) {
         $this->database = $database;
         $this->languages = $languages;
         $this->interfaceLanguages = $interfaceLanguages;
-        $this->example = $example;
         $this->variables = $variables;
     }
 
@@ -136,58 +126,6 @@ class ModuleInstaller
 
         // activate and update description
         $this->getDatabase()->update('modules', ['installed_on' => gmdate('Y-m-d H:i:s')], 'name = ?', $this->module);
-    }
-
-    /**
-     * Add a search index
-     *
-     * @param string $module The module wherein will be searched.
-     * @param int $otherId The id of the record.
-     * @param array $fields A key/value pair of fields to index.
-     * @param string $language The frontend language for this entry.
-     */
-    protected function addSearchIndex(string $module, int $otherId, array $fields, string $language): void
-    {
-        // get database
-        $database = $this->getDatabase();
-
-        // validate cache
-        if (empty(self::$modules)) {
-            // get all modules
-            self::$modules = (array) $database->getColumn('SELECT m.name FROM modules AS m');
-        }
-
-        // module exists?
-        if (!in_array('Search', self::$modules)) {
-            return;
-        }
-
-        // no fields?
-        if (empty($fields)) {
-            return;
-        }
-
-        // insert search index
-        foreach ($fields as $field => $value) {
-            // reformat value
-            $value = strip_tags((string) $value);
-
-            // insert in database
-            $database->execute(
-                'INSERT INTO search_index (module, other_id, language, field, value, active)
-                 VALUES (?, ?, ?, ?, ?, ?)
-                 ON DUPLICATE KEY UPDATE value = ?, active = ?',
-                [(string) $module, (int) $otherId, (string) $language, (string) $field, $value, true, $value, true]
-            );
-        }
-
-        // invalidate the cache for search
-        $finder = new Finder();
-        $filesystem = new Filesystem();
-        foreach ($finder->files()->in(FRONTEND_CACHE_PATH . '/Search/') as $file) {
-            /** @var $file \SplFileInfo */
-            $filesystem->remove($file->getRealPath());
-        }
     }
 
     /**
@@ -711,9 +649,6 @@ class ModuleInstaller
         );
         $revision['meta_id'] = $revision['meta_id'] ?? $this->getNewMetaId($meta, $revision['title']);
 
-        if (!isset($revision['data']['image']) && $this->installExample()) {
-            $revision['data']['image'] = $this->getAndCopyRandomImage();
-        }
         if ($revision['data'] !== null) {
             $revision['data'] = serialize($revision['data']);
         }
@@ -795,32 +730,6 @@ class ModuleInstaller
                 return $block;
             },
             $blocks
-        );
-    }
-
-    /**
-     * Should example data be installed
-     *
-     * @return bool
-     */
-    protected function installExample(): bool
-    {
-        return $this->example;
-    }
-
-    /**
-     * Make a module searchable
-     *
-     * @param string $module The module to make searchable.
-     * @param bool $searchable Enable/disable search for this module by default?
-     * @param int $weight Set default search weight for this module.
-     */
-    protected function makeSearchable(string $module, bool $searchable = true, int $weight = 1): void
-    {
-        $this->getDatabase()->execute(
-            'INSERT INTO search_modules (module, searchable, weight) VALUES (?, ?, ?)
-             ON DUPLICATE KEY UPDATE searchable = ?, weight = ?',
-            [$module, $searchable, $weight, $searchable, $weight]
         );
     }
 

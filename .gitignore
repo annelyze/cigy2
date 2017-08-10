@@ -25,3 +25,5 @@
 # Docker
 var/docker/db/data/*
 docker-compose.override.yml
+
+/.idea/*

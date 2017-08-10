@@ -90,9 +90,7 @@ class ForkInstaller
             'Groups',
             'Extensions',
             'Pages',
-            'Search',
             'ContentBlocks',
-            'Tags',
         ];
     }
 
@@ -162,7 +160,6 @@ class ForkInstaller
             $this->container->get('database'),
             $data->getLanguages(),
             $data->getInterfaceLanguages(),
-            $data->hasExampleData(),
             $this->getInstallerData($data)
         );
     }
@@ -185,7 +182,6 @@ class ForkInstaller
                     $this->container->get('database'),
                     $data->getLanguages(),
                     $data->getInterfaceLanguages(),
-                    $data->hasExampleData(),
                     $this->getInstallerData($data)
                 );
 

@@ -18,8 +18,6 @@ use Backend\Core\Engine\Meta as BackendMeta;
 use Backend\Core\Engine\Model as BackendModel;
 use Backend\Modules\Extensions\Engine\Model as BackendExtensionsModel;
 use Backend\Modules\Pages\Engine\Model as BackendPagesModel;
-use Backend\Modules\Search\Engine\Model as BackendSearchModel;
-use Backend\Modules\Tags\Engine\Model as BackendTagsModel;
 use SpoonFormHidden;
 
 /**
@@ -159,9 +157,6 @@ class Add extends BackendBaseActionAdd
         $block['formElements']['hidExtraType'] = $this->form->addHidden('block_extra_type_' . $block['index'], 'rich_text');
         $block['formElements']['hidExtraData'] = $this->form->addHidden('block_extra_data_' . $block['index']);
         $block['formElements']['hidPosition'] = $this->form->addHidden('block_position_' . $block['index'], 'fallback');
-        $block['formElements']['txtHTML'] = $this->form->addTextarea(
-            'block_html_' . $block['index']
-        ); // this is no editor; we'll add the editor in JS
 
         // add default block to "fallback" position, the only one which we can rest assured to exist
         $this->positions['fallback']['blocks'][] = $block;
@@ -197,16 +192,7 @@ class Add extends BackendBaseActionAdd
                 $html = $this->getRequest()->request->get('block_html_' . $i);
 
                 // extra-type is HTML
-                if ($block['extra_id'] === null || $block['extra_type'] == 'usertemplate') {
-                    if ($this->getRequest()->request->get('block_extra_type_' . $i) === 'usertemplate') {
-                        $block['extra_id'] = $this->getRequest()->request->get('block_extra_id_' . $i);
-                        $_POST['block_extra_data_' . $i] = htmlspecialchars($_POST['block_extra_data_' . $i]);
-                    } else {
-                        // reset vars
-                        $block['extra_id'] = null;
-                    }
-                    $block['html'] = $html;
-                } else {
+                if ($block['extra_id'] !== null) {
                     // type of block
                     if (isset($this->extras[$block['extra_id']]['type']) && $this->extras[$block['extra_id']]['type'] == 'block') {
                         // set error
@@ -259,10 +245,6 @@ class Add extends BackendBaseActionAdd
                 'block_position_' . $block['index'],
                 $block['position']
             );
-            $block['formElements']['txtHTML'] = $this->form->addTextarea(
-                'block_html_' . $block['index'],
-                $block['html']
-            ); // this is no editor; we'll add the editor in JS
 
             $this->positions[$block['position']]['blocks'][] = $block;
         }
@@ -288,11 +270,6 @@ class Add extends BackendBaseActionAdd
         // page info
         $this->form->addCheckbox('navigation_title_overwrite');
         $this->form->addText('navigation_title');
-
-        if ($this->showTags()) {
-            // tags
-            $this->form->addText('tags', null, null, 'form-control js-tags-input', 'form-control danger js-tags-input');
-        }
 
         // a specific action
         $this->form->addCheckbox('is_action', false);
@@ -327,7 +304,6 @@ class Add extends BackendBaseActionAdd
             rtrim(BackendPagesModel::getFullUrl($this->getRequest()->query->getInt('parent', 1)), '/')
         );
         $this->template->assign('formErrors', (string) $this->form->getErrors());
-        $this->template->assign('showTags', $this->showTags());
 
         // get default template id
         $defaultTemplateId = $this->get('fork.settings')->get('Pages', 'default_template', 1);
@@ -340,12 +316,6 @@ class Add extends BackendBaseActionAdd
 
         // parse the tree
         $this->template->assign('tree', BackendPagesModel::getTreeHTML());
-
-        $this->header->addJsData(
-            'pages',
-            'userTemplates',
-            BackendPagesModel::loadUserTemplates()
-        );
     }
 
     private function validateForm(): void
@@ -498,35 +468,11 @@ class Add extends BackendBaseActionAdd
                 // insert the blocks
                 BackendPagesModel::insertBlocks($this->blocksContent);
 
-                if ($this->showTags()) {
-                    // save tags
-                    BackendTagsModel::saveTags(
-                        $page['id'],
-                        $this->form->getField('tags')->getValue(),
-                        $this->url->getModule()
-                    );
-                }
-
                 // build the cache
                 BackendPagesModel::buildCache(BL::getWorkingLanguage());
 
                 // active
                 if ($page['status'] == 'active') {
-                    // init var
-                    $text = '';
-
-                    // build search-text
-                    foreach ($this->blocksContent as $block) {
-                        $text .= ' ' . $block['html'];
-                    }
-
-                    // add to search index
-                    BackendSearchModel::saveIndex(
-                        $this->getModule(),
-                        $page['id'],
-                        ['title' => $page['title'], 'text' => $text]
-                    );
-
                     // everything is saved, so redirect to the overview
                     $this->redirect(
                         BackendModel::createUrlForAction(
@@ -560,16 +506,6 @@ class Add extends BackendBaseActionAdd
         $this->form->getField('image')->generateThumbnails($imagePath, $imageFilename);
 
         return $imageFilename;
-    }
-
-    /**
-     * Check if the user has the right to see/edit tags
-     *
-     * @return bool
-     */
-    private function showTags(): bool
-    {
-        return Authentication::isAllowedAction('Edit', 'Tags') && Authentication::isAllowedAction('GetAllTags', 'Tags');
     }
 
     private function getHiddenJsonField(string $name, ?string $json): SpoonFormHidden

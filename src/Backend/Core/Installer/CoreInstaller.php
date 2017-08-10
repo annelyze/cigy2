@@ -68,8 +68,6 @@ class CoreInstaller extends ModuleInstaller
 
         // other settings
         $this->setSetting('Core', 'theme');
-        $this->setSetting('Core', 'akismet_key', '');
-        $this->setSetting('Core', 'google_maps_key', '');
         $this->setSetting('Core', 'max_num_revisions', 20);
         $this->setSetting('Core', 'site_domains', [$this->getVariable('site_domain')]);
         $this->setSetting('Core', 'site_html_header', '');
@@ -201,16 +199,5 @@ class CoreInstaller extends ModuleInstaller
                 (isset($siteTitles[$language])) ? $siteTitles[$language] : $this->getVariable('site_title')
             );
         }
-
-        // ckfinder
-        $this->setSetting('Core', 'ckfinder_license_name', 'Fork CMS');
-        $this->setSetting('Core', 'ckfinder_license_key', 'VNA6-BP17-T7D3-CP1B-EMJF-X7Q3-5THF');
-
-        // Enable the cookie bar by default when the timezone is in europe
-        $this->setSetting(
-            'Core',
-            'show_cookie_bar',
-            date_default_timezone_get() && strpos(mb_strtolower(date_default_timezone_get()), 'europe') === 0
-        );
     }
 }

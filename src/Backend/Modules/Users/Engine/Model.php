@@ -72,6 +72,18 @@ class Model
     }
 
     /**
+     * Encrypt the password with PHP password_hash function.
+     *
+     * @param string $password
+     *
+     * @return string
+     */
+    public static function encryptPassword(string $password): string
+    {
+        return password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    /**
      * Does the user exist.
      *
      * @param int  $id     The userId to check for existence.

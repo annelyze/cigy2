@@ -139,26 +139,6 @@ final class Cookie
         return null;
     }
 
-    /**
-     * Has the visitor allowed cookies?
-     *
-     * @return bool
-     */
-    public function hasAllowedCookies(): bool
-    {
-        return $this->get('cookie_bar_agree', 'N') === 'N';
-    }
-
-    /**
-     * Has the cookiebar been hidden by the visitor
-     *
-     * @return bool
-     */
-    public function hasHiddenCookieBar(): bool
-    {
-        return $this->get('cookie_bar_hide', 'N') === 'N';
-    }
-
     public function attachToResponse(Response $response): void
     {
         foreach ($this->newCookiesHeaderBag->getCookies() as $cookie) {

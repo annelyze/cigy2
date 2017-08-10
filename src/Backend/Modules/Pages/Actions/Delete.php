@@ -14,7 +14,6 @@ use Backend\Core\Language\Language as BL;
 use Backend\Core\Engine\Model as BackendModel;
 use Backend\Form\Type\DeleteType;
 use Backend\Modules\Pages\Engine\Model as BackendPagesModel;
-use Backend\Modules\Search\Engine\Model as BackendSearchModel;
 
 /**
  * This is the delete-action, it will delete a page
@@ -68,9 +67,6 @@ class Delete extends BackendBaseActionDelete
         }
 
         $success = BackendPagesModel::delete($this->id, null, $revisionId);
-
-        // delete search indexes
-        BackendSearchModel::removeIndex($this->getModule(), $this->id);
 
         // build cache
         BackendPagesModel::buildCache(BL::getWorkingLanguage());

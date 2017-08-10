@@ -16,8 +16,6 @@ use Backend\Core\Language\Language as BL;
 use Backend\Core\Engine\Model as BackendModel;
 use Backend\Core\Language\Locale;
 use Backend\Modules\Extensions\Engine\Model as BackendExtensionsModel;
-use Backend\Modules\Search\Engine\Model as BackendSearchModel;
-use Backend\Modules\Tags\Engine\Model as BackendTagsModel;
 use ForkCMS\App\ForkController;
 use Frontend\Core\Language\Language as FrontendLanguage;
 
@@ -143,9 +141,6 @@ class Model
             }
         }
 
-        // delete search indexes
-        $database->delete('search_index', 'module = ? AND language = ?', ['pages', $toLanguage]);
-
         // get all active pages
         $ids = BackendModel::getContainer()->get('database')->getColumn(
             'SELECT id
@@ -223,39 +218,6 @@ class Model
 
             // insert the blocks
             self::insertBlocks($blocks);
-
-            // init var
-            $text = '';
-
-            // build search-text
-            foreach ($blocks as $block) {
-                $text .= ' ' . $block['html'];
-            }
-
-            // add
-            BackendSearchModel::saveIndex(
-                'Pages',
-                (int) $page['id'],
-                ['title' => $page['title'], 'text' => $text],
-                $toLanguage
-            );
-
-            // get tags
-            $tags = BackendTagsModel::getTags('pages', $id, 'string', $fromLanguage);
-
-            // save tags
-            if ($tags != '') {
-                $saveWorkingLanguage = BL::getWorkingLanguage();
-
-                // If we don't set the working language to the target language,
-                // BackendTagsModel::getUrl() will use the current working
-                // language, possibly causing unnecessary '-2' suffixes in
-                // tags.url
-                BL::setWorkingLanguage($toLanguage);
-
-                BackendTagsModel::saveTags($page['id'], $tags, 'pages', $toLanguage);
-                BL::setWorkingLanguage($saveWorkingLanguage);
-            }
         }
 
         // build cache
@@ -359,9 +321,6 @@ class Model
             $database->delete('pages', 'revision_id IN (' . implode(',', $revisionIDs) . ')');
         }
 
-        // delete tags
-        BackendTagsModel::saveTags($id, '', 'Pages');
-
         // return
         return true;
     }
@@ -464,32 +423,6 @@ class Model
                 ORDER BY b.sequence ASC',
             [$pageId, $revisionId, $language]
         );
-    }
-
-    public static function getByTag(int $tagId): array
-    {
-        // get the items
-        $items = (array) BackendModel::getContainer()->get('database')->getRecords(
-            'SELECT i.id AS url, i.title AS name, mt.module
-             FROM modules_tags AS mt
-             INNER JOIN tags AS t ON mt.tag_id = t.id
-             INNER JOIN pages AS i ON mt.other_id = i.id
-             WHERE mt.module = ? AND mt.tag_id = ? AND i.status = ?',
-            ['pages', $tagId, 'active']
-        );
-
-        // loop items
-        foreach ($items as &$row) {
-            $row['url'] = BackendModel::createUrlForAction(
-                'Edit',
-                'Pages',
-                null,
-                ['id' => $row['url']]
-            );
-        }
-
-        // return
-        return $items;
     }
 
     /**
@@ -911,10 +844,8 @@ class Model
     public static function getTypes(): array
     {
         return [
-            'rich_text' => BL::lbl('Editor'),
             'block' => BL::lbl('Module'),
-            'widget' => BL::lbl('Widget'),
-            'usertemplate' => BL::lbl('UserTemplate'),
+            'widget' => BL::lbl('Widget')
         ];
     }
 
@@ -1039,37 +970,9 @@ class Model
 
         // loop blocks
         foreach ($blocks as $block) {
-            if ($block['extra_type'] === 'usertemplate') {
-                $block['extra_id'] = null;
-            }
-
             // insert blocks
             $database->insert('pages_blocks', $block);
         }
-    }
-
-    public static function loadUserTemplates(): array
-    {
-        $themePath = FRONTEND_PATH . '/Themes/';
-        $themePath .= BackendModel::get('fork.settings')->get('Core', 'theme', 'Fork');
-        $filePath = $themePath . '/Core/Layout/Templates/UserTemplates/Templates.json';
-
-        $userTemplates = [];
-
-        $fs = new Filesystem();
-        if ($fs->exists($filePath)) {
-            $userTemplates = json_decode(file_get_contents($filePath), true);
-
-            foreach ($userTemplates as &$userTemplate) {
-                $userTemplate['file'] =
-                    '/src/Frontend/Themes/' .
-                    BackendModel::get('fork.settings')->get('Core', 'theme', 'Fork') .
-                    '/Core/Layout/Templates/UserTemplates/' .
-                    $userTemplate['file'];
-            }
-        }
-
-        return $userTemplates;
     }
 
     /**

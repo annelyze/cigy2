@@ -217,7 +217,6 @@ final class Header extends KernelLoader
         $this->jsFiles->parse($this->template, 'jsFiles');
 
         $this->jsData->add('site', 'domain', SITE_DOMAIN);
-        $this->jsData->add('editor', 'language', $this->getCKEditorLanguage());
 
         if (!empty($this->get('fork.settings')->get('Core', 'theme'))) {
             $this->jsData->add('theme', 'theme', $this->get('fork.settings')->get('Core', 'theme'));
@@ -239,20 +238,5 @@ final class Header extends KernelLoader
         }
 
         return BL::getInterfaceLanguage();
-    }
-
-    /**
-     * @return string
-     */
-    private function getCKEditorLanguage(): string
-    {
-        $language = $this->getInterfaceLanguage();
-
-        // CKeditor has support for simplified Chinese, but the language is called zh-cn instead of zn
-        if ($language === 'zh') {
-            return 'zh-cn';
-        }
-
-        return $language;
     }
 }

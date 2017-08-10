@@ -17,7 +17,6 @@ class Installer extends ModuleInstaller
         $this->importLocale(__DIR__ . '/Data/locale.xml');
         $this->configureBackendNavigation();
         $this->configureBackendRights();
-        $this->configureFrontendExtras();
         $this->configureFrontendForkTheme();
     }
 
@@ -89,11 +88,6 @@ class Installer extends ModuleInstaller
         $this->configureBackendActionRightsForModules();
         $this->configureBackendActionRightsForTemplates();
         $this->configureBackendActionRightsForThemes();
-    }
-
-    private function configureFrontendExtras(): void
-    {
-        $this->insertExtra('Search', ModuleExtraType::widget(), 'SearchForm', 'Form');
     }
 
     private function configureFrontendForkTheme(): void

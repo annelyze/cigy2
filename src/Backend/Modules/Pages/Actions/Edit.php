@@ -21,9 +21,6 @@ use Backend\Core\Engine\Model as BackendModel;
 use Backend\Form\Type\DeleteType;
 use Backend\Modules\Extensions\Engine\Model as BackendExtensionsModel;
 use Backend\Modules\Pages\Engine\Model as BackendPagesModel;
-use Backend\Modules\Search\Engine\Model as BackendSearchModel;
-use Backend\Modules\Tags\Engine\Model as BackendTagsModel;
-use Backend\Modules\Profiles\Engine\Model as BackendProfilesModel;
 use SpoonFormHidden;
 
 /**
@@ -230,7 +227,6 @@ class Edit extends BackendBaseActionEdit
 
         // create elements
         $this->form->addText('title', $this->record['title'], null, 'form-control title', 'form-control danger title');
-        $this->form->addEditor('html');
         $this->form->addHidden('template_id', $this->record['template_id']);
         $this->form->addRadiobutton(
             'hidden',
@@ -244,40 +240,6 @@ class Edit extends BackendBaseActionEdit
         // image related fields
         $this->form->addImage('image');
         $this->form->addCheckbox('remove_image');
-
-        // page auth related fields
-        // check if profiles module is installed
-        if (BackendModel::isModuleInstalled('Profiles')) {
-            // add checkbox for auth_required
-            $this->form->addCheckbox(
-                'auth_required',
-                isset($this->record['data']['auth_required']) && $this->record['data']['auth_required']
-            );
-
-            // add checkbox for index page to search
-            $this->form->addCheckbox(
-                'remove_from_search_index',
-                isset($this->record['data']['remove_from_search_index']) && $this->record['data']['remove_from_search_index']
-            );
-
-            // get all groups and parse them in key value pair
-            $groupItems = BackendProfilesModel::getGroups();
-            if (!empty($groupItems)) {
-                $groups = [];
-                foreach ($groupItems as $key => $item) {
-                    $groups[] = ['label' => $item, 'value' => $key];
-                }
-                // set checked values
-                $checkedGroups = [];
-                if (isset($this->record['data']['auth_groups']) && is_array($this->record['data']['auth_groups'])) {
-                    foreach ($this->record['data']['auth_groups'] as $group) {
-                        $checkedGroups[] = $group;
-                    }
-                }
-                // add multi checkbox
-                $this->form->addMultiCheckbox('auth_groups', $groups, $checkedGroups);
-            }
-        }
 
         // a god user should be able to adjust the detailed settings for a page easily
         if ($this->isGod) {
@@ -304,10 +266,6 @@ class Edit extends BackendBaseActionEdit
         $block['formElements']['hidExtraType'] = $this->form->addHidden('block_extra_type_' . $block['index'], 'rich_text');
         $block['formElements']['hidExtraData'] = $this->form->addHidden('block_extra_data_' . $block['index']);
         $block['formElements']['hidPosition'] = $this->form->addHidden('block_position_' . $block['index'], 'fallback');
-        $block['formElements']['txtHTML'] = $this->form->addTextarea(
-            'block_html_' . $block['index'],
-            ''
-        ); // this is no editor; we'll add the editor in JS
 
         // add default block to "fallback" position, the only one which we can rest assured to exist
         $this->positions['fallback']['blocks'][] = $block;
@@ -340,19 +298,8 @@ class Edit extends BackendBaseActionEdit
                 // init html
                 $block['html'] = null;
 
-                $html = $this->getRequest()->request->get('block_html_' . $i);
-
                 // extra-type is HTML
-                if ($block['extra_id'] === null || $block['extra_type'] == 'usertemplate') {
-                    if ($this->getRequest()->request->get('block_extra_type_' . $i) === 'usertemplate') {
-                        $block['extra_id'] = $this->getRequest()->request->get('block_extra_id_' . $i);
-                        $_POST['block_extra_data_' . $i] = htmlspecialchars($_POST['block_extra_data_' . $i]);
-                    } else {
-                        // reset vars
-                        $block['extra_id'] = null;
-                    }
-                    $block['html'] = $html;
-                } else {
+                if ($block['extra_id'] !== null) {
                     // type of block
                     if (isset($this->extras[$block['extra_id']]['type']) && $this->extras[$block['extra_id']]['type'] == 'block') {
                         // set error
@@ -410,10 +357,6 @@ class Edit extends BackendBaseActionEdit
                 'block_position_' . $block['index'],
                 $block['position']
             );
-            $block['formElements']['txtHTML'] = $this->form->addTextarea(
-                'block_html_' . $block['index'],
-                $block['html']
-            ); // this is no editor; we'll add the editor in JS
 
             $this->positions[$block['position']]['blocks'][] = $block;
         }
@@ -457,17 +400,6 @@ class Edit extends BackendBaseActionEdit
         // page info
         $this->form->addCheckbox('navigation_title_overwrite', $this->record['navigation_title_overwrite']);
         $this->form->addText('navigation_title', $this->record['navigation_title']);
-
-        if ($this->userCanSeeAndEditTags()) {
-            // tags
-            $this->form->addText(
-                'tags',
-                BackendTagsModel::getTags($this->url->getModule(), $this->id),
-                null,
-                'form-control js-tags-input',
-                'error js-tags-input'
-            );
-        }
 
         // a specific action
         $isAction = isset($this->record['data']['is_action']) && $this->record['data']['is_action'];
@@ -565,7 +497,6 @@ class Edit extends BackendBaseActionEdit
         $this->template->assign('extrasById', json_encode(BackendExtensionsModel::getExtras()));
         $this->template->assign('prefixURL', rtrim(BackendPagesModel::getFullUrl($this->record['parent_id']), '/'));
         $this->template->assign('formErrors', (string) $this->form->getErrors());
-        $this->template->assign('showTags', $this->userCanSeeAndEditTags());
 
         // init var
         $showDelete = true;
@@ -598,15 +529,6 @@ class Edit extends BackendBaseActionEdit
 
         // parse the tree
         $this->template->assign('tree', BackendPagesModel::getTreeHTML());
-
-        // assign if profiles module is installed
-        $this->template->assign('showAuthenticationTab', BackendModel::isModuleInstalled('Profiles'));
-
-        $this->header->addJsData(
-            'pages',
-            'userTemplates',
-            BackendPagesModel::loadUserTemplates()
-        );
     }
 
     private function validateForm(): void
@@ -675,20 +597,6 @@ class Edit extends BackendBaseActionEdit
                 }
 
                 $data['auth_required'] = false;
-                if (BackendModel::isModuleInstalled('Profiles') && $this->form->getField('auth_required')->isChecked()) {
-                    $data['auth_required'] = true;
-                    // get all groups and parse them in key value pair
-                    $groupItems = BackendProfilesModel::getGroups();
-                    // check for groups
-                    if (!empty($groupItems)) {
-                        $data['auth_groups'] = $this->form->getField('auth_groups')->getValue();
-                    }
-                }
-
-                $data['remove_from_search_index'] = false;
-                if (BackendModel::isModuleInstalled('Profiles') && $this->form->getField('remove_from_search_index')->isChecked() && $this->form->getField('auth_required')->isChecked()) {
-                    $data['remove_from_search_index'] = true;
-                }
 
                 // build page record
                 $page = [];
@@ -763,42 +671,11 @@ class Edit extends BackendBaseActionEdit
                 // insert the blocks
                 BackendPagesModel::insertBlocks($this->blocksContent);
 
-                if ($this->userCanSeeAndEditTags()) {
-                    // save tags
-                    BackendTagsModel::saveTags(
-                        $page['id'],
-                        $this->form->getField('tags')->getValue(),
-                        $this->url->getModule()
-                    );
-                }
-
                 // build cache
                 BackendPagesModel::buildCache(BL::getWorkingLanguage());
 
                 // active
                 if ($page['status'] == 'active') {
-                    // init var
-                    $text = '';
-
-                    // build search-text
-                    foreach ($this->blocksContent as $block) {
-                        $text .= ' ' . $block['html'];
-                    }
-
-                    // add to search index, only if authentication is false
-                    if ($data['remove_from_search_index'] == false) {
-                        BackendSearchModel::saveIndex(
-                            $this->getModule(),
-                            $page['id'],
-                            ['title' => $page['title'], 'text' => $text]
-                        );
-                    } else {
-                        BackendSearchModel::removeIndex(
-                            $this->getModule(),
-                            $page['id']
-                        );
-                    }
-
                     // everything is saved, so redirect to the overview
                     $this->redirect(
                         BackendModel::createUrlForAction(
@@ -844,11 +721,6 @@ class Edit extends BackendBaseActionEdit
         $this->form->getField('image')->generateThumbnails($imagePath, $imageFilename);
 
         return $imageFilename;
-    }
-
-    private function userCanSeeAndEditTags(): bool
-    {
-        return Authentication::isAllowedAction('Edit', 'Tags') && Authentication::isAllowedAction('GetAllTags', 'Tags');
     }
 
     private function loadDeleteForm(): void

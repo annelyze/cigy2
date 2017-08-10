@@ -27,7 +27,6 @@ final class Navigation extends KernelLoader
         // store for later use throughout the application
         $this->getContainer()->set('navigation', $this);
 
-        $this->buildEditorLinkListIfNeeded();
         $this->navigation = $this->getNavigationForAllowedModulesAndActions();
     }
 
@@ -169,18 +168,5 @@ final class Navigation extends KernelLoader
         }
 
         return null;
-    }
-
-    private function buildEditorLinkListIfNeeded(): void
-    {
-        $editorLinkListCache = sprintf(
-            '%1$s/Navigation/editor_link_list_%2$s.js',
-            FRONTEND_CACHE_PATH,
-            BackendLanguage::getWorkingLanguage()
-        );
-
-        if (!is_file($editorLinkListCache)) {
-            BackendPagesModel::buildCache(BackendLanguage::getWorkingLanguage());
-        }
     }
 }

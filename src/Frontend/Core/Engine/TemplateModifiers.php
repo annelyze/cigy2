@@ -15,7 +15,6 @@ use Frontend\Core\Engine\Model as FrontendModel;
 use Frontend\Core\Engine\Block\Widget as FrontendBlockWidget;
 use Frontend\Core\Language\Language;
 use Frontend\Core\Language\Locale;
-use Frontend\Modules\Profiles\Engine\Model as FrontendProfilesModel;
 use Common\Core\Twig\Extensions\BaseTwigModifiers;
 use SpoonDate;
 
@@ -411,33 +410,6 @@ class TemplateModifiers extends BaseTwigModifiers
     }
 
     /**
-     * Output a profile setting
-     *    syntax: {{ profilesetting($profileId, $name) }}
-     *
-     * @param int $profileId The variable
-     * @param string $name The name of the setting
-     *
-     * @return mixed
-     */
-    public static function profileSetting(int $profileId, string $name)
-    {
-        $profile = FrontendProfilesModel::get($profileId);
-
-        // convert into array
-        $profile = $profile->toArray();
-
-        // @remark I know this is dirty, but I couldn't find a better way.
-        if (in_array($name, ['display_name', 'registered_on', 'full_url']) && isset($profile[$name])) {
-            return $profile[$name];
-        }
-        if (isset($profile['settings'][$name])) {
-            return $profile['settings'][$name];
-        }
-
-        return '';
-    }
-
-    /**
      * Get the value for a user-setting
      *    syntax {{ usersetting($setting, $userId) }}
      *
@@ -476,10 +448,7 @@ class TemplateModifiers extends BaseTwigModifiers
     public static function cleanupPlainText(string $string): string
     {
         // detect links
-        $string = \SpoonFilter::replaceURLsWithAnchors(
-            $string,
-            FrontendModel::get('fork.settings')->get('Core', 'seo_nofollow_in_comments', false)
-        );
+        $string = \SpoonFilter::replaceURLsWithAnchors($string);
 
         // replace newlines
         $string = str_replace("\r", '', $string);

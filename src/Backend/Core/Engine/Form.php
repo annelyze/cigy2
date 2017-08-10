@@ -55,49 +55,6 @@ class Form extends \Common\Core\Form
     }
 
     /**
-     * Add an editor field
-     *
-     * @param string $name       The name of the element.
-     * @param string $value      The value inside the element.
-     * @param string $class      Class(es) that will be applied on the element.
-     * @param string $classError Class(es) that will be applied on the element when an error occurs.
-     * @param bool   $HTML       Will the field contain HTML?
-     *
-     * @return SpoonFormTextarea
-     */
-    public function addEditor($name, $value = null, $class = null, $classError = null, $HTML = true): SpoonFormTextarea
-    {
-        $name = (string) $name;
-        $value = ($value !== null) ? (string) $value : null;
-        $class = 'inputEditor ' . (string) $class;
-        $classError = 'inputEditorError ' . (string) $classError;
-        $HTML = (bool) $HTML;
-
-        // we add JS because we need CKEditor
-        $this->header->addJS('ckeditor/ckeditor.js', 'Core', false);
-        $this->header->addJS('ckeditor/adapters/jquery.js', 'Core', false);
-        $this->header->addJS('ckfinder/ckfinder.js', 'Core', false);
-
-        // add the internal link lists-file
-        if (is_file(FRONTEND_CACHE_PATH . '/Navigation/editor_link_list_' . BackendLanguage::getWorkingLanguage() . '.js')) {
-            $timestamp = @filemtime(
-                FRONTEND_CACHE_PATH . '/Navigation/editor_link_list_' . BackendLanguage::getWorkingLanguage() . '.js'
-            );
-            $this->header->addJS(
-                '/src/Frontend/Cache/Navigation/editor_link_list_' . BackendLanguage::getWorkingLanguage(
-                ) . '.js?m=' . $timestamp,
-                null,
-                false,
-                true,
-                false
-            );
-        }
-
-        // create and return a textarea for the editor
-        return $this->addTextarea($name, $value, $class, $classError, $HTML);
-    }
-
-    /**
      * Adds a single file field.
      *
      * @param string $name       Name of the element.

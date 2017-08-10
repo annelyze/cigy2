@@ -29,7 +29,6 @@ class CacheBuilder
     protected $cache;
 
     protected $blocks;
-    protected $sitemapId;
 
     public function __construct(\SpoonDatabase $database, CacheItemPoolInterface $cache)
     {
@@ -43,14 +42,6 @@ class CacheBuilder
         $this->cache->deleteItems(['keys_' . $language, 'navigation_' . $language]);
         $keys = $this->getKeys($language);
         $navigation = $this->getNavigation($language);
-
-        // build file with navigation structure to feed into editor
-        $filesystem = new Filesystem();
-        $cachePath = FRONTEND_CACHE_PATH . '/Navigation/';
-        $filesystem->dumpFile(
-            $cachePath . 'editor_link_list_' . $language . '.js',
-            $this->dumpEditorLinkList($navigation, $keys, $language)
-        );
     }
 
     public function getKeys(string $language): array
@@ -176,21 +167,6 @@ class CacheBuilder
             $treeType = 'home';
         } elseif ($page['id'] == 404) {
             $treeType = 'error';
-        } elseif ($page['id'] < 404 && mb_substr_count($page['extra_ids'], $this->getSitemapId()) > 0) {
-            // get extras
-            $extraIDs = explode(',', $page['extra_ids']);
-
-            // loop extras
-            foreach ($extraIDs as $id) {
-                // check if this is the sitemap id
-                if ($id == $this->getSitemapId()) {
-                    // set type
-                    $treeType = 'sitemap';
-
-                    // break it
-                    break;
-                }
-            }
         }
 
         // any data?
@@ -272,29 +248,6 @@ class CacheBuilder
         return $this->blocks;
     }
 
-    protected function getSitemapId(): int
-    {
-        if (empty($this->sitemapId)) {
-            $widgets = (array) $this->database->getRecords(
-                'SELECT i.id, i.module, i.action
-                 FROM modules_extras AS i
-                 WHERE i.type = ? AND i.hidden = ?',
-                ['widget', false],
-                'id'
-            );
-
-            // search sitemap
-            foreach ($widgets as $id => $row) {
-                if ($row['action'] == 'Sitemap') {
-                    $this->sitemapId = $id;
-                    break;
-                }
-            }
-        }
-
-        return (int) $this->sitemapId;
-    }
-
     protected function getOrder(
         array $navigation,
         string $type = 'page',
@@ -318,86 +271,6 @@ class CacheBuilder
 
         // return
         return $order;
-    }
-
-    protected function dumpEditorLinkList(array $navigation, array $keys, string $language): string
-    {
-        $order = [];
-        // get the order
-        foreach (array_keys($navigation) as $type) {
-            $order[$type] = $this->getOrder($navigation, $type, 0);
-        }
-
-        // start building the cache file
-        $editorLinkListString = $this->getCacheHeader(
-            'the links that can be used by the editor'
-        );
-
-        // init var
-        $links = [];
-
-        // init var
-        $cachedTitles = (array) $this->database->getPairs(
-            'SELECT i.id, i.navigation_title
-             FROM pages AS i
-             WHERE i.id IN(' . implode(',', array_keys($keys)) . ')
-             AND i.language = ? AND i.status = ?',
-            [$language, 'active']
-        );
-
-        // loop the types in the order we want them to appear
-        foreach (['page', 'meta', 'footer', 'root'] as $type) {
-            // any pages?
-            if (isset($order[$type])) {
-                // loop pages
-                foreach ($order[$type] as $pageId => $url) {
-                    // skip if we don't have a title
-                    if (!isset($cachedTitles[$pageId])) {
-                        continue;
-                    }
-
-                    // get the title
-                    $title = \SpoonFilter::htmlspecialcharsDecode($cachedTitles[$pageId]);
-
-                    // split into chunks
-                    $urlChunks = explode('/', $url);
-
-                    // remove the language chunk
-                    $hasMultiLanguages = BackendModel::getContainer()->getParameter('site.multilanguage');
-                    $urlChunks = ($hasMultiLanguages) ? array_slice($urlChunks, 2) : array_slice($urlChunks, 1);
-
-                    // subpage?
-                    if (count($urlChunks) > 1) {
-                        // loop while we have more then 1 chunk
-                        while (count($urlChunks) > 1) {
-                            // remove last chunk of the url
-                            array_pop($urlChunks);
-
-                            // build the temporary URL, so we can search for an id
-                            $tempUrl = implode('/', $urlChunks);
-
-                            // search the pageID
-                            $tempPageId = array_search($tempUrl, $keys);
-
-                            // prepend the title
-                            if (!isset($cachedTitles[$tempPageId])) {
-                                $title = ' > ' . $title;
-                            } else {
-                                $title = $cachedTitles[$tempPageId] . ' > ' . $title;
-                            }
-                        }
-                    }
-
-                    // add
-                    $links[] = [$title, $url];
-                }
-            }
-        }
-
-        // add JSON-string
-        $editorLinkListString .= 'var linkList = ' . json_encode($links) . ';';
-
-        return $editorLinkListString;
     }
 
     protected function getCacheHeader(string $itContainsMessage): string

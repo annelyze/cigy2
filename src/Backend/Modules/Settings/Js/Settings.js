@@ -5,14 +5,6 @@ jsBackend.settings =
 {
     init: function()
     {
-        $('#facebookAdminIds').multipleTextbox(
-        {
-            emptyMessage: utils.string.ucfirst(jsBackend.locale.msg('NoAdminIds')),
-            addLabel: utils.string.ucfirst(jsBackend.locale.lbl('Add')),
-            removeLabel: utils.string.ucfirst(jsBackend.locale.lbl('Delete')),
-            canAddNew: true
-        });
-
         $('#testEmailConnection').on('click', jsBackend.settings.testEmailConnection);
         $('[data-role="fork-clear-cache"]').on('click', jsBackend.settings.clearCache);
 

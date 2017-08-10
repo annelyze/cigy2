@@ -14,7 +14,6 @@ use Frontend\Core\Language\Language;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Backend\Modules\Pages\Engine\Model as BackendPagesModel;
 use Frontend\Core\Engine\Model as FrontendModel;
-use Frontend\Modules\Profiles\Engine\Authentication as FrontendAuthentication;
 
 /**
  * This class will be used to build the navigation
@@ -283,34 +282,6 @@ class Navigation extends KernelLoader
                 if ($page['hidden'] || $page['tree_type'] === 'direct_action') {
                     unset($navigation[$type][$parentId][$id]);
                     continue;
-                }
-
-                // authentication
-                if (isset($page['data'])) {
-                    // unserialize data
-                    $page['data'] = unserialize($page['data']);
-                    // if auth_required isset and is true
-                    if (isset($page['data']['auth_required']) && $page['data']['auth_required']) {
-                        // is profile logged? unset
-                        if (!FrontendAuthentication::isLoggedIn()) {
-                            unset($navigation[$type][$parentId][$id]);
-                            continue;
-                        }
-                        // check if group auth is set
-                        if (!empty($page['data']['auth_groups'])) {
-                            $inGroup = false;
-                            // loop group and set value true if one is found
-                            foreach ($page['data']['auth_groups'] as $group) {
-                                if (FrontendAuthentication::getProfile()->isInGroup($group)) {
-                                    $inGroup = true;
-                                }
-                            }
-                            // unset page if not in any of the groups
-                            if (!$inGroup) {
-                                unset($navigation[$type][$parentId][$id]);
-                            }
-                        }
-                    }
                 }
 
                 // some ids should be excluded

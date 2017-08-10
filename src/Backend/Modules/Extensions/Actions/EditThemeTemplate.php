@@ -156,7 +156,6 @@ class EditThemeTemplate extends BackendBaseActionEdit
 
         // create array
         $defaultExtras = [
-            '' => [0 => \SpoonFilter::ucfirst(BL::lbl('Editor'))],
             \SpoonFilter::ucfirst(BL::lbl('Widgets')) => $widgets,
         ];
 
