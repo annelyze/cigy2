@@ -158,7 +158,7 @@ class Model extends \Common\Core\Model
     public static function getPageRevision(int $revisionId, bool $allowHidden = true): array
     {
         $pageRevision = (array) self::getContainer()->get('database')->getRecord(
-            'SELECT p.id, p.parent_id, p.revision_id, p.template_id, p.title, p.navigation_title,
+            'SELECT p.id, p.parent_id, p.revision_id, p.template_id, p.title, p.team, p.navigation_title,
                  p.navigation_title_overwrite, p.data, p.hidden,
                  m.title AS meta_title, m.title_overwrite AS meta_title_overwrite,
                  m.keywords AS meta_keywords, m.keywords_overwrite AS meta_keywords_overwrite,

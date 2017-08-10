@@ -13,6 +13,7 @@ use Common\Core\Header\Priority;
 use Common\Exception\RedirectException;
 use ForkCMS\App\KernelLoader;
 use Frontend\Core\Engine\Model;
+use Frontend\Core\Engine\Page;
 use Frontend\Core\Engine\Url;
 use Frontend\Core\Header\Header;
 use Frontend\Core\Engine\TwigTemplate;
@@ -71,6 +72,13 @@ class Widget extends KernelLoader
     protected $template;
 
     /**
+     * Filter selected for team on page level
+     *
+     * @var int
+     */
+    protected $pageTeamFilter;
+
+    /**
      * URL instance
      *
      * @var Url
@@ -93,6 +101,7 @@ class Widget extends KernelLoader
         $this->url = $this->getContainer()->get('url');
 
         // set properties
+        $this->setPageTeamFilter($this->getContainer()->get('page'));
         $this->setModule($module);
         $this->setAction($action);
         $this->setData($data);
@@ -248,6 +257,12 @@ class Widget extends KernelLoader
     private function setModule(string $module): void
     {
         $this->module = $module;
+    }
+
+    private function setPageTeamFilter(Page $page): void
+    {
+        $pageInfo = Model::getPage($page->getId());
+        $this->pageTeamFilter = (array_key_exists('team', $pageInfo)? (int) $pageInfo['team'] : 0);
     }
 
     /**

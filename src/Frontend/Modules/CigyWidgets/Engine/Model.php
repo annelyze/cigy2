@@ -1,433 +1,363 @@
 <?php
 
-namespace Backend\Modules\CigyWidgets\Engine;
+namespace Frontend\Modules\CigyWidgets\Engine;
 
-use Common\ModuleExtraType;
-use Common\Uri as CommonUri;
-use Backend\Core\Language\Language as BL;
-use Backend\Core\Engine\Model as BackendModel;
+use Frontend\Core\Engine\Model as FrontendModel;
+use Frontend\Core\Engine\Navigation as FrontendNavigation;
+use Frontend\Core\Engine\Page as FrontendPage;
+use Frontend\Core\Engine\Url as FrontendUrl;
 
 /**
  * In this file we store all generic functions that we will be using in the faq module
  */
 class Model
 {
+
+    public static function get(string $url): array
+    {
+        return (array) FrontendModel::getContainer()->get('database')->getRecord(
+            'SELECT i.*, m.url, c.title AS category_title, m2.url AS category_url
+             FROM faq_questions AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             INNER JOIN faq_categories AS c ON i.category_id = c.id
+             INNER JOIN meta AS m2 ON c.meta_id = m2.id
+             WHERE m.url = ? AND i.language = ? AND i.hidden = ?
+             ORDER BY i.sequence',
+            [$url, LANGUAGE, false]
+        );
+    }
+
     /**
-     * Get page team filter setting
+     * @param int $categoryId
+     * @param int $limit
+     * @param int|int[] $excludeIds
      *
-     * @return int
+     * @return array
      */
-    public static function getPageTeam(): int
+    public static function getAllForCategory(int $categoryId, int $limit = null, $excludeIds = null): array
     {
+        $excludeIds = empty($excludeIds) ? [0] : (array) $excludeIds;
 
-
-        /** @var $database \SpoonDatabase */
-        $database = BackendModel::getContainer()->get('database');
-        return (int) $database->getVar(
-            'SELECT p.team 
-                FROM pages AS p 
-                WHERE p.id = ? AND p.language = ? AND p.status = ?',
-            [$pageId, BL::getWorkingLanguage(), 'active']);
-    }
-
-    public static function deleteCategory(int $id): void
-    {
-        $database = BackendModel::getContainer()->get('database');
-        $item = self::getCategory($id);
-
-        if (empty($item)) {
-            return;
-        }
-
-        $database->delete('meta', 'id = ?', [$item['meta_id']]);
-        $database->delete('faq_categories', 'id = ?', [$id]);
-        $database->update('faq_questions', ['category_id' => null], 'category_id = ?', [$id]);
-
-        BackendModel::deleteExtraById($item['extra_id']);
-    }
-
-    public static function deleteCategoryAllowed(int $id): bool
-    {
-        if (!BackendModel::get('fork.settings')->get('Faq', 'allow_multiple_categories', true)
-            && self::getCategoryCount() == 1
-        ) {
-            return false;
-        }
-
-        // check if the category does not contain questions
-        return !(bool) BackendModel::get('database')->getVar(
-            'SELECT 1
+        // get items
+        if ($limit !== null) {
+            $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+                'SELECT i.*, m.url
                  FROM faq_questions AS i
-                 WHERE i.category_id = ? AND i.language = ?
-                 LIMIT 1',
-            [$id, BL::getWorkingLanguage()]
-        );
-    }
-
-    public static function deleteFeedback(int $itemId): void
-    {
-        BackendModel::getContainer()->get('database')->update(
-            'faq_feedback',
-            ['processed' => true, 'edited_on' => \SpoonDate::getDate('Y-m-d H:i:s')],
-            'id = ?',
-            $itemId
-        );
-    }
-
-    /**
-     * Does the question exist?
-     *
-     * @param int $id
-     *
-     * @return bool
-     */
-    public static function exists(int $id): bool
-    {
-        return (bool) BackendModel::getContainer()->get('database')->getVar(
-            'SELECT 1
-             FROM faq_questions AS i
-             WHERE i.id = ? AND i.language = ?
-             LIMIT 1',
-            [$id, BL::getWorkingLanguage()]
-        );
-    }
-
-    public static function existsCategory(int $id): bool
-    {
-        return (bool) BackendModel::getContainer()->get('database')->getVar(
-            'SELECT 1
-             FROM faq_categories AS i
-             WHERE i.id = ? AND i.language = ?
-             LIMIT 1',
-            [$id, BL::getWorkingLanguage()]
-        );
-    }
-
-    /**
-     * Fetch a question
-     *
-     * @param int $id
-     *
-     * @return array
-     */
-    public static function get(int $id): array
-    {
-        return (array) BackendModel::getContainer()->get('database')->getRecord(
-            'SELECT i.*, m.url
-             FROM faq_questions AS i
-             INNER JOIN meta AS m ON m.id = i.meta_id
-             WHERE i.id = ? AND i.language = ?',
-            [$id, BL::getWorkingLanguage()]
-        );
-    }
-
-    public static function getAllFeedback(int $limit = 5): array
-    {
-        return (array) BackendModel::getContainer()->get('database')->getRecords(
-            'SELECT f.*
-             FROM faq_feedback AS f
-             WHERE f.processed = ?
+                 INNER JOIN meta AS m ON i.meta_id = m.id
+                 WHERE i.category_id = ? AND i.language = ? AND i.hidden = ?
+                 AND i.id NOT IN (' . implode(',', $excludeIds) . ')
+             ORDER BY i.sequence
              LIMIT ?',
-            [false, $limit]
-        );
-    }
+                [$categoryId, LANGUAGE, false, $limit]
+            );
+        } else {
+            $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+                'SELECT i.*, m.url
+                 FROM faq_questions AS i
+                 INNER JOIN meta AS m ON i.meta_id = m.id
+                 WHERE i.category_id = ? AND i.language = ? AND i.hidden = ?
+                 AND i.id NOT IN (' . implode(',', $excludeIds) . ')
+             ORDER BY i.sequence',
+                [$categoryId, LANGUAGE, false]
+            );
+        }
 
-    public static function getAllFeedbackForQuestion(int $id): array
-    {
-        return (array) BackendModel::getContainer()->get('database')->getRecords(
-            'SELECT f.*
-             FROM faq_feedback AS f
-             WHERE f.question_id = ? AND f.processed = ?',
-            [$id, false]
-        );
-    }
+        // init var
+        $link = FrontendNavigation::getUrlForBlock('Faq', 'Detail');
 
-    /**
-     * Get all items by a given tag id
-     *
-     * @param int $tagId
-     *
-     * @return array
-     */
-    public static function getByTag(int $tagId): array
-    {
-        $items = (array) BackendModel::getContainer()->get('database')->getRecords(
-            'SELECT i.id AS url, i.question AS name, mt.module
-             FROM modules_tags AS mt
-             INNER JOIN tags AS t ON mt.tag_id = t.id
-             INNER JOIN faq_questions AS i ON mt.other_id = i.id
-             WHERE mt.module = ? AND mt.tag_id = ? AND i.language = ?',
-            ['Faq', $tagId, BL::getWorkingLanguage()]
-        );
-
-        foreach ($items as &$row) {
-            $row['url'] = BackendModel::createUrlForAction('Edit', 'Faq', null, ['id' => $row['url']]);
+        // build the item urls
+        foreach ($items as &$item) {
+            $item['full_url'] = $link . '/' . $item['url'];
         }
 
         return $items;
     }
 
-    public static function getCategories(bool $includeCount = false): array
+    public static function getCategories(): array
     {
-        $database = BackendModel::getContainer()->get('database');
+        $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+            'SELECT i.*, m.url
+             FROM faq_categories AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             WHERE i.language = ?
+             ORDER BY i.sequence',
+            [LANGUAGE]
+        );
 
-        if ($includeCount) {
-            return (array) $database->getPairs(
-                'SELECT i.id, CONCAT(i.title, " (",  COUNT(p.category_id) ,")") AS title
-                 FROM faq_categories AS i
-                 LEFT OUTER JOIN faq_questions AS p ON i.id = p.category_id AND i.language = p.language
-                 WHERE i.language = ?
-                 GROUP BY i.id
-                 ORDER BY i.sequence',
-                [BL::getWorkingLanguage()]
+        // init var
+        $link = FrontendNavigation::getUrlForBlock('Faq', 'Category');
+
+        // build the item url
+        foreach ($items as &$item) {
+            $item['full_url'] = $link . '/' . $item['url'];
+        }
+
+        return $items;
+    }
+
+    public static function getCategory(string $url): array
+    {
+        return (array) FrontendModel::getContainer()->get('database')->getRecord(
+            'SELECT i.*, m.url
+             FROM faq_categories AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             WHERE m.url = ? AND i.language = ?
+             ORDER BY i.sequence',
+            [$url, LANGUAGE]
+        );
+    }
+
+    public static function getCategoryById(int $id): array
+    {
+        return (array) FrontendModel::getContainer()->get('database')->getRecord(
+            'SELECT i.*, m.url
+             FROM faq_categories AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             WHERE i.id = ? AND i.language = ?
+             ORDER BY i.sequence',
+            [$id, LANGUAGE]
+        );
+    }
+
+    /**
+     * Fetch the list of tags for a list of items
+     *
+     * @param array $ids
+     *
+     * @return array
+     */
+    public static function getForTags(array $ids): array
+    {
+        $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+            'SELECT i.question AS title, m.url
+             FROM faq_questions AS i
+             INNER JOIN meta AS m ON m.id = i.meta_id
+             WHERE i.hidden = ? AND i.id IN (' . implode(',', $ids) . ')
+             ORDER BY i.question',
+            [false]
+        );
+
+        if (!empty($items)) {
+            $link = FrontendNavigation::getUrlForBlock('Faq', 'Detail');
+
+            // build the item urls
+            foreach ($items as &$row) {
+                $row['full_url'] = $link . '/' . $row['url'];
+            }
+        }
+
+        return $items;
+    }
+
+    /**
+     * Get the id of an item by the full URL of the current page.
+     * Selects the proper part of the full URL to get the item's id from the database.
+     *
+     * @param FrontendUrl $url
+     *
+     * @return int
+     */
+    public static function getIdForTags(FrontendUrl $url): int
+    {
+        $itemUrl = (string) $url->getParameter(1);
+
+        return self::get($itemUrl)['id'];
+    }
+
+    public static function getMostRead(int $limit): array
+    {
+        $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+            'SELECT i.*, m.url
+             FROM faq_questions AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             WHERE i.num_views > 0 AND i.language = ? AND i.hidden = ?
+             ORDER BY (i.num_usefull_yes + i.num_usefull_no) DESC
+             LIMIT ?',
+            [LANGUAGE, false, $limit]
+        );
+
+        $link = FrontendNavigation::getUrlForBlock('Faq', 'Detail');
+        foreach ($items as &$item) {
+            $item['full_url'] = $link . '/' . $item['url'];
+        }
+
+        return $items;
+    }
+
+    public static function getFaqsForCategory(int $categoryId): array
+    {
+        $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+            'SELECT i.id, i.category_id, i.question, i.hidden, i.sequence, m.url
+             FROM faq_questions AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             WHERE i.language = ? AND i.category_id = ?
+             ORDER BY i.sequence ASC',
+            [LANGUAGE, $categoryId]
+        );
+
+        $link = FrontendNavigation::getUrlForBlock('Faq', 'Detail');
+
+        foreach ($items as &$item) {
+            $item['full_url'] = $link . '/' . $item['url'];
+        }
+
+        return $items;
+    }
+
+    /**
+     * Get related items based on tags
+     *
+     * @param int $questionId
+     * @param int $limit
+     *
+     * @return array
+     */
+    public static function getRelated(int $questionId, int $limit = 5): array
+    {
+        $relatedIDs = (array) FrontendTagsModel::getRelatedItemsByTags((int) $questionId, 'Faq', 'Faq');
+
+        // there are no items, so return an empty array
+        if (empty($relatedIDs)) {
+            return [];
+        }
+
+        $link = FrontendNavigation::getUrlForBlock('Faq', 'Detail');
+        $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+            'SELECT i.id, i.question, m.url
+             FROM faq_questions AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             WHERE i.language = ? AND i.hidden = ? AND i.id IN(' . implode(',', $relatedIDs) . ')
+             ORDER BY i.question
+             LIMIT ?',
+            [LANGUAGE, false, $limit],
+            'id'
+        );
+
+        foreach ($items as &$row) {
+            $row['full_url'] = $link . '/' . $row['url'];
+        }
+
+        return $items;
+    }
+
+    /**
+     * @later make this dynamic
+     *
+     * @param int $teamId
+     * @return string
+     */
+    public static function getTeamName(int $teamId): string
+    {
+        $teams = array(
+            0 => 'Wijs',
+            1 => 'Teamtation',
+            2 => 'Flaming Flamingo\'s',
+            3 => 'Studio Eleanor',
+            4 => 'Fireflies'
+        );
+
+        return (string) (array_key_exists($teamId, $teams) ? $teams[$teamId] : $teams[0]);
+    }
+
+    public static function increaseViewCount(int $questionId): void
+    {
+        FrontendModel::getContainer()->get('database')->execute(
+            'UPDATE faq_questions SET num_views = num_views + 1 WHERE id = ?',
+            [$questionId]
+        );
+    }
+
+    public static function saveFeedback(array $feedback): void
+    {
+        $feedback['created_on'] = FrontendModel::getUTCDate();
+        unset($feedback['sentOn']);
+
+        FrontendModel::getContainer()->get('database')->insert('faq_feedback', $feedback);
+    }
+
+    /**
+     * Parse the search results for this module
+     *
+     * Note: a module's search function should always:
+     *        - accept an array of entry id's
+     *        - return only the entries that are allowed to be displayed, with their array's index being the entry's id
+     *
+     *
+     * @param array $ids
+     *
+     * @return array
+     */
+    public static function search(array $ids): array
+    {
+        $items = (array) FrontendModel::getContainer()->get('database')->getRecords(
+            'SELECT i.id, i.question AS title, i.answer AS text, m.url,
+             c.title AS category_title, m2.url AS category_url
+             FROM faq_questions AS i
+             INNER JOIN meta AS m ON i.meta_id = m.id
+             INNER JOIN faq_categories AS c ON c.id = i.category_id
+             INNER JOIN meta AS m2 ON c.meta_id = m2.id
+             WHERE i.hidden = ? AND i.language = ? AND i.id IN (' . implode(',', $ids) . ')',
+            [false, LANGUAGE],
+            'id'
+        );
+
+        // prepare items for search
+        $detailUrl = FrontendNavigation::getUrlForBlock('Faq', 'Detail');
+        foreach ($items as &$item) {
+            $item['full_url'] = $detailUrl . '/' . $item['url'];
+        }
+
+        return $items;
+    }
+
+    /**
+     * Update the usefulness of the feedback
+     *
+     * @param int $id
+     * @param bool $useful
+     * @param bool|null $previousFeedback
+     */
+    public static function updateFeedback(int $id, bool $useful, bool $previousFeedback = null): void
+    {
+        // feedback hasn't changed so don't update the counters
+        if ($previousFeedback !== null && $useful == $previousFeedback) {
+            return;
+        }
+
+        $database = FrontendModel::getContainer()->get('database');
+
+        // update counter with current feedback (increase)
+        if ($useful) {
+            $database->execute(
+                'UPDATE faq_questions
+                 SET num_usefull_yes = num_usefull_yes + 1
+                 WHERE id = ?',
+                [$id]
+            );
+        } else {
+            $database->execute(
+                'UPDATE faq_questions
+                 SET num_usefull_no = num_usefull_no + 1
+                 WHERE id = ?',
+                [$id]
             );
         }
 
-        return (array) $database->getPairs(
-            'SELECT i.id, i.title
-             FROM faq_categories AS i
-             WHERE i.language = ?',
-            [BL::getWorkingLanguage()]
-        );
-    }
-
-    public static function getCategory(int $id): array
-    {
-        return (array) BackendModel::getContainer()->get('database')->getRecord(
-            'SELECT i.*, m.url
-             FROM faq_categories AS i
-             INNER JOIN meta AS m ON m.id = i.meta_id
-             WHERE i.id = ? AND i.language = ?',
-            [$id, BL::getWorkingLanguage()]
-        );
-    }
-
-    public static function getCategoryCount(): int
-    {
-        return (int) BackendModel::getContainer()->get('database')->getVar(
-            'SELECT COUNT(i.id)
-             FROM faq_categories AS i
-             WHERE i.language = ?',
-            [BL::getWorkingLanguage()]
-        );
-    }
-
-    public static function getFeedback(int $id): array
-    {
-        return (array) BackendModel::getContainer()->get('database')->getRecord(
-            'SELECT f.*
-             FROM faq_feedback AS f
-             WHERE f.id = ?',
-            [$id]
-        );
-    }
-
-    public static function getMaximumCategorySequence(): int
-    {
-        return (int) BackendModel::getContainer()->get('database')->getVar(
-            'SELECT MAX(i.sequence)
-             FROM faq_categories AS i
-             WHERE i.language = ?',
-            [BL::getWorkingLanguage()]
-        );
-    }
-
-    /**
-     * Get the max sequence id for a question belonging to a category
-     *
-     * @param int $categoryId
-     *
-     * @return int
-     */
-    public static function getMaximumSequence(int $categoryId): int
-    {
-        return (int) BackendModel::getContainer()->get('database')->getVar(
-            'SELECT MAX(i.sequence)
-             FROM faq_questions AS i
-             WHERE i.category_id = ?',
-            [$categoryId]
-        );
-    }
-
-    /**
-     * Retrieve the unique URL for an item
-     *
-     * @param string $url
-     * @param int $id The id of the item to ignore.
-     *
-     * @return string
-     */
-    public static function getUrl(string $url, int $id = null): string
-    {
-        $url = CommonUri::getUrl((string) $url);
-        $database = BackendModel::get('database');
-
-        // new item
-        if ($id === null) {
-            if ((bool) $database->getVar(
-                'SELECT 1
-                 FROM faq_questions AS i
-                 INNER JOIN meta AS m ON i.meta_id = m.id
-                 WHERE i.language = ? AND m.url = ?
-                 LIMIT 1',
-                [BL::getWorkingLanguage(), $url]
-            )
-            ) {
-                $url = BackendModel::addNumber($url);
-
-                return self::getUrl($url);
-            }
-        } else {
-            // current category should be excluded
-            if ((bool) $database->getVar(
-                'SELECT 1
-                 FROM faq_questions AS i
-                 INNER JOIN meta AS m ON i.meta_id = m.id
-                 WHERE i.language = ? AND m.url = ? AND i.id != ?
-                 LIMIT 1',
-                [BL::getWorkingLanguage(), $url, $id]
-            )
-            ) {
-                $url = BackendModel::addNumber($url);
-
-                return self::getUrl($url, $id);
-            }
+        // update counter with previous feedback (decrease)
+        if ($previousFeedback) {
+            $database->execute(
+                'UPDATE faq_questions
+                 SET num_usefull_yes = num_usefull_yes - 1
+                 WHERE id = ?',
+                [$id]
+            );
+        } elseif ($previousFeedback !== null) {
+            $database->execute(
+                'UPDATE faq_questions
+                 SET num_usefull_no = num_usefull_no - 1
+                 WHERE id = ?',
+                [$id]
+            );
         }
-
-        return $url;
-    }
-
-    /**
-     * Retrieve the unique URL for a category
-     *
-     * @param string $url
-     * @param int $id The id of the category to ignore.
-     *
-     * @return string
-     */
-    public static function getUrlForCategory(string $url, int $id = null): string
-    {
-        $url = CommonUri::getUrl($url);
-        $database = BackendModel::get('database');
-
-        // new category
-        if ($id === null) {
-            if ((bool) $database->getVar(
-                'SELECT 1
-                 FROM faq_categories AS i
-                 INNER JOIN meta AS m ON i.meta_id = m.id
-                 WHERE i.language = ? AND m.url = ?
-                 LIMIT 1',
-                [BL::getWorkingLanguage(), $url]
-            )
-            ) {
-                $url = BackendModel::addNumber($url);
-
-                return self::getUrlForCategory($url);
-            }
-
-            return $url;
-        }
-
-        // current category should be excluded
-        if ((bool) $database->getVar(
-            'SELECT 1
-                 FROM faq_categories AS i
-                 INNER JOIN meta AS m ON i.meta_id = m.id
-                 WHERE i.language = ? AND m.url = ? AND i.id != ?
-                 LIMIT 1',
-            [BL::getWorkingLanguage(), $url, $id]
-        )
-        ) {
-            $url = BackendModel::addNumber($url);
-
-            return self::getUrlForCategory($url, $id);
-        }
-
-        return $url;
-    }
-
-    /**
-     * Insert a question in the database
-     *
-     * @param array $item
-     *
-     * @return int
-     */
-    public static function insert(array $item): int
-    {
-        $insertId = BackendModel::getContainer()->get('database')->insert('faq_questions', $item);
-
-        return $insertId;
-    }
-
-    public static function insertCategory(array $item, array $meta = null): int
-    {
-        $database = BackendModel::get('database');
-
-        // insert the meta if possible
-        if ($meta !== null) {
-            $item['meta_id'] = $database->insert('meta', $meta);
-        }
-
-        // insert extra
-        $item['extra_id'] = BackendModel::insertExtra(
-            ModuleExtraType::widget(),
-            'Faq',
-            'CategoryList'
-        );
-
-        $item['id'] = $database->insert('faq_categories', $item);
-
-        // update extra (item id is now known)
-        BackendModel::updateExtra(
-            $item['extra_id'],
-            'data',
-            [
-                'id' => $item['id'],
-                'extra_label' => \SpoonFilter::ucfirst(BL::lbl('Category', 'Faq')) . ': ' . $item['title'],
-                'language' => $item['language'],
-                'edit_url' => BackendModel::createUrlForAction(
-                    'EditCategory',
-                    'Faq',
-                    $item['language']
-                ) . '&id=' . $item['id'],
-            ]
-        );
-
-        return (int) $item['id'];
-    }
-
-    /**
-     * Update a certain question
-     *
-     * @param array $item
-     */
-    public static function update(array $item): void
-    {
-        BackendModel::getContainer()->get('database')->update(
-            'faq_questions',
-            $item,
-            'id = ?',
-            [(int) $item['id']]
-        );
-    }
-
-    public static function updateCategory(array $item): void
-    {
-        // update faq category
-        BackendModel::getContainer()->get('database')->update('faq_categories', $item, 'id = ?', [$item['id']]);
-
-        // update extra
-        BackendModel::updateExtra(
-            $item['extra_id'],
-            'data',
-            [
-                'id' => $item['id'],
-                'extra_label' => 'Category: ' . $item['title'],
-                'language' => $item['language'],
-                'edit_url' => BackendModel::createUrlForAction('EditCategory') . '&id=' . $item['id'],
-            ]
-        );
     }
 }
