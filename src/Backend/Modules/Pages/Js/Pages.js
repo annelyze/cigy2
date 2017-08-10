@@ -116,14 +116,6 @@ jsBackend.pages.extras = {
         // add visual representation of block to template visualisation
         var addedVisual = jsBackend.pages.extras.addBlockVisual(selectedPosition, index, selectedExtraId, visible, selectedExtraType, selectedExtraData);
 
-        // block/widget = don't show editor
-        if (typeof extrasById != 'undefined' && typeof extrasById[selectedExtraId] != 'undefined') {
-            $('.blockContentHTML', block).hide();
-        }// editor
-        else {
-            $('.blockContentHTML', block).show();
-        }
-
         return addedVisual ? index : false;
     },
 
