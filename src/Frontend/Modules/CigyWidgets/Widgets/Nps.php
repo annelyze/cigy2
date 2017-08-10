@@ -3,7 +3,6 @@
 namespace Frontend\Modules\CigyWidgets\Widgets;
 
 use Frontend\Core\Engine\Base\Widget as FrontendBaseWidget;
-use Frontend\Modules\CigyWidgets\Engine\Model as FrontendCigyWidgetsModel;
 use Frontend\Modules\CigyWidgets\Services\CustomerGauge as FrontendCigyServicesCustomerGauge;
 
 /**
