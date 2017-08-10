@@ -98,6 +98,16 @@
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="tabContent">
             <div id="editTemplate">
+
+              <p class="current-template">
+                <label for="team" class="control-label">{{ 'lbl.TeamFilter'|trans|ucfirst }}
+                  <abbr class="fa fa-info-circle" data-toggle="tooltip" title="{{ 'msg.HelpFilter'|trans }}"></abbr>
+                </label>
+                {% form_field team %} {% form_field_error team %}
+              </p>
+
+              <hr />
+
               {# Do not change the ID! #}
               <p class="current-template">{{ 'lbl.Template'|trans|ucfirst }}:
                 <span id="tabTemplateLabel">&nbsp;</span>

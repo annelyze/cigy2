@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: cigy2
-# Generation Time: 2017-08-10 06:20:49 +0000
+# Generation Time: 2017-08-10 07:57:02 +0000
 # ************************************************************
 
 
@@ -2084,7 +2084,9 @@ VALUES
 	(1821,1,'nl','Backend','Core','lbl','CigyWidgets','Cigy Widgets','2017-08-10 01:57:46'),
 	(1822,1,'nl','Backend','Core','lbl','Nps','NPS','2017-08-10 01:58:22'),
 	(1823,1,'nl','Backend','Core','lbl','Abr','ABR','2017-08-10 01:58:46'),
-	(1824,1,'nl','Backend','Core','lbl','ClosedWon','Closed Won','2017-08-10 01:58:57');
+	(1824,1,'nl','Backend','Core','lbl','ClosedWon','Closed Won','2017-08-10 01:58:57'),
+	(1825,1,'nl','Backend','Pages','lbl','TeamFilter','team filter','2017-08-10 07:45:22'),
+	(1826,1,'nl','Backend','Pages','msg','HelpFilter','Selecteer het team waarop je de widgets op deze pagina wil filteren.\r\nWil je enkel de bedrijfsgegevens zien? Selecteer dan \'Wijs\'.','2017-08-10 07:46:51');
 
 /*!40000 ALTER TABLE `locale` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2126,7 +2128,11 @@ VALUES
 	(6,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
 	(7,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
 	(8,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
-	(9,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL);
+	(9,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
+	(10,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
+	(11,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
+	(12,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
+	(13,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `meta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2269,6 +2275,7 @@ CREATE TABLE `pages` (
   `language` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'language of the content',
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'root' COMMENT 'page, header, footer, ...',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `team` int(11) NOT NULL DEFAULT '0',
   `navigation_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'title that will be used in the navigation',
   `navigation_title_overwrite` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'should we override the navigation title',
   `hidden` tinyint(1) NOT NULL DEFAULT '1',
@@ -2289,17 +2296,21 @@ CREATE TABLE `pages` (
 LOCK TABLES `pages` WRITE;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 
-INSERT INTO `pages` (`id`, `revision_id`, `user_id`, `parent_id`, `template_id`, `meta_id`, `language`, `type`, `title`, `navigation_title`, `navigation_title_overwrite`, `hidden`, `status`, `publish_on`, `data`, `created_on`, `edited_on`, `allow_move`, `allow_children`, `allow_edit`, `allow_delete`, `sequence`)
+INSERT INTO `pages` (`id`, `revision_id`, `user_id`, `parent_id`, `template_id`, `meta_id`, `language`, `type`, `title`, `team`, `navigation_title`, `navigation_title_overwrite`, `hidden`, `status`, `publish_on`, `data`, `created_on`, `edited_on`, `allow_move`, `allow_children`, `allow_edit`, `allow_delete`, `sequence`)
 VALUES
-	(1,1,1,0,2,1,'nl','page','Home','Home',0,0,'archive','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
-	(404,2,1,0,1,2,'nl','root','404','404',0,0,'active','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
-	(1,3,1,0,2,3,'nl','page','Home','Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:16',0,1,1,0,1),
-	(1,4,1,0,2,4,'nl','page','Home','Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:42',0,1,1,0,1),
-	(405,5,1,0,1,5,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:1:{s:5:\"image\";N;}','2017-08-10 06:13:10','2017-08-10 06:13:10',1,1,1,1,2),
-	(405,6,1,0,1,6,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:14:47',1,1,1,1,2),
-	(405,7,1,0,1,7,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:16:38',1,1,1,1,2),
-	(405,8,1,0,1,8,'nl','root','Teamtation ABR','Teamtation ABR',0,0,'active','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:17:39',1,1,1,1,2),
-	(1,9,1,0,2,9,'nl','page','Home','Home',0,0,'active','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 06:19:48',0,1,1,0,1);
+	(1,1,1,0,2,1,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
+	(404,2,1,0,1,2,'nl','root','404',0,'404',0,0,'active','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
+	(1,3,1,0,2,3,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:16',0,1,1,0,1),
+	(1,4,1,0,2,4,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:42',0,1,1,0,1),
+	(405,5,1,0,1,5,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:1:{s:5:\"image\";N;}','2017-08-10 06:13:10','2017-08-10 06:13:10',1,1,1,1,2),
+	(405,6,1,0,1,6,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:14:47',1,1,1,1,2),
+	(405,7,1,0,1,7,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:16:38',1,1,1,1,2),
+	(405,8,1,0,1,8,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'active','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:17:39',1,1,1,1,2),
+	(1,9,1,0,2,9,'nl','page','Home',0,'Home',0,0,'active','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 06:19:48',0,1,1,0,1),
+	(406,10,1,0,1,10,'nl','root','Testjes',0,'Testjes',0,0,'archive','2017-08-10 07:47:26','a:1:{s:5:\"image\";N;}','2017-08-10 07:47:26','2017-08-10 07:47:26',1,1,1,1,3),
+	(406,11,1,0,1,11,'nl','root','Testjes',0,'Testjes',0,0,'archive','2017-08-10 07:47:26','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:47:26','2017-08-10 07:47:33',1,1,1,1,3),
+	(406,12,1,0,1,12,'nl','root','Testjes',3,'Testjes',0,0,'active','2017-08-10 07:47:26','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:47:26','2017-08-10 07:48:45',1,1,1,1,3),
+	(407,13,1,0,1,13,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'active','2017-08-10 07:50:07','a:1:{s:5:\"image\";N;}','2017-08-10 07:50:07','2017-08-10 07:50:07',1,1,1,1,4);
 
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2334,7 +2345,8 @@ VALUES
 	(4,'main',1,'widget',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,0),
 	(5,'main',2,'widget','','2017-08-10 06:13:09','2017-08-10 06:13:09',1,0),
 	(8,'main',2,'widget','','2017-08-10 06:17:39','2017-08-10 06:17:39',1,0),
-	(9,'main',1,'widget','','2017-08-10 06:19:48','2017-08-10 06:19:48',1,0);
+	(9,'main',1,'widget','','2017-08-10 06:19:48','2017-08-10 06:19:48',1,0),
+	(13,'main',1,'widget','','2017-08-10 07:50:07','2017-08-10 07:50:07',1,0);
 
 /*!40000 ALTER TABLE `pages_blocks` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2435,7 +2447,7 @@ LOCK TABLES `users_sessions` WRITE;
 
 INSERT INTO `users_sessions` (`id`, `user_id`, `session_id`, `secret_key`, `date`)
 VALUES
-	(1,1,'b0d0de35d415176256c693e829a2ec83','6e0436d633e62f342b2989a3a7a014c670480424','2017-08-10 06:19:49');
+	(1,1,'b0d0de35d415176256c693e829a2ec83','6e0436d633e62f342b2989a3a7a014c670480424','2017-08-10 07:50:07');
 
 /*!40000 ALTER TABLE `users_sessions` ENABLE KEYS */;
 UNLOCK TABLES;

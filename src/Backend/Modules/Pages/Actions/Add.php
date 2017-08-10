@@ -112,6 +112,7 @@ class Add extends BackendBaseActionAdd
 
         // create elements
         $this->form->addText('title', null, null, 'form-control title', 'form-control danger title');
+        $this->form->addDropdown('team', BackendPagesModel::getTeamsForDropdown());
         $this->form->addHidden('template_id', $defaultTemplateId);
         $this->form->addRadiobutton(
             'hidden',
@@ -393,6 +394,7 @@ class Add extends BackendBaseActionAdd
                 $page['language'] = BL::getWorkingLanguage();
                 $page['type'] = $parentPage ? 'page' : 'root';
                 $page['title'] = $this->form->getField('title')->getValue();
+                $page['team'] = ($this->form->getField('team')->isFilled() ? $this->form->getField('team')->getValue() : 0);
                 $page['navigation_title'] = ($this->form->getField('navigation_title')->getValue(
                 ) != '') ? $this->form->getField('navigation_title')->getValue() : $this->form->getField(
                     'title'

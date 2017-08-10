@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   `language` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'language of the content',
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'root' COMMENT 'page, header, footer, ...',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `team` int(11) NOT NULL DEFAULT '0' COMMENT 'optional filter on team',
   `navigation_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'title that will be used in the navigation',
   `navigation_title_overwrite` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'should we override the navigation title',
   `hidden` tinyint(1) NOT NULL DEFAULT '1',

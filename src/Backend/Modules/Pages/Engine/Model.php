@@ -177,6 +177,7 @@ class Model
             $page['language'] = $toLanguage;
             $page['type'] = $sourceData['type'];
             $page['title'] = $sourceData['title'];
+            $page['team'] = $sourceData['team'];
             $page['navigation_title'] = $sourceData['navigation_title'];
             $page['navigation_title_overwrite'] = $sourceData['navigation_title_overwrite'];
             $page['hidden'] = $sourceData['hidden'];
@@ -649,6 +650,23 @@ class Model
     }
 
     /**
+     * Get all teams for filter.
+     * @later Hardcoded for the moment but a configuration can be added to the Fork CMS backend later.
+     *
+     * @return array
+     */
+    public static function getTeamsForDropdown(): array
+    {
+        return array(
+          0 => 'Wijs',
+          1 => 'Teamtation',
+          2 => 'Flaming Flamingo\'s',
+          3 => 'Studio Eleanor',
+          4 => 'Fireflies'
+        );
+    }
+
+    /**
      * Get all pages/level
      *
      * @param int[] $ids The parentIds.
@@ -665,7 +683,7 @@ class Model
         // get data
         $data[$level] = (array) BackendModel::getContainer()->get('database')->getRecords(
             'SELECT
-                 i.id, i.title, i.parent_id, i.navigation_title, i.type, i.hidden, i.data,
+                 i.id, i.title, i.team, i.parent_id, i.navigation_title, i.type, i.hidden, i.data,
                 m.url, m.data AS meta_data, m.seo_follow, m.seo_index,
                 IF(COUNT(e.id) > 0, "Y", "N") AS has_extra,
                 GROUP_CONCAT(b.extra_id) AS extra_ids,

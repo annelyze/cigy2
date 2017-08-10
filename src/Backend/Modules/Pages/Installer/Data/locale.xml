@@ -260,6 +260,10 @@
         <translation language="uk"><![CDATA[Форма підписки]]></translation>
         <translation language="el"><![CDATA[Φόρμα εγγραφής]]></translation>
       </item>
+      <item type="label" name="TeamFilter">
+        <translation language="en"><![CDATA[team filter]]></translation>
+        <translation language="nl"><![CDATA[team filter]]></translation>
+      </item>
       <item type="label" name="UnsubscribeForm">
         <translation language="en"><![CDATA[unsubscribe form]]></translation>
         <translation language="nl"><![CDATA[uitschrijvingsformulier]]></translation>

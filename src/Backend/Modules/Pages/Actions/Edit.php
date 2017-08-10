@@ -227,6 +227,7 @@ class Edit extends BackendBaseActionEdit
 
         // create elements
         $this->form->addText('title', $this->record['title'], null, 'form-control title', 'form-control danger title');
+        $this->form->addDropdown('team', BackendPagesModel::getTeamsForDropdown(), $this->record['team']);
         $this->form->addHidden('template_id', $this->record['template_id']);
         $this->form->addRadiobutton(
             'hidden',
@@ -604,6 +605,7 @@ class Edit extends BackendBaseActionEdit
                 $page['language'] = BL::getWorkingLanguage();
                 $page['type'] = $this->record['type'];
                 $page['title'] = $this->form->getField('title')->getValue();
+                $page['team'] = ($this->form->getField('team')->isFilled() ? $this->form->getField('team')->getValue() : 0);
                 $page['navigation_title'] = ($this->form->getField('navigation_title')->getValue() != '') ? $this->form->getField('navigation_title')->getValue() : $this->form->getField('title')->getValue();
                 $page['navigation_title_overwrite'] = $this->form->getField('navigation_title_overwrite')->isChecked();
                 $page['hidden'] = $this->form->getField('hidden')->getValue();
