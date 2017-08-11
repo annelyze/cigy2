@@ -1,9 +1,14 @@
-{% extends 'Core/Layout/Templates/PageStart.html.twig' %}
+{% include 'Core/Layout/Templates/PageStart.html.twig' %}
 
 <!-- The team's stylesheet -->
 <link href="/src/Frontend/Themes/Fork/Core/Layout/Css/theme-flamingflamingos.css" rel="stylesheet">
 
-{% extends 'Core/Layout/Templates/PageMid.html.twig' %}
+{% include 'Core/Layout/Templates/PageMid.html.twig' %}
+
+<div class="header">
+  Team Dashboard - <span class="teamname">{{ page.title }}</span>
+</div>
+<div class="dashboard">
 
 {% block main %}
 
@@ -18,4 +23,4 @@
   {% endfor %}
 {% endblock %}
 
-{% extends 'Core/Layout/Templates/PageEnd.html.twig' %}
+{% include 'Core/Layout/Templates/PageEnd.html.twig' %}
