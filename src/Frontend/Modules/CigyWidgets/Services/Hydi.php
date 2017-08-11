@@ -32,7 +32,6 @@ class Hydi
 
         // set options
         $curlOptions = array(
-            CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_POST => 1,
             CURLOPT_POSTFIELDS => 'email=' . self::API_LOGIN . '&password=' . self::API_PASSWORD
@@ -76,6 +75,19 @@ class Hydi
 
         // do call and get content
         $result = (array) json_decode(SpoonHTTP::getContent($url, $curlOptions), true);
+
+        // set URL and other appropriate options
+        $url = self::API_LOCATION . 'logout';
+
+        // set options
+        $curlOptions = array(
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_POST => 1,
+            CURLOPT_HTTPHEADER => $header
+        );
+
+        // do call and get content
+        SpoonHTTP::getContent($url, $curlOptions);
 
         if(array_key_exists('by_date_total', $result) && array_key_exists('_hydi', $result['by_date_total'])) return $result['by_date_total']['_hydi'];
         return '';
