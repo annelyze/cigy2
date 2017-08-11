@@ -30,7 +30,6 @@ class ClosedWon extends FrontendBaseWidget
             'team_target' => $teamtarget,
             'company' => $companyClosedWon["actual_ytd"],
             'company_target' => $companytarget,
-        
         );
 
         $this->template->assign('widgetClosedWon', $closedWonData);

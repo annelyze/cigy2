@@ -1,0 +1,29 @@
+<div>
+    <div style="float: left;">
+        <span class="title">Closed won</span>
+        <br />
+        YTD
+    </div>
+    <div style="float: right;">
+        Target
+        <br />
+        <span class="xsvalue">€ {{ widgetClosedWon.team_target|formatnumber(0) }}</span>
+    </div>
+</div>
+<div class="content">
+    <span class="mdvalue">€ {{ widgetClosedWon.team|formatnumber(0) }}</span>
+</div>
+<div>
+    {% if page.showCompanyWide %}
+    <div style="float: left;">
+        Wijs target
+        <br />
+        <span class="xsvalue">€ {{ widgetClosedWon.company_target|formatnumber(0) }}</span>
+    </div>
+    <div style="float: right;">
+        Wijs value
+        <br />
+        <span class="xsvalue">€ {{ widgetClosedWon.company|formatnumber(0) }}</span>
+    </div>
+    {% endif %}
+</div>

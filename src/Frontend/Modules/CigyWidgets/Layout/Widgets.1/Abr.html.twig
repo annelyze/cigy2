@@ -1,0 +1,29 @@
+<div>
+    <div style="float: left;">
+        <span class="title">ABR</span>
+        <br />
+        Q1 + Q2
+    </div>
+    <div style="float: right;">
+        Target
+        <br />
+        <span class="xsvalue">€ {{ widgetAbr.team_target|formatnumber(0) }}</span>
+    </div>
+</div>
+<div class="content">
+    <span class="mdvalue">€ {{ widgetAbr.team|formatnumber(0) }}</span>
+</div>
+<div>
+    {% if page.showCompanyWide %}
+    <div style="float: left;">
+        Wijs target
+        <br />
+        <span class="xsvalue">€ {{ widgetAbr.company|formatnumber(0) }}</span>
+    </div>
+    <div style="float: right;">
+        Wijs value
+        <br />
+        <span class="xsvalue">€ {{ widgetAbr.company_target|formatnumber(0) }}</span>
+    </div>
+    {% endif %}
+</div>
