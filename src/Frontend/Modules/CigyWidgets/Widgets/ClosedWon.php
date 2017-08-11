@@ -3,6 +3,9 @@
 namespace Frontend\Modules\CigyWidgets\Widgets;
 
 use Frontend\Core\Engine\Base\Widget as FrontendBaseWidget;
+
+use Frontend\Core\Language\Locale;
+use Frontend\Modules\CigyWidgets\Engine\Model as FrontendCigyWidgetsModel;
 use Frontend\Modules\CigyWidgets\Services\Yadera as FrontendCigyServicesYadera;
 
 /**
@@ -14,14 +17,20 @@ class ClosedWon extends FrontendBaseWidget
     {
         parent::execute();
         $this->loadTemplate();
-
+        //TODO: 
         //$teamClosedWon = FrontendCigyServicesYadera::getClosedWon($this->pageTeamFilter);
 
+        $teamClosedWon = FrontendCigyWidgetsModel::getClosedWon($this->pageTeamFilter);
+        $companyClosedWon = FrontendCigyWidgetsModel::getClosedWon(0);
+        $teamtarget = FrontendCigyWidgetsModel::getYtdTarget($this->pageTeamFilter, 'ClosedWon', 3);
+        $companytarget = FrontendCigyWidgetsModel::getYtdTarget(0, 'ClosedWon', 3);
+
         $closedWonData = array(
-            'team' => 1800000,
-            'team_target' => 2400000,
-            'company' => 4700000,
-            'company_target' => 7000000,
+            'team' => $teamClosedWon["actual_ytd"],
+            'team_target' => $teamtarget,
+            'company' => $companyClosedWon["actual_ytd"],
+            'company_target' => $companytarget,
+        
         );
 
         $this->template->assign('widgetClosedWon', $closedWonData);

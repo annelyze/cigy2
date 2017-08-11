@@ -51,7 +51,7 @@ class Model
             AND team = ?
             AND month = ?
             AND `level` = ?",
-            [$targettype, $team, date('M'), $level]
+            [$targettype, $team, intval(date('m')), $level]
         );
     }
 
@@ -61,6 +61,16 @@ class Model
             "SELECT period, actual_ytd from cigy_abr_actuals
             WHERE team = ?",
             [$team]
+        );
+    }
+
+    public static function getClosedWon(int $team): Array
+    {
+        return (Array) FrontendModel::getContainer()->get('database')->getRecord(
+            "SELECT actual, actual_ytd from cigy_closedwon_actuals
+            WHERE team = ?
+            AND month = ?",
+            [$team, intval(date('m'))]
         );
     }
 }
