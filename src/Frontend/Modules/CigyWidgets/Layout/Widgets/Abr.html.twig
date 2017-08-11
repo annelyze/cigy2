@@ -14,6 +14,7 @@
     <span class="mdvalue">€ {{ widgetAbr.team|formatnumber(0) }}</span>
 </div>
 <div>
+    {% if page.showCompanyWide %}
     <div style="float: left;">
         Wijs target
         <br />
@@ -24,4 +25,5 @@
         <br />
         <span class="xsvalue">€ {{ widgetAbr.company_target|formatnumber(0) }}</span>
     </div>
+    {% endif %}
 </div>

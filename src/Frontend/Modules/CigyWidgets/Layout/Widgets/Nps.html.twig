@@ -14,6 +14,7 @@
     <span class="lgvalue">{{ widgetNps.team }}</span>
 </div>
 <div>
+    {% if page.showCompanyWide %}
     <div style="float: left;">
         Wijs target
         <br />
@@ -24,4 +25,5 @@
         <br />
         <span class="xsvalue">{{ widgetNps.company }}</span>
     </div>
+    {% endif %}
 </div>
