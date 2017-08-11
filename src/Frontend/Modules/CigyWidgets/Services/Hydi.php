@@ -58,6 +58,7 @@ class Hydi
         if($team == 1) $team = 7;
         elseif($team == 2) $team = 8;
         elseif($team == 3) $team = 6;
+        elseif($team == 4) $team = 9;
 
         // set URL and other appropriate options
         $url = self::API_LOCATION . 'submissions' . ($team = 0 ? '' : '?team=' . $team);
