@@ -3,6 +3,7 @@
 namespace Frontend\Modules\CigyWidgets\Widgets;
 
 use Frontend\Core\Engine\Base\Widget as FrontendBaseWidget;
+use Frontend\Modules\CigyWidgets\Engine\Model as FrontendCigyWidgetsModel;
 use Frontend\Modules\CigyWidgets\Services\CustomerGauge as FrontendCigyServicesCustomerGauge;
 
 /**
@@ -17,11 +18,13 @@ class Nps extends FrontendBaseWidget
 
         $teamNps = FrontendCigyServicesCustomerGauge::getNps($this->pageTeamFilter);
         $companyNps = FrontendCigyServicesCustomerGauge::getNps();
+        //The NPS target is a company target so we collect the company target for NPS instead of the team target
+        $target = FrontendCigyWidgetsModel::getYtdTarget(0, 'NPS', 3);
 
         $npsData = array(
             'team' => $teamNps,
             'company' => $companyNps,
-            'target' => '9',
+            'target' => $target,
         );
 
         $this->template->assign('widgetNps', $npsData);

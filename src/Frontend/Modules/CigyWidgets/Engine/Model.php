@@ -28,4 +28,31 @@ class Model
 
         return (string) (array_key_exists($teamId, $teams) ? $teams[$teamId] : $teams[0]);
     }
+
+    public static function getYtdTarget(int $team, string $targettype, int $level): int
+    {
+        $target = (int) FrontendModel::getContainer()->get('database')->getVar(
+            "SELECT value_ytd from cigy_targets
+            WHERE target = ?
+            AND team = ?
+            AND month = ?
+            AND `level` = ?",
+            [$targettype, $team, intval(date('m')), $level]
+        );
+
+        var_dump(FrontendModel::getContainer()->get('database')->getQueries());
+        return $target;
+    }
+
+    public static function getTarget(int $team, string $targettype, int $level): int
+    {
+        return (int) FrontendModel::getContainer()->get('database')->getVar(
+            "SELECT value from cigy_targets
+            WHERE target = ?
+            AND team = ?
+            AND month = ?
+            AND `level` = ?",
+            [$targettype, $team, date('M'), $level]
+        );
+    }
 }
