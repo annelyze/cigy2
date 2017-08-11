@@ -11,7 +11,7 @@ class Hydi
 {
     // @later make these settings in Fork CMS backend
     const API_LOCATION = 'https://hyd.timvermaercke.be/api/v1/';
-    const API_LOGIN = 'annelies@timvermaercke.be';
+    const API_LOGIN = 'annelies.vanextergem@wijs.be';
     const API_PASSWORD = 'test';
 
     private function getHttpHeader(){
@@ -28,18 +28,6 @@ class Hydi
     public function getApiKey(): string
     {
         // set URL and other appropriate options
-        $url = self::API_LOCATION . 'logout';
-
-        // set options
-        $curlOptions = array(
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => 1
-        );
-
-        // do call and get content
-        SpoonHTTP::getContent($url, $curlOptions);
-
-         // set URL and other appropriate options
         $url = self::API_LOCATION . 'login';
 
         // set options
@@ -51,9 +39,9 @@ class Hydi
         );
 
         // do call and get content
-        $result = json_decode(SpoonHTTP::getContent($url, $curlOptions));
+        $result = (array) json_decode(SpoonHTTP::getContent($url, $curlOptions), true);
 
-        if(isset($result->user) && isset($result->user->api_token)) return $result->user->api_token;
+        if(array_key_exists('user', $result) && array_key_exists('api_token', $result['user'])) return $result['user']['api_token'];
         return '';
     }
 
@@ -66,6 +54,11 @@ class Hydi
     {
         // no API Key given
         if(empty($apiKey)) return '';
+
+        // reset team numbers because the HYDI team is weird like that
+        if($team == 1) $team = 7;
+        elseif($team == 2) $team = 8;
+        elseif($team == 3) $team = 6;
 
         // set URL and other appropriate options
         $url = self::API_LOCATION . 'submissions' . ($team = 0 ? '' : '?team=' . $team);
@@ -82,9 +75,9 @@ class Hydi
         );
 
         // do call and get content
-        $result = json_decode(SpoonHTTP::getContent($url, $curlOptions));
+        $result = (array) json_decode(SpoonHTTP::getContent($url, $curlOptions), true);
 
-        if(isset($result->user) && isset($result->user->api_token)) return $result->user->api_token;
+        if(array_key_exists('by_date_total', $result) && array_key_exists('_hydi', $result['by_date_total'])) return $result['by_date_total']['_hydi'];
         return '';
     }
 }
