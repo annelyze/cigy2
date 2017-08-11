@@ -187,6 +187,7 @@ class Model extends \Common\Core\Model
         $pageRevision = self::unserializeArrayContent($pageRevision, 'meta_data');
         $pageRevision = self::unserializeArrayContent($pageRevision, 'template_data');
         $pageRevision['positions'] = self::getPositionsForRevision($pageRevision['revision_id'], $allowHidden);
+        $pageRevision['showCompanyWide'] = ($pageRevision['team'] != 0);
 
         return $pageRevision;
     }
