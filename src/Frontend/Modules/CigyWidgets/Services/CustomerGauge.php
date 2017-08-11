@@ -41,7 +41,6 @@ class CustomerGauge
 
         // set options
         $curlOptions = array(
-            CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_HTTPHEADER => self::getHttpHeader()
         );
