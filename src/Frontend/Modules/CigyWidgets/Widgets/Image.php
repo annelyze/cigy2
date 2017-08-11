@@ -10,16 +10,25 @@ use Frontend\Modules\CigyWidgets\Engine\Model as FrontendCigyWidgetsModel;
  */
 class Image extends FrontendBaseWidget
 {
+    private $imageLocation = "/src/Frontend/Themes/Fork/Core/Layout/Images/WidgetImages/";
     public function execute(): void
     {
         parent::execute();
         $this->loadTemplate();
 
-        $npsData = array(
-            'image' => 'Frontend/Themes/Code/Layout/Images/WidgetImages/partyparrot.gif',
-        );
+        $randomTeamImage = FrontendCigyWidgetsModel::getRandomTeamImage($this->pageTeamFilter);
 
-        $this->template->assign('widgetImage', $npsData);
+        $title = $randomTeamImage['title'];
+        $subtitle = $randomTeamImage['subtitle'];
+        $imagefile = $randomTeamImage['imagefile'];
+        
+        $imageData = array(
+            'title' => $title,
+            'subtitle' => $subtitle,
+            'image' => $this->imageLocation . $imagefile,
+        );
+        
+        $this->template->assign('widgetImage', $imageData);
     }
 
 }

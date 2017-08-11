@@ -73,4 +73,25 @@ class Model
             [$team, intval(date('m'))]
         );
     }
+
+    public static function getRandomTeamImage(int $team) : Array{
+        $teamImages = (Array) FrontendModel::getContainer()->get('database')->getRecords(
+            "SELECT title, subtitle, imagefile from cigy_images
+            WHERE team = ?",
+            [$team]
+        );
+
+        if(count($teamImages) > 0)
+        {
+            return $teamImages[rand(0, count($teamImages) -1)];
+        }
+        else
+        {
+            return array(
+                'title' => '',
+                'subtitle' => '',
+                'imagefile' => '',
+            );
+        }
+    }
 }

@@ -1,23 +1,12 @@
+{% if widgetImage.image != '' %}
 <div>
     <div style="float: left;">
-        <span class="title">ABR</span>
+        <span class="title">{{ widgetImage.title }}</span>
         <br />
-        Q1 + Q2
-    </div>
-    <div style="float: right;">
-        Target
-        <br />
-        <span class="xsvalue">€ {{ widgetAbr.team_target|formatnumber(0) }}</span>
-    </div>
-
-
-<div>
-    <div style="float: left;">
-        <span class="title">Party parrot</span>
-        <br />
-        Totally amazing and out of control
+        {{ widgetImage.subtitle }}
     </div>
 </div> 
 <div class="content">
     <img src="{{ widgetImage.image }}" />
 </div>
+{% endif %}
