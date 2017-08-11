@@ -12,24 +12,44 @@
   </description>
   <metanavigation supported="false" />
   <templates>
-    <template label="Home" path="Core/Layout/Templates/Home.html.twig" image="true">
-      <positions>
-        <position name="top" />
-        <position name="main" />
-      </positions>
-      <format>
-        [/,/,top],
-        [main,main,main]
-      </format>
-    </template>
     <template label="Default" path="Core/Layout/Templates/Default.html.twig" image="true">
       <positions>
-        <position name="top" />
         <position name="main" />
       </positions>
       <format>
-        [/,/,top],
-        [main,main,main]
+        [main]
+      </format>
+    </template>
+    <template label="TemptationIsland" path="Core/Layout/Templates/TemptationIsland.html.twig" image="true">
+      <positions>
+        <position name="main" />
+      </positions>
+      <format>
+        [main]
+      </format>
+    </template>
+    <template label="FlamingoParadise" path="Core/Layout/Templates/FlamingoParadise.html.twig" image="true">
+      <positions>
+        <position name="main" />
+      </positions>
+      <format>
+        [main]
+      </format>
+    </template>
+    <template label="GoneIn60Seconds" path="Core/Layout/Templates/GoneIn60Seconds.html.twig" image="true">
+      <positions>
+        <position name="main" />
+      </positions>
+      <format>
+        [main]
+      </format>
+    </template>
+    <template label="Fireflies" path="Core/Layout/Templates/Fireflies.html.twig" image="true">
+      <positions>
+        <position name="main" />
+      </positions>
+      <format>
+        [main]
       </format>
     </template>
   </templates>

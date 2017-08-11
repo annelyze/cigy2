@@ -1,0 +1,14 @@
+.header {
+	background-color: #5D988A;
+}
+
+.dashboard {
+	background-image: url("../Images/studioeleanor.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.dashboardwidget_inner {
+	/* background-color: #4b4b4d; */
+	background-color: rgba(255, 255, 255, 0.9);
+}

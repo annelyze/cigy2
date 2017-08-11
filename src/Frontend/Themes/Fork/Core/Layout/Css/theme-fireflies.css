@@ -1,0 +1,18 @@
+body {
+	color: #ffffff;
+}
+
+.header {
+	background-color: #00617F;
+}
+
+.dashboard {
+	background-image: url("../Images/fireflies.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.dashboardwidget_inner {
+	/* background-color: #4b4b4d; */
+	background-color: rgba(75, 75, 75, 0.9);
+}

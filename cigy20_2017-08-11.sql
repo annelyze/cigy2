@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: cigy20
-# Generation Time: 2017-08-11 07:49:37 +0000
+# Generation Time: 2017-08-11 09:22:18 +0000
 # ************************************************************
 
 
@@ -61,6 +61,31 @@ VALUES
 	(19,2,'ContentBlocks','content_blocks/index','a:2:{i:0;s:18:\"content_blocks/add\";i:1;s:19:\"content_blocks/edit\";}',1);
 
 /*!40000 ALTER TABLE `backend_navigation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table cigy_abr_actuals
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `cigy_abr_actuals`;
+
+CREATE TABLE `cigy_abr_actuals` (
+  `team` int(11) NOT NULL,
+  `period` varchar(255) NOT NULL,
+  `actual_ytd` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `cigy_abr_actuals` WRITE;
+/*!40000 ALTER TABLE `cigy_abr_actuals` DISABLE KEYS */;
+
+INSERT INTO `cigy_abr_actuals` (`team`, `period`, `actual_ytd`)
+VALUES
+	(0,'Q1 + Q2',2906933),
+	(1,'Q1 + Q2',919062),
+	(2,'Q1 + Q2',1002853),
+	(3,'Q1 + Q2',985018);
+
+/*!40000 ALTER TABLE `cigy_abr_actuals` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -301,15 +326,6 @@ CREATE TABLE `content_blocks` (
   PRIMARY KEY (`revision_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-LOCK TABLES `content_blocks` WRITE;
-/*!40000 ALTER TABLE `content_blocks` DISABLE KEYS */;
-
-INSERT INTO `content_blocks` (`revision_id`, `id`, `user_id`, `extra_id`, `template`, `language`, `title`, `text`, `hidden`, `status`, `created_on`, `edited_on`)
-VALUES
-	(2,1,1,5,'Default.html.twig','nl','dfdfs','fdsqdfs',0,'active','2017-08-10 08:46:01','2017-08-10 08:46:01');
-
-/*!40000 ALTER TABLE `content_blocks` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table groups
@@ -2347,27 +2363,14 @@ INSERT INTO `meta` (`id`, `keywords`, `keywords_overwrite`, `description`, `desc
 VALUES
 	(1,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
 	(2,'404',0,'404',0,'404',0,'404',0,NULL,NULL,NULL,NULL),
-	(3,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(4,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(5,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
-	(6,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
-	(7,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
-	(8,'Teamtation ABR',0,'Teamtation ABR',0,'Teamtation ABR',0,'teamtation-abr',0,NULL,NULL,NULL,NULL),
-	(9,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(10,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
-	(11,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
-	(12,'Testjes',0,'Testjes',0,'Testjes',0,'testjes',0,NULL,NULL,NULL,NULL),
-	(13,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
-	(14,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
-	(15,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
-	(16,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
-	(17,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
-	(18,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'Testjefjslkjfdjsqkl',0,'testjefjslkjfdjsqkl',0,NULL,NULL,NULL,NULL),
-	(19,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(20,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(21,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(22,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL),
-	(23,'Home',0,'Home',0,'Home',0,'home',0,NULL,NULL,NULL,NULL);
+	(3,'Teamtation',0,'Teamtation',0,'Teamtation',0,'teamtation',0,NULL,NULL,NULL,NULL),
+	(4,'Wijs',0,'Wijs',0,'Wijs',0,'wijs',0,NULL,NULL,NULL,NULL),
+	(5,'Wijs',0,'Wijs',0,'Wijs',0,'wijs',0,NULL,NULL,NULL,NULL),
+	(6,'Wijs',0,'Wijs',0,'Wijs',0,'wijs',0,NULL,NULL,NULL,NULL),
+	(7,'Wijs',0,'Wijs',0,'Wijs',0,'wijs',0,NULL,NULL,NULL,NULL),
+	(8,'Wijs',0,'Wijs',0,'Wijs',0,'wijs',0,NULL,NULL,NULL,NULL),
+	(9,'Teamtation',0,'Teamtation',0,'Teamtation',0,'teamtation',0,NULL,NULL,NULL,NULL),
+	(10,'Teamtation',0,'Teamtation',0,'Teamtation',0,'teamtation',0,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `meta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2432,7 +2435,6 @@ VALUES
 	(1,'CigyWidgets','widget','Nps','Nps',NULL,0,0),
 	(2,'CigyWidgets','widget','Abr','Abr',NULL,0,0),
 	(3,'CigyWidgets','widget','ClosedWon','ClosedWon',NULL,0,0),
-	(5,'ContentBlocks','widget','ContentBlocks','Detail','a:5:{s:2:\"id\";i:1;s:8:\"language\";s:2:\"nl\";s:8:\"edit_url\";s:53:\"/private/nl/content_blocks/edit?token=9mj0lsnlod&id=1\";s:15:\"custom_template\";s:17:\"Default.html.twig\";s:11:\"extra_label\";s:5:\"dfdfs\";}',0,0),
 	(6,'CigyWidgets','widget','Hydi','Hydi',NULL,0,0);
 
 /*!40000 ALTER TABLE `modules_extras` ENABLE KEYS */;
@@ -2482,7 +2484,7 @@ VALUES
 	('Core','smtp_port','s:0:\"\";'),
 	('Core','smtp_username','s:0:\"\";'),
 	('Core','smtp_password','s:0:\"\";'),
-	('Core','site_title_nl','s:5:\"Cigy2\";'),
+	('Core','site_title_nl','s:15:\"Cigy Dashboards\";'),
 	('Users','date_formats','a:4:{i:0;s:5:\"j/n/Y\";i:1;s:5:\"d/m/Y\";i:2;s:5:\"j F Y\";i:3;s:6:\"F j, Y\";}'),
 	('Users','default_group','i:1;'),
 	('Users','time_formats','a:4:{i:0;s:3:\"H:i\";i:1;s:5:\"H:i:s\";i:2;s:5:\"g:i a\";i:3;s:5:\"g:i A\";}'),
@@ -2535,29 +2537,16 @@ LOCK TABLES `pages` WRITE;
 
 INSERT INTO `pages` (`id`, `revision_id`, `user_id`, `parent_id`, `template_id`, `meta_id`, `language`, `type`, `title`, `team`, `navigation_title`, `navigation_title_overwrite`, `hidden`, `status`, `publish_on`, `data`, `created_on`, `edited_on`, `allow_move`, `allow_children`, `allow_edit`, `allow_delete`, `sequence`)
 VALUES
-	(1,1,1,0,2,1,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
 	(404,2,1,0,1,2,'nl','root','404',0,'404',0,0,'active','2017-08-10 01:14:30',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',0,1,1,0,1),
-	(1,3,1,0,2,3,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:16',0,1,1,0,1),
-	(1,4,1,0,2,4,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 01:59:42',0,1,1,0,1),
-	(405,5,1,0,1,5,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:1:{s:5:\"image\";N;}','2017-08-10 06:13:10','2017-08-10 06:13:10',1,1,1,1,2),
-	(405,6,1,0,1,6,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:14:47',1,1,1,1,2),
-	(405,7,1,0,1,7,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:16:38',1,1,1,1,2),
-	(405,8,1,0,1,8,'nl','root','Teamtation ABR',0,'Teamtation ABR',0,0,'active','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-10 06:17:39',1,1,1,1,2),
-	(1,9,1,0,2,9,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 06:19:48',0,1,1,0,1),
-	(406,10,1,0,1,10,'nl','root','Testjes',0,'Testjes',0,0,'archive','2017-08-10 07:47:26','a:1:{s:5:\"image\";N;}','2017-08-10 07:47:26','2017-08-10 07:47:26',1,1,1,1,3),
-	(406,11,1,0,1,11,'nl','root','Testjes',0,'Testjes',0,0,'archive','2017-08-10 07:47:26','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:47:26','2017-08-10 07:47:33',1,1,1,1,3),
-	(406,12,1,0,1,12,'nl','root','Testjes',3,'Testjes',0,0,'active','2017-08-10 07:47:26','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:47:26','2017-08-10 07:48:45',1,1,1,1,3),
-	(407,13,1,0,1,13,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:1:{s:5:\"image\";N;}','2017-08-10 07:50:07','2017-08-10 07:50:07',1,1,1,1,4),
-	(407,14,1,0,1,14,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:29:42',1,1,1,1,4),
-	(407,15,1,0,1,15,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:29:52',1,1,1,1,4),
-	(407,16,1,0,1,16,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:31:24',1,1,1,1,4),
-	(407,17,1,0,1,17,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'archive','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:32:48',1,1,1,1,4),
-	(407,18,1,0,1,18,'nl','root','Testjefjslkjfdjsqkl',4,'Testjefjslkjfdjsqkl',0,0,'active','2017-08-10 07:50:07','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 07:50:07','2017-08-10 08:56:43',1,1,1,1,4),
-	(1,19,1,0,2,19,'nl','page','Home',0,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 17:41:15',0,1,1,0,1),
-	(1,20,1,0,2,20,'nl','page','Home',1,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 17:41:56',0,1,1,0,1),
-	(1,21,1,0,2,21,'nl','page','Home',1,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 18:17:31',0,1,1,0,1),
-	(1,22,1,0,2,22,'nl','page','Home',1,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 18:17:42',0,1,1,0,1),
-	(1,23,1,0,2,23,'nl','page','Home',1,'Home',0,0,'active','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-10 21:13:45',0,1,1,0,1);
+	(405,3,1,1,1,3,'nl','page','Teamtation',1,'Teamtation',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-11 08:38:27',1,1,1,1,2),
+	(1,1,1,0,1,1,'nl','page','Home',1,'Home',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 08:36:11',0,1,1,0,1),
+	(1,30,1,0,1,4,'nl','page','Wijs',1,'Wijs',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 08:57:51',0,1,1,0,1),
+	(1,31,1,0,1,5,'nl','page','Wijs',0,'Wijs',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 09:00:09',0,1,1,0,1),
+	(1,32,1,0,1,6,'nl','page','Wijs',0,'Wijs',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 09:00:35',0,1,1,0,1),
+	(1,33,1,0,1,7,'nl','page','Wijs',0,'Wijs',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 09:00:36',0,1,1,0,1),
+	(1,34,1,0,1,8,'nl','page','Wijs',0,'Wijs',0,0,'active','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 09:00:53',0,1,1,0,1),
+	(405,35,1,1,1,9,'nl','page','Teamtation',1,'Teamtation',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-11 09:01:32',1,1,1,1,2),
+	(405,36,1,1,3,10,'nl','page','Teamtation',1,'Teamtation',0,0,'active','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-11 09:03:04',1,1,1,1,2);
 
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2586,37 +2575,42 @@ LOCK TABLES `pages_blocks` WRITE;
 
 INSERT INTO `pages_blocks` (`revision_id`, `position`, `extra_id`, `extra_type`, `extra_data`, `created_on`, `edited_on`, `visible`, `sequence`)
 VALUES
-	(1,'main',NULL,'widget',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',1,0),
-	(2,'main',NULL,'widget',NULL,'2017-08-10 01:14:30','2017-08-10 01:14:30',1,0),
-	(3,'main',NULL,'widget',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,0),
-	(4,'main',1,'widget',NULL,'0000-00-00 00:00:00','0000-00-00 00:00:00',1,0),
-	(5,'main',2,'widget','','2017-08-10 06:13:09','2017-08-10 06:13:09',1,0),
-	(8,'main',2,'widget','','2017-08-10 06:17:39','2017-08-10 06:17:39',1,0),
-	(9,'main',1,'widget','','2017-08-10 06:19:48','2017-08-10 06:19:48',1,0),
-	(13,'main',1,'widget','','2017-08-10 07:50:07','2017-08-10 07:50:07',1,0),
-	(14,'main',1,'widget','','2017-08-10 08:29:42','2017-08-10 08:29:42',1,0),
-	(15,'main',1,'widget','','2017-08-10 08:29:52','2017-08-10 08:29:52',1,0),
-	(16,'main',1,'widget','','2017-08-10 08:31:24','2017-08-10 08:31:24',1,0),
-	(17,'main',1,'widget','','2017-08-10 08:32:48','2017-08-10 08:32:48',1,0),
-	(18,'main',1,'widget','','2017-08-10 08:56:43','2017-08-10 08:56:43',1,0),
-	(19,'main',1,'widget','','2017-08-10 17:41:15','2017-08-10 17:41:15',1,0),
-	(19,'main',2,'widget','','2017-08-10 17:41:15','2017-08-10 17:41:15',1,1),
-	(19,'main',3,'widget','','2017-08-10 17:41:15','2017-08-10 17:41:15',1,2),
-	(20,'main',1,'widget','','2017-08-10 17:41:56','2017-08-10 17:41:56',1,0),
-	(20,'main',2,'widget','','2017-08-10 17:41:56','2017-08-10 17:41:56',1,1),
-	(20,'main',3,'widget','','2017-08-10 17:41:56','2017-08-10 17:41:56',1,2),
-	(21,'main',1,'widget','','2017-08-10 18:17:31','2017-08-10 18:17:31',1,0),
-	(21,'main',2,'widget','','2017-08-10 18:17:31','2017-08-10 18:17:31',1,1),
-	(21,'main',3,'widget','','2017-08-10 18:17:31','2017-08-10 18:17:31',1,2),
-	(21,'main',6,'widget','','2017-08-10 18:17:31','2017-08-10 18:17:31',1,3),
-	(22,'main',6,'widget','','2017-08-10 18:17:42','2017-08-10 18:17:42',1,0),
-	(22,'main',1,'widget','','2017-08-10 18:17:42','2017-08-10 18:17:42',1,1),
-	(22,'main',2,'widget','','2017-08-10 18:17:42','2017-08-10 18:17:42',1,2),
-	(22,'main',3,'widget','','2017-08-10 18:17:42','2017-08-10 18:17:42',1,3),
-	(23,'main',2,'widget','','2017-08-10 21:13:45','2017-08-10 21:13:45',1,0),
-	(23,'main',6,'widget','','2017-08-10 21:13:45','2017-08-10 21:13:45',1,1),
-	(23,'main',1,'widget','','2017-08-10 21:13:45','2017-08-10 21:13:45',1,2),
-	(23,'main',3,'widget','','2017-08-10 21:13:45','2017-08-10 21:13:45',1,3);
+	(34,'main',2,'widget','','2017-08-11 09:00:53','2017-08-11 09:00:53',1,1),
+	(31,'main',1,'widget','','2017-08-11 09:00:09','2017-08-11 09:00:09',1,2),
+	(31,'main',6,'widget','','2017-08-11 09:00:09','2017-08-11 09:00:09',1,1),
+	(31,'main',2,'widget','','2017-08-11 09:00:09','2017-08-11 09:00:09',1,0),
+	(30,'main',3,'widget','','2017-08-11 08:57:51','2017-08-11 08:57:51',1,3),
+	(30,'main',1,'widget','','2017-08-11 08:57:51','2017-08-11 08:57:51',1,2),
+	(30,'main',6,'widget','','2017-08-11 08:57:51','2017-08-11 08:57:51',1,1),
+	(30,'main',2,'widget','','2017-08-11 08:57:51','2017-08-11 08:57:51',1,0),
+	(34,'main',1,'widget','','2017-08-11 09:00:53','2017-08-11 09:00:53',1,0),
+	(33,'main',3,'widget','','2017-08-11 09:00:36','2017-08-11 09:00:36',1,3),
+	(33,'main',1,'widget','','2017-08-11 09:00:36','2017-08-11 09:00:36',1,2),
+	(33,'main',6,'widget','','2017-08-11 09:00:36','2017-08-11 09:00:36',1,1),
+	(33,'main',2,'widget','','2017-08-11 09:00:36','2017-08-11 09:00:36',1,0),
+	(32,'main',3,'widget','','2017-08-11 09:00:35','2017-08-11 09:00:35',1,3),
+	(32,'main',1,'widget','','2017-08-11 09:00:35','2017-08-11 09:00:35',1,2),
+	(32,'main',6,'widget','','2017-08-11 09:00:35','2017-08-11 09:00:35',1,1),
+	(32,'main',2,'widget','','2017-08-11 09:00:35','2017-08-11 09:00:35',1,0),
+	(31,'main',3,'widget','','2017-08-11 09:00:09','2017-08-11 09:00:09',1,3),
+	(3,'main',6,'widget','','2017-08-11 08:38:27','2017-08-11 08:38:27',1,3),
+	(3,'main',3,'widget','','2017-08-11 08:38:27','2017-08-11 08:38:27',1,2),
+	(3,'main',2,'widget','','2017-08-11 08:38:27','2017-08-11 08:38:27',1,1),
+	(3,'main',1,'widget','','2017-08-11 08:38:27','2017-08-11 08:38:27',1,0),
+	(1,'main',2,'widget','','2017-08-11 08:36:10','2017-08-11 08:36:10',1,0),
+	(1,'main',6,'widget','','2017-08-11 08:36:10','2017-08-11 08:36:10',1,1),
+	(1,'main',1,'widget','','2017-08-11 08:36:10','2017-08-11 08:36:10',1,2),
+	(1,'main',3,'widget','','2017-08-11 08:36:10','2017-08-11 08:36:10',1,3),
+	(34,'main',3,'widget','','2017-08-11 09:00:53','2017-08-11 09:00:53',1,2),
+	(34,'main',6,'widget','','2017-08-11 09:00:53','2017-08-11 09:00:53',1,3),
+	(35,'main',1,'widget','','2017-08-11 09:01:32','2017-08-11 09:01:32',1,0),
+	(35,'main',2,'widget','','2017-08-11 09:01:32','2017-08-11 09:01:32',1,1),
+	(35,'main',3,'widget','','2017-08-11 09:01:32','2017-08-11 09:01:32',1,2),
+	(35,'main',6,'widget','','2017-08-11 09:01:32','2017-08-11 09:01:32',1,3),
+	(36,'main',1,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,0),
+	(36,'main',2,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,1),
+	(36,'main',3,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,2),
+	(36,'main',6,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,3);
 
 /*!40000 ALTER TABLE `pages_blocks` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2642,8 +2636,11 @@ LOCK TABLES `themes_templates` WRITE;
 
 INSERT INTO `themes_templates` (`id`, `theme`, `label`, `path`, `active`, `data`)
 VALUES
-	(1,'Fork','Default','Core/Layout/Templates/Default.html.twig',1,'a:3:{s:6:\"format\";s:26:\"[/,/,top],[main,main,main]\";s:5:\"image\";b:1;s:5:\"names\";a:2:{i:0;s:4:\"main\";i:1;s:3:\"top\";}}'),
-	(2,'Fork','Home','Core/Layout/Templates/Home.html.twig',1,'a:3:{s:6:\"format\";s:26:\"[/,/,top],[main,main,main]\";s:5:\"image\";b:1;s:5:\"names\";a:2:{i:0;s:4:\"main\";i:1;s:3:\"top\";}}');
+	(1,'Fork','Default','Core/Layout/Templates/Default.html.twig',1,'a:5:{s:6:\"format\";s:6:\"[main]\";s:5:\"image\";b:1;s:5:\"names\";a:1:{i:0;s:4:\"main\";}s:14:\"default_extras\";a:1:{s:4:\"main\";a:0:{}}s:17:\"default_extras_nl\";a:1:{s:4:\"main\";a:0:{}}}'),
+	(4,'Fork','FlamingoParadise','Core/Layout/Templates/FlamingoParadise.html.twig',1,'a:5:{s:6:\"format\";s:6:\"[main]\";s:5:\"names\";a:1:{i:0;s:4:\"main\";}s:14:\"default_extras\";a:1:{s:4:\"main\";a:0:{}}s:17:\"default_extras_nl\";a:1:{s:4:\"main\";a:0:{}}s:5:\"image\";b:1;}'),
+	(3,'Fork','TemptationIsland','Core/Layout/Templates/TemptationIsland.html.twig',1,'a:5:{s:6:\"format\";s:6:\"[main]\";s:5:\"names\";a:1:{i:0;s:4:\"main\";}s:14:\"default_extras\";a:1:{s:4:\"main\";a:0:{}}s:17:\"default_extras_nl\";a:1:{s:4:\"main\";a:0:{}}s:5:\"image\";b:1;}'),
+	(5,'Fork','GoneIn60Seconds','Core/Layout/Templates/GoneIn60Seconds.html.twig',1,'a:5:{s:6:\"format\";s:6:\"[main]\";s:5:\"names\";a:1:{i:0;s:4:\"main\";}s:14:\"default_extras\";a:1:{s:4:\"main\";a:0:{}}s:17:\"default_extras_nl\";a:1:{s:4:\"main\";a:0:{}}s:5:\"image\";b:1;}'),
+	(6,'Fork','Fireflies','Core/Layout/Templates/Fireflies.html.twig',1,'a:5:{s:6:\"format\";s:6:\"[main]\";s:5:\"names\";a:1:{i:0;s:4:\"main\";}s:14:\"default_extras\";a:1:{s:4:\"main\";a:0:{}}s:17:\"default_extras_nl\";a:1:{s:4:\"main\";a:0:{}}s:5:\"image\";b:1;}');
 
 /*!40000 ALTER TABLE `themes_templates` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2717,7 +2714,7 @@ LOCK TABLES `users_sessions` WRITE;
 
 INSERT INTO `users_sessions` (`id`, `user_id`, `session_id`, `secret_key`, `date`)
 VALUES
-	(2,1,'fbc22ffa1cfef90d0b409f5140ac35b2','48b09669e9ef1280457b8de53d3328a844322cbb','2017-08-10 21:13:46');
+	(2,1,'fbc22ffa1cfef90d0b409f5140ac35b2','48b09669e9ef1280457b8de53d3328a844322cbb','2017-08-11 09:03:04');
 
 /*!40000 ALTER TABLE `users_sessions` ENABLE KEYS */;
 UNLOCK TABLES;

@@ -1,0 +1,19 @@
+body {
+	color: #ffffff;
+}
+
+.header {
+	background-color: #d62828;
+}
+
+.dashboard {
+	background-image: url("../Images/temptation.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #222222;
+}
+
+.dashboardwidget_inner {
+	/* background-color: #4b4b4d; */
+	background-color: rgba(50, 50, 50, 0.9);
+}
