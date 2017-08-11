@@ -1,11 +1,11 @@
-.header {
-	background-color: #FF6D7F;
-}
-
-.dashboard {
+body {
 	background-image: url("../Images/flamingflamingos.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.header {
+	background-color: #FF6D7F;
 }
 
 .dashboardwidget_inner {

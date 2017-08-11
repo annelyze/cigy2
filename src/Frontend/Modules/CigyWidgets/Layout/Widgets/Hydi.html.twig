@@ -1,6 +1,19 @@
-<dl>
-    <dt>HYD:</dt>
-    <dd>{{ widgetHydi.team }}</dd>
-    <dt>Wijs HYD:</dt>
-    <dd>{{ widgetHydi.company }}</dd>
-</dl>
+<div>
+    <div style="float: left;">
+        <span class="title">HYD</span>
+        <br />
+        How You Doin'?
+    </div>
+</div>
+<div class="content">
+    <span class="lgvalue">{{ widgetHydi.team }}</span>
+</div>
+<div>
+    {% if page.showCompanyWide %}
+    <div style="float: right;">
+        Wijs value
+        <br />
+        <span class="xsvalue">{{ widgetHydi.company }}</span>
+    </div>
+    {% endif %}
+</div>

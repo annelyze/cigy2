@@ -16,6 +16,8 @@ ul, li {
 }
 
 body {
+	height: 100%;
+
     font-weight: 400;
     font-family: "Fira Sans", "Segoe WP", "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
@@ -42,9 +44,8 @@ body {
 
 .dashboard {
 	width: 100%;
-	height: 100%;
 	overflow: hidden;
-	
+
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -52,8 +53,6 @@ body {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-
-	background-color: #eeeeee;
 }
 
 .dashboardwidget {

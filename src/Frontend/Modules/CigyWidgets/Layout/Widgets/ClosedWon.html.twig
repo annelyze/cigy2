@@ -1,10 +1,29 @@
-<dl>
-    <dt>Team Closed Won:</dt>
-    <dd>{{ widgetClosedWon.team }}</dd>
-    <dt>Team Closed Won target:</dt>
-    <dd>{{ widgetClosedWon.team_target }}</dd>
-    <dt>Wijs Closed Won:</dt>
-    <dd>{{ widgetClosedWon.company }}</dd>
-    <dt>Wijs Closed Won target:</dt>
-    <dd>{{ widgetClosedWon.company_target }}</dd>
-</dl>
+<div>
+    <div style="float: left;">
+        <span class="title">Closed won</span>
+        <br />
+        YTD
+    </div>
+    <div style="float: right;">
+        Target
+        <br />
+        <span class="xsvalue">€ {{ widgetClosedWon.team_target|formatnumber(0) }}</span>
+    </div>
+</div>
+<div class="content">
+    <span class="mdvalue">€ {{ widgetClosedWon.team|formatnumber(0) }}</span>
+</div>
+<div>
+    {% if page.showCompanyWide %}
+    <div style="float: left;">
+        Wijs target
+        <br />
+        <span class="xsvalue">€ {{ widgetClosedWon.company_target|formatnumber(0) }}</span>
+    </div>
+    <div style="float: right;">
+        Wijs value
+        <br />
+        <span class="xsvalue">€ {{ widgetClosedWon.company|formatnumber(0) }}</span>
+    </div>
+    {% endif %}
+</div>

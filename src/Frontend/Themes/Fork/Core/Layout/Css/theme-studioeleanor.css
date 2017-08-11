@@ -1,11 +1,11 @@
-.header {
-	background-color: #5D988A;
-}
-
-.dashboard {
+body {
 	background-image: url("../Images/studioeleanor.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.header {
+	background-color: #5D988A;
 }
 
 .dashboardwidget_inner {

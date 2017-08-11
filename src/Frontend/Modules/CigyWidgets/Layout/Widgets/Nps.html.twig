@@ -1,8 +1,29 @@
-<dl>
-    <dt>NPS:</dt>
-    <dd>{{ widgetNps.team }}</dd>
-    <dt>Wijs NPS:</dt>
-    <dd>{{ widgetNps.company }}</dd>
-    <dt>NPS target:</dt>
-    <dd>{{ widgetNps.target }}</dd>
-</dl>
+<div>
+    <div style="float: left;">
+        <span class="title">NPS</span>
+        <br />
+        Net Promoter Score
+    </div>
+    <div style="float: right;">
+        Target
+        <br />
+        <span class="xsvalue">{{ widgetNps.target }}</span>
+    </div>
+</div>
+<div class="content">
+    <span class="lgvalue">{{ widgetNps.team }}</span>
+</div>
+<div>
+    {% if page.showCompanyWide %}
+    <div style="float: left;">
+        Wijs target
+        <br />
+        <span class="xsvalue">{{ widgetNps.target }}</span>
+    </div>
+    <div style="float: right;">
+        Wijs value
+        <br />
+        <span class="xsvalue">{{ widgetNps.company }}</span>
+    </div>
+    {% endif %}
+</div>

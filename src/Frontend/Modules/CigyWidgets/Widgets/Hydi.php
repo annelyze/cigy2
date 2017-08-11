@@ -15,11 +15,17 @@ class Hydi extends FrontendBaseWidget
         parent::execute();
         $this->loadTemplate();
 
-        // get api key
-        $apiKey = FrontendCigyServicesHydi::getApiKey();
+        $teamHydi = '-';
+        $companyHydi = '-';
 
-        $teamHydi = FrontendCigyServicesHydi::getHydi($apiKey, $this->pageTeamFilter);
-        $companyHydi = FrontendCigyServicesHydi::getHydi($apiKey);
+        try {
+            // get api key
+            $apiKey = FrontendCigyServicesHydi::getApiKey();
+
+            // get numbers
+            $teamHydi = FrontendCigyServicesHydi::getHydi($apiKey, $this->pageTeamFilter);
+            $companyHydi = FrontendCigyServicesHydi::getHydi($apiKey);
+        } catch (Exception $e) {}
 
         $hydiData = array(
             'team' => $teamHydi,
