@@ -40,7 +40,6 @@ class Model
             [$targettype, $team, intval(date('m')), $level]
         );
 
-        var_dump(FrontendModel::getContainer()->get('database')->getQueries());
         return $target;
     }
 
@@ -53,6 +52,15 @@ class Model
             AND month = ?
             AND `level` = ?",
             [$targettype, $team, date('M'), $level]
+        );
+    }
+
+    public static function GetAbr(int $team): Array
+    {
+        return (Array) FrontendModel::getContainer()->get('database')->getRecord(
+            "SELECT period, actual_ytd from cigy_abr_actuals
+            WHERE team = ?",
+            [$team]
         );
     }
 }
