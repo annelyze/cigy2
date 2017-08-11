@@ -36,7 +36,7 @@ class CustomerGauge
         $url = self::API_LOCATION . 'report/nps.json?date_range_from=' . date('Y') . '-01-01';
         if($team != '')
         {
-            $url = $url.'&filter_SegmentB=' . $teamName . '';
+            $url = $url.'&filter_SegmentB=' . urlencode($teamName) . '';
         }
 
         // set options

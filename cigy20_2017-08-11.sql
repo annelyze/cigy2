@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: cigy20
-# Generation Time: 2017-08-11 10:00:39 +0000
+# Generation Time: 2017-08-11 11:41:13 +0000
 # ************************************************************
 
 
@@ -86,6 +86,32 @@ VALUES
 	(3,'Q1 + Q2',985018);
 
 /*!40000 ALTER TABLE `cigy_abr_actuals` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table cigy_closedwon_actuals
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `cigy_closedwon_actuals`;
+
+CREATE TABLE `cigy_closedwon_actuals` (
+  `team` int(11) NOT NULL,
+  `month` int(11) NOT NULL,
+  `actual` int(11) NOT NULL,
+  `actual_ytd` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `cigy_closedwon_actuals` WRITE;
+/*!40000 ALTER TABLE `cigy_closedwon_actuals` DISABLE KEYS */;
+
+INSERT INTO `cigy_closedwon_actuals` (`team`, `month`, `actual`, `actual_ytd`)
+VALUES
+	(0,8,0,3321163),
+	(1,8,0,1285568),
+	(2,8,0,958356),
+	(3,8,0,993480);
+
+/*!40000 ALTER TABLE `cigy_closedwon_actuals` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -2370,7 +2396,12 @@ VALUES
 	(7,'Wijs',0,'Wijs',0,'Wijs',0,'wijs',0,NULL,NULL,NULL,NULL),
 	(8,'Wijs',0,'Wijs',0,'Wijs',0,'wijs',0,NULL,NULL,NULL,NULL),
 	(9,'Teamtation',0,'Teamtation',0,'Teamtation',0,'teamtation',0,NULL,NULL,NULL,NULL),
-	(10,'Teamtation',0,'Teamtation',0,'Teamtation',0,'teamtation',0,NULL,NULL,NULL,NULL);
+	(10,'Teamtation',0,'Teamtation',0,'Teamtation',0,'teamtation',0,NULL,NULL,NULL,NULL),
+	(11,'Flaming Flamingo\'s',0,'Flaming Flamingo\'s',0,'Flaming Flamingo\'s',0,'flaming-flamingos',0,NULL,NULL,NULL,NULL),
+	(12,'Flaming Flamingo\'s',0,'Flaming Flamingo\'s',0,'Flaming Flamingo\'s',0,'flaming-flamingos',0,NULL,NULL,NULL,NULL),
+	(13,'Studio Eleanor',0,'Studio Eleanor',0,'Studio Eleanor',0,'studio-eleanor',0,NULL,NULL,NULL,NULL),
+	(14,'Fireflies',0,'Fireflies',0,'Fireflies',0,'fireflies',0,NULL,NULL,NULL,NULL),
+	(15,'Fireflies',0,'Fireflies',0,'Fireflies',0,'fireflies',0,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `meta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2435,7 +2466,13 @@ VALUES
 	(1,'CigyWidgets','widget','Nps','Nps',NULL,0,0),
 	(2,'CigyWidgets','widget','Abr','Abr',NULL,0,0),
 	(3,'CigyWidgets','widget','ClosedWon','ClosedWon',NULL,0,0),
-	(6,'CigyWidgets','widget','Hydi','Hydi',NULL,0,0);
+	(7,'CigyWidgets','widget','Image','Image',NULL,0,0),
+	(8,'CigyWidgets','widget','TipOfTheDay','TipOfTheDay',NULL,0,0),
+	(9,'CigyWidgets','widget','Leave','Leave',NULL,0,0),
+	(10,'CigyWidgets','widget','LoggingsCheck','LoggingsCheck',NULL,0,0),
+	(6,'CigyWidgets','widget','Hydi','Hydi',NULL,0,0),
+	(11,'CigyWidgets','widget','CigyWidgets','CigyWidgets',NULL,0,0),
+	(12,'CigyWidgets','widget','CommunityDay','CommunityDay',NULL,0,0);
 
 /*!40000 ALTER TABLE `modules_extras` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2475,7 +2512,7 @@ VALUES
 	('Core','date_formats_long','a:14:{i:0;s:5:\"j F Y\";i:1;s:7:\"D j F Y\";i:2;s:7:\"l j F Y\";i:3;s:6:\"j F, Y\";i:4;s:8:\"D j F, Y\";i:5;s:8:\"l j F, Y\";i:6;s:5:\"d F Y\";i:7;s:6:\"d F, Y\";i:8;s:5:\"F j Y\";i:9;s:7:\"D F j Y\";i:10;s:7:\"l F j Y\";i:11;s:6:\"F d, Y\";i:12;s:8:\"D F d, Y\";i:13;s:8:\"l F d, Y\";}'),
 	('Core','time_format','s:3:\"H:i\";'),
 	('Core','time_formats','a:4:{i:0;s:3:\"H:i\";i:1;s:5:\"H:i:s\";i:2;s:5:\"g:i a\";i:3;s:5:\"g:i A\";}'),
-	('Core','number_format','s:11:\"dot_nothing\";'),
+	('Core','number_format','s:9:\"comma_dot\";'),
 	('Core','number_formats','a:6:{s:13:\"comma_nothing\";s:8:\"10000,25\";s:11:\"dot_nothing\";s:8:\"10000.25\";s:9:\"dot_comma\";s:9:\"10,000.25\";s:9:\"comma_dot\";s:9:\"10.000,25\";s:9:\"dot_space\";s:8:\"10000.25\";s:11:\"comma_space\";s:9:\"10 000,25\";}'),
 	('Core','mailer_from','a:2:{s:4:\"name\";s:8:\"Fork CMS\";s:5:\"email\";s:28:\"annelies.vanextergem@wijs.be\";}'),
 	('Core','mailer_to','a:2:{s:4:\"name\";s:8:\"Fork CMS\";s:5:\"email\";s:28:\"annelies.vanextergem@wijs.be\";}'),
@@ -2546,7 +2583,12 @@ VALUES
 	(1,33,1,0,1,7,'nl','page','Wijs',0,'Wijs',0,0,'archive','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 09:00:36',0,1,1,0,1),
 	(1,34,1,0,1,8,'nl','page','Wijs',0,'Wijs',0,0,'active','2017-08-10 01:14:30','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 01:14:30','2017-08-11 09:00:53',0,1,1,0,1),
 	(405,35,1,1,1,9,'nl','page','Teamtation',1,'Teamtation',0,0,'archive','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-11 09:01:32',1,1,1,1,2),
-	(405,36,1,1,3,10,'nl','page','Teamtation',1,'Teamtation',0,0,'active','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-11 09:03:04',1,1,1,1,2);
+	(405,36,1,1,3,10,'nl','page','Teamtation',1,'Teamtation',0,0,'active','2017-08-10 06:13:10','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-10 06:13:10','2017-08-11 09:03:04',1,1,1,1,2),
+	(406,37,1,0,1,11,'nl','root','Flaming Flamingo\'s',2,'Flaming Flamingo\'s',0,0,'archive','2017-08-11 11:26:59','a:1:{s:5:\"image\";N;}','2017-08-11 11:26:59','2017-08-11 11:26:59',1,1,1,1,2),
+	(406,38,1,1,4,12,'nl','page','Flaming Flamingo\'s',2,'Flaming Flamingo\'s',0,0,'active','2017-08-11 11:26:59','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-11 11:26:59','2017-08-11 11:27:07',1,1,1,1,3),
+	(407,39,1,1,5,13,'nl','page','Studio Eleanor',3,'Studio Eleanor',0,0,'active','2017-08-11 11:27:57','a:1:{s:5:\"image\";N;}','2017-08-11 11:27:57','2017-08-11 11:27:57',1,1,1,1,4),
+	(408,40,1,1,6,14,'nl','page','Fireflies',4,'Fireflies',0,0,'archive','2017-08-11 11:28:32','a:1:{s:5:\"image\";N;}','2017-08-11 11:28:32','2017-08-11 11:28:32',1,1,1,1,5),
+	(408,41,1,1,6,15,'nl','page','Fireflies',4,'Fireflies',0,0,'active','2017-08-11 11:28:32','a:2:{s:5:\"image\";N;s:13:\"auth_required\";b:0;}','2017-08-11 11:28:32','2017-08-11 11:29:14',1,1,1,1,5);
 
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2610,7 +2652,21 @@ VALUES
 	(36,'main',1,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,0),
 	(36,'main',2,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,1),
 	(36,'main',3,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,2),
-	(36,'main',6,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,3);
+	(36,'main',6,'widget','','2017-08-11 09:03:04','2017-08-11 09:03:04',1,3),
+	(37,'main',1,'widget','','2017-08-11 11:26:59','2017-08-11 11:26:59',1,0),
+	(37,'main',2,'widget','','2017-08-11 11:26:59','2017-08-11 11:26:59',1,1),
+	(37,'main',3,'widget','','2017-08-11 11:26:59','2017-08-11 11:26:59',1,2),
+	(37,'main',6,'widget','','2017-08-11 11:26:59','2017-08-11 11:26:59',1,3),
+	(38,'main',1,'widget','','2017-08-11 11:27:07','2017-08-11 11:27:07',1,0),
+	(38,'main',2,'widget','','2017-08-11 11:27:07','2017-08-11 11:27:07',1,1),
+	(38,'main',3,'widget','','2017-08-11 11:27:07','2017-08-11 11:27:07',1,2),
+	(38,'main',6,'widget','','2017-08-11 11:27:07','2017-08-11 11:27:07',1,3),
+	(39,'main',1,'widget','','2017-08-11 11:27:57','2017-08-11 11:27:57',1,0),
+	(39,'main',2,'widget','','2017-08-11 11:27:57','2017-08-11 11:27:57',1,1),
+	(39,'main',3,'widget','','2017-08-11 11:27:57','2017-08-11 11:27:57',1,2),
+	(39,'main',6,'widget','','2017-08-11 11:27:57','2017-08-11 11:27:57',1,3),
+	(40,'main',6,'widget','','2017-08-11 11:28:32','2017-08-11 11:28:32',1,0),
+	(41,'main',6,'widget','','2017-08-11 11:29:14','2017-08-11 11:29:14',1,0);
 
 /*!40000 ALTER TABLE `pages_blocks` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -2714,7 +2770,7 @@ LOCK TABLES `users_sessions` WRITE;
 
 INSERT INTO `users_sessions` (`id`, `user_id`, `session_id`, `secret_key`, `date`)
 VALUES
-	(2,1,'fbc22ffa1cfef90d0b409f5140ac35b2','48b09669e9ef1280457b8de53d3328a844322cbb','2017-08-11 09:03:04');
+	(2,1,'fbc22ffa1cfef90d0b409f5140ac35b2','48b09669e9ef1280457b8de53d3328a844322cbb','2017-08-11 11:33:11');
 
 /*!40000 ALTER TABLE `users_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
